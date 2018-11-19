@@ -1,0 +1,59 @@
+,ru,en
+GAME_NAME,Dwarmino,Dwarmino
+GAME_SCORE,Счет,Score
+BUTTON_CONTINUE,Продолжить,Continue
+BUTTON_NEW_GAME,Новая игра,New Game
+BUTTON_SAVES,Сохранения,Save
+BUTTON_OPTIONS,Настройки,Options
+BUTTON_EXIT,Выход,Exit
+BUTTON_CREDITS,Авторы,Credits
+BUTTON_RESUME,Продолжить,Resume
+BUTTON_SAVE_AND_EXIT,Сохранить и Выйти,Save and Exit
+LABEL_PAUSE,Пауза,Pause
+LABEL_LOADING,Загрузка,Loading
+BUTTON_VIDEO,Видео,Video
+BUTTON_MUSIC,Музыка,Music
+BUTTON_CONTROLS,Управление,Controls
+GAME_MODE,Режим игры,Game Mode
+GAME_MODE_LITE,Легкий,Lite
+GAME_MODE_MEDIUM,Средний,Medium
+GAME_MODE_HARD,Сложный,Hard
+LANGUAGE,Язык,Language
+AUTO,Авто,Auto
+RUSSIAN,Русский,Russian
+ENGLISH,Английский,English
+FULLSCREEN,Полноэкранный режим,Fullscreen
+VSYNC,Вертикальная синхронизация,Vsync
+FPS,FPS,FPS
+MSAA,MSAA,MSAA
+HDR,HDR,HDR
+SCREEN_RESOLUTION,Разрешение экрана,Screen resolution
+MOUSE_SENSITIVITY,Чувствительность мыши,Mouse Sensitivity
+CONTROL_KEYS,Клавиши управления,Control Keys
+MOUSE_LABEL,Мышь,Mouse
+SSAO,SSAO,SSAO
+DISABLED,Отключить,Disabled
+LOW,Низкий,Low
+MEDIUM,Средний,Medium
+HIGH,Высокий,High
+SHADOW,Тень,Shadow
+KEY_UP,Вверх,Up
+KEY_DOWN,Вниз,Down
+KEY_LEFT,Влево,Left
+KEY_RIGHT,Вправо,Right
+KEY_ACCELERATION_OF_FALL,Ускорение падения,Acceleration of Fall
+KEY_ROTATE_LEFT,Повернуть влево,Rotate Left
+KEY_ROTATE_RIGHT,Повернуть вправо,Rotate Right
+KEY_TURN_LEFT,Перевернуть влево,Turn Left
+KEY_TURN_RIGHT,Перевернуть вправо,Turn Right
+KEY_PAUSE,Пауза,Pause
+PRESS_ANY_KEY,Нажмите клавишу…,Press any Key…
+BUTTON_TOP_TEN,Топ 10,Top 10
+DEAD_END,Конец,Dead End
+KEY_VIEW,Обзор,View
+KEY_ZOOM,Приблизить\отдалить,Zooming
+MOUSE_WHEEL,Колесо мыши,Mouse Wheel
+LOCATION,Карта,Location
+LOCATION_RANDOM,Случайная,Random
+LOCATION_LITE,Легкая,Lite
+LOCATION_DUNES_01,Дюны 1,Dunes 1

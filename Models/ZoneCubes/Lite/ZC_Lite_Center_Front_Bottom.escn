@@ -1,0 +1,212 @@
+[gd_scene load_steps=1 format=2]
+
+[sub_resource id=1 type="Shader"]
+
+code = "shader_type spatial;
+render_mode blend_mix,depth_draw_always,cull_back,diffuse_burley,specular_schlick_ggx;
+
+
+
+void node_bsdf_principled(vec4 color, float subsurface, vec4 subsurface_color,
+        float metallic, float specular, float roughness, float clearcoat,
+        float clearcoat_roughness, float anisotropy, float transmission,
+        float IOR, out vec3 albedo, out float sss_strength_out,
+        out float metallic_out, out float specular_out,
+        out float roughness_out, out float clearcoat_out,
+        out float clearcoat_gloss_out, out float anisotropy_out,
+        out float transmission_out, out float ior) {
+    metallic = clamp(metallic, 0.0, 1.0);
+    transmission = clamp(transmission, 0.0, 1.0);
+
+    subsurface = subsurface * (1.0 - metallic);
+    transmission = transmission * (1.0 - metallic);
+
+    albedo = mix(color.rgb, subsurface_color.rgb, subsurface);
+    sss_strength_out = subsurface;
+    metallic_out = metallic;
+    specular_out = pow((IOR - 1.0)/(IOR + 1.0), 2)/0.08;
+    roughness_out = sqrt(roughness);
+    clearcoat_out = clearcoat * (1.0 - transmission);
+    clearcoat_gloss_out = 1.0 - clearcoat_roughness;
+    anisotropy_out = clamp(anisotropy, 0.0, 1.0);
+    transmission_out = transmission;
+    ior = IOR;
+}
+
+
+
+void vertex() {
+	
+}
+
+
+void fragment() {
+	float var1_PrincipledBSDF_Subsurface;
+	var1_PrincipledBSDF_Subsurface = 0.0;
+	float var2_PrincipledBSDF_Metallic;
+	var2_PrincipledBSDF_Metallic = 0.0;
+	float var3_PrincipledBSDF_Specular;
+	var3_PrincipledBSDF_Specular = 1.0;
+	float var4_PrincipledBSDF_Roughness;
+	var4_PrincipledBSDF_Roughness = 1.0;
+	float var5_PrincipledBSDF_Clearcoat;
+	var5_PrincipledBSDF_Clearcoat = 0.0;
+	float var6_PrincipledBSDF_ClearcoatRoughness;
+	var6_PrincipledBSDF_ClearcoatRoughness = 0.029999999329447746;
+	float var7_PrincipledBSDF_Anisotropic;
+	var7_PrincipledBSDF_Anisotropic = 0.0;
+	float var8_PrincipledBSDF_Transmission;
+	var8_PrincipledBSDF_Transmission = 0.0;
+	float var9_PrincipledBSDF_IOR;
+	var9_PrincipledBSDF_IOR = 1.4500000476837158;
+	vec3 var10_PrincipledBSDF_output_albedo;
+	float var11_PrincipledBSDF_output_sss_strength;
+	float var12_PrincipledBSDF_output_metallic;
+	float var13_PrincipledBSDF_output_specular;
+	float var14_PrincipledBSDF_output_roughness;
+	float var15_PrincipledBSDF_output_clearcoat;
+	float var16_PrincipledBSDF_output_clearcoat_gloss;
+	float var17_PrincipledBSDF_output_anisotropy;
+	float var18_PrincipledBSDF_output_transmission;
+	float var19_PrincipledBSDF_output_ior;
+	node_bsdf_principled(vec4(0.03968191519379616, 0.025460340082645416, 0.004687439650297165, 1.0), var1_PrincipledBSDF_Subsurface, vec4(0.03968191519379616, 0.025460340082645416, 0.004687439650297165, 1.0), var2_PrincipledBSDF_Metallic, var3_PrincipledBSDF_Specular, var4_PrincipledBSDF_Roughness, var5_PrincipledBSDF_Clearcoat, var6_PrincipledBSDF_ClearcoatRoughness, var7_PrincipledBSDF_Anisotropic, var8_PrincipledBSDF_Transmission, var9_PrincipledBSDF_IOR, var10_PrincipledBSDF_output_albedo, var11_PrincipledBSDF_output_sss_strength, var12_PrincipledBSDF_output_metallic, var13_PrincipledBSDF_output_specular, var14_PrincipledBSDF_output_roughness, var15_PrincipledBSDF_output_clearcoat, var16_PrincipledBSDF_output_clearcoat_gloss, var17_PrincipledBSDF_output_anisotropy, var18_PrincipledBSDF_output_transmission, var19_PrincipledBSDF_output_ior);
+	ALBEDO = var10_PrincipledBSDF_output_albedo;
+	SSS_STRENGTH = var11_PrincipledBSDF_output_sss_strength;
+	SPECULAR = var13_PrincipledBSDF_output_specular;
+	METALLIC = var12_PrincipledBSDF_output_metallic;
+	ROUGHNESS = var14_PrincipledBSDF_output_roughness;
+	CLEARCOAT = var15_PrincipledBSDF_output_clearcoat;
+	CLEARCOAT_GLOSS = var16_PrincipledBSDF_output_clearcoat_gloss;
+}
+"
+
+[sub_resource id=2 type="ShaderMaterial"]
+
+shader = SubResource(1)
+
+[sub_resource id=3 type="Shader"]
+
+code = "shader_type spatial;
+render_mode blend_mix,depth_draw_always,cull_back,diffuse_burley,specular_schlick_ggx;
+
+
+
+void node_bsdf_principled(vec4 color, float subsurface, vec4 subsurface_color,
+        float metallic, float specular, float roughness, float clearcoat,
+        float clearcoat_roughness, float anisotropy, float transmission,
+        float IOR, out vec3 albedo, out float sss_strength_out,
+        out float metallic_out, out float specular_out,
+        out float roughness_out, out float clearcoat_out,
+        out float clearcoat_gloss_out, out float anisotropy_out,
+        out float transmission_out, out float ior) {
+    metallic = clamp(metallic, 0.0, 1.0);
+    transmission = clamp(transmission, 0.0, 1.0);
+
+    subsurface = subsurface * (1.0 - metallic);
+    transmission = transmission * (1.0 - metallic);
+
+    albedo = mix(color.rgb, subsurface_color.rgb, subsurface);
+    sss_strength_out = subsurface;
+    metallic_out = metallic;
+    specular_out = pow((IOR - 1.0)/(IOR + 1.0), 2)/0.08;
+    roughness_out = sqrt(roughness);
+    clearcoat_out = clearcoat * (1.0 - transmission);
+    clearcoat_gloss_out = 1.0 - clearcoat_roughness;
+    anisotropy_out = clamp(anisotropy, 0.0, 1.0);
+    transmission_out = transmission;
+    ior = IOR;
+}
+
+
+
+void vertex() {
+	
+}
+
+
+void fragment() {
+	float var1_PrincipledBSDF_Subsurface;
+	var1_PrincipledBSDF_Subsurface = 0.0;
+	float var2_PrincipledBSDF_Metallic;
+	var2_PrincipledBSDF_Metallic = 0.0;
+	float var3_PrincipledBSDF_Specular;
+	var3_PrincipledBSDF_Specular = 1.0;
+	float var4_PrincipledBSDF_Roughness;
+	var4_PrincipledBSDF_Roughness = 1.0;
+	float var5_PrincipledBSDF_Clearcoat;
+	var5_PrincipledBSDF_Clearcoat = 0.0;
+	float var6_PrincipledBSDF_ClearcoatRoughness;
+	var6_PrincipledBSDF_ClearcoatRoughness = 0.029999999329447746;
+	float var7_PrincipledBSDF_Anisotropic;
+	var7_PrincipledBSDF_Anisotropic = 0.0;
+	float var8_PrincipledBSDF_Transmission;
+	var8_PrincipledBSDF_Transmission = 0.0;
+	float var9_PrincipledBSDF_IOR;
+	var9_PrincipledBSDF_IOR = 1.4500000476837158;
+	vec3 var10_PrincipledBSDF_output_albedo;
+	float var11_PrincipledBSDF_output_sss_strength;
+	float var12_PrincipledBSDF_output_metallic;
+	float var13_PrincipledBSDF_output_specular;
+	float var14_PrincipledBSDF_output_roughness;
+	float var15_PrincipledBSDF_output_clearcoat;
+	float var16_PrincipledBSDF_output_clearcoat_gloss;
+	float var17_PrincipledBSDF_output_anisotropy;
+	float var18_PrincipledBSDF_output_transmission;
+	float var19_PrincipledBSDF_output_ior;
+	node_bsdf_principled(vec4(0.3564002215862274, 0.21233564615249634, 0.023666968569159508, 1.0), var1_PrincipledBSDF_Subsurface, vec4(0.3564002215862274, 0.21233564615249634, 0.023666968569159508, 1.0), var2_PrincipledBSDF_Metallic, var3_PrincipledBSDF_Specular, var4_PrincipledBSDF_Roughness, var5_PrincipledBSDF_Clearcoat, var6_PrincipledBSDF_ClearcoatRoughness, var7_PrincipledBSDF_Anisotropic, var8_PrincipledBSDF_Transmission, var9_PrincipledBSDF_IOR, var10_PrincipledBSDF_output_albedo, var11_PrincipledBSDF_output_sss_strength, var12_PrincipledBSDF_output_metallic, var13_PrincipledBSDF_output_specular, var14_PrincipledBSDF_output_roughness, var15_PrincipledBSDF_output_clearcoat, var16_PrincipledBSDF_output_clearcoat_gloss, var17_PrincipledBSDF_output_anisotropy, var18_PrincipledBSDF_output_transmission, var19_PrincipledBSDF_output_ior);
+	ALBEDO = var10_PrincipledBSDF_output_albedo;
+	SSS_STRENGTH = var11_PrincipledBSDF_output_sss_strength;
+	SPECULAR = var13_PrincipledBSDF_output_specular;
+	METALLIC = var12_PrincipledBSDF_output_metallic;
+	ROUGHNESS = var14_PrincipledBSDF_output_roughness;
+	CLEARCOAT = var15_PrincipledBSDF_output_clearcoat;
+	CLEARCOAT_GLOSS = var16_PrincipledBSDF_output_clearcoat_gloss;
+}
+"
+
+[sub_resource id=4 type="ShaderMaterial"]
+
+shader = SubResource(3)
+
+[sub_resource id=5 type="ArrayMesh"]
+
+surfaces/0 = {
+	"material":SubResource(2),
+	"primitive":4,
+	"arrays":[
+		Vector3Array(-0.5, -0.5, 0.475, 0.5, -0.5, -0.5, 0.5, -0.5, 0.475, 0.5, -0.5, 0.5, -0.5, -0.275, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.475, 0.5, -0.5, 0.475, -0.5, -0.5, -0.5, 0.5, -0.275, -0.5, 0.5, -0.5, -0.5, 0.5, -0.275, -0.0499998, 0.5, -0.5, 0.475, 0.5, -0.5, -0.5, -0.5, -0.275, -0.0499994, -0.5, -0.5, 0.475, -0.5, -0.275, 0.463158, 0.5, -0.275, -0.5, 0.5, -0.275, -0.092857, 0.5, -0.5, -0.5, 0.5, -0.275, 0.5, 0.5, -0.5, 0.475, 0.5, -0.275, 0.4875, -0.5, -0.275, 0.4875, -0.5, -0.275, 0.463158, -0.5, -0.5, 0.475, -0.5, -0.275, -0.0499994, -0.5, -0.275, -0.5, -0.5, -0.5, -0.5, 0.5, -0.275, 0.463158, 0.5, -0.275, 0.4875, 0.5, -0.5, 0.475, -0.5, -0.5, 0.5, -0.5, -0.275, 0.5, 0.5, -0.275, -0.092857, 0.5, -0.275, -0.0499998, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.275, 0.5, -0.5, -0.275, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.275, -0.5, 0.5, -0.275, -0.5, 0.5, -0.275, -0.0499998, 0.5, -0.275, 0.463158, 0.5, -0.5, 0.475, -0.5, -0.275, -0.0499994, -0.5, -0.5, -0.5, -0.5, -0.5, 0.475, 0.5, -0.275, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.475),
+		Vector3Array(0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -5.29819e-07, 1.0, 0.0, -5.29819e-07, 1.0, 0.0, -5.29819e-07, 1.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.32455e-07, -1.0, 0.0, 1.32455e-07, -1.0, 0.0, 1.32455e-07, -1.0, 1.0, -2.85287e-07, -1.35851e-07, 1.0, -2.85287e-07, -1.35851e-07, 1.0, -2.85287e-07, -1.35851e-07, -1.0, -2.71023e-07, -2.58117e-07, -1.0, -2.71023e-07, -2.58117e-07, -1.0, -2.71023e-07, -2.58117e-07, 1.0, -1.32455e-07, -3.25327e-07, 1.0, -1.32455e-07, -3.25327e-07, 1.0, -1.32455e-07, -3.25327e-07, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, -2.94343e-07, -1.0, -2.64909e-07, -2.94343e-07, -1.0, -2.64909e-07, -2.94343e-07, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, 0.0, -1.0, -2.64909e-07, 0.0, 1.0, -5.29817e-07, 0.0, 1.0, -5.29817e-07, 0.0, 1.0, -5.29817e-07, 0.0, 0.0, -1.0, 0.0, -3.15797e-14, 0.0, 1.0, -3.15797e-14, 0.0, 1.0, -3.15797e-14, 0.0, 1.0, 0.0, -1.0, 0.0, 0.0, 5.29819e-07, -1.0, 0.0, 5.29819e-07, -1.0, 0.0, 5.29819e-07, -1.0, 1.0, -2.71023e-07, -2.58117e-07, 1.0, -2.71023e-07, -2.58117e-07, 1.0, -2.71023e-07, -2.58117e-07, -1.0, -3.56608e-07, -1.35851e-07, -1.0, -3.56608e-07, -1.35851e-07, -1.0, -3.56608e-07, -1.35851e-07, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0, 1.0, -2.64909e-07, 0.0),
+		null, ; No Tangents,
+		null, ; no Vertex Colors,
+		null, ; No UV1,
+		null, ; No UV2,
+		null, ; No Bones,
+		null, ; No Weights,
+		IntArray(0, 2, 1, 3, 5, 4, 6, 8, 7, 9, 11, 10, 12, 14, 13, 15, 17, 16, 18, 20, 19, 21, 23, 22, 24, 26, 25, 27, 29, 28, 30, 32, 31, 24, 34, 33, 35, 37, 36, 0, 1, 38, 39, 41, 40, 6, 7, 42, 43, 45, 44, 46, 48, 47, 49, 51, 50, 52, 54, 53, 24, 33, 26)
+	],
+	"morph_arrays":[]
+}
+surfaces/1 = {
+	"material":SubResource(4),
+	"primitive":4,
+	"arrays":[
+		Vector3Array(0.5, 0.05, 0.5, -0.5, 0.2175, 0.5, -0.5, 0.05, 0.5, 0.5, 0.025, 0.45, -0.5, 0.025, 0.475, -0.5, 0.025, 0.45, 0.5, -0.025, 0.45, -0.5, 0.025, 0.45, -0.5, -0.025, 0.45, 0.5, 0.2425, 0.475, -0.5, 0.282812, 0.475, -0.5, 0.2425, 0.475, 0.5, -0.025, 0.45, -0.5, -0.025, 0.475, 0.5, -0.025, 0.475, 0.5, 0.308209, 0.5, -0.5, 0.5, 0.5, -0.5, 0.308209, 0.5, 0.5, 0.025, 0.475, -0.5, 0.05, 0.5, -0.5, 0.025, 0.475, 0.5, -0.025, 0.475, -0.5, -0.05, 0.5, 0.5, -0.05, 0.5, 0.5, 0.282812, 0.475, -0.5, 0.308209, 0.5, -0.5, 0.282812, 0.475, 0.5, 0.2425, 0.475, -0.5, 0.2175, 0.5, 0.5, 0.2175, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.05, 0.5, 0.5, -0.275, 0.5, 0.5, -0.275, 0.4875, 0.5, 0.025, 0.45, 0.5, 0.5, -0.5, 0.5, 0.2425, 0.475, 0.5, 0.025, 0.45, 0.5, -0.275, -0.5, 0.5, 0.5, -0.5, 0.5, -0.025, 0.475, 0.5, -0.05, 0.5, 0.5, -0.025, 0.45, -0.5, -0.05, 0.5, -0.5, -0.275, 0.4875, -0.5, -0.275, 0.5, 0.5, 0.05, 0.5, 0.5, 0.025, 0.475, 0.5, 0.025, 0.45, 0.5, 0.5, 0.5, 0.5, 0.308209, 0.5, 0.5, 0.282812, 0.475, 0.5, -0.05, 0.5, 0.5, -0.275, 0.463158, 0.5, -0.025, 0.45, 0.5, 0.2175, 0.5, 0.5, 0.025, 0.45, 0.5, 0.2425, 0.475, 0.5, 0.282812, 0.475, 0.5, 0.2425, 0.475, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.282812, 0.475, 0.5, -0.025, 0.45, 0.5, -0.275, -0.092857, 0.5, 0.025, 0.45, 0.5, 0.2175, 0.5, 0.5, 0.05, 0.5, 0.5, 0.025, 0.45, -0.5, -0.025, 0.45, -0.5, -0.275, 0.4875, -0.5, -0.05, 0.5, -0.5, 0.025, 0.45, -0.5, 0.2175, 0.5, -0.5, 0.2425, 0.475, -0.5, 0.5, -0.5, -0.5, -0.275, -0.0499994, -0.5, -0.025, 0.45, -0.5, -0.025, 0.475, -0.5, -0.025, 0.45, -0.5, -0.05, 0.5, -0.5, 0.025, 0.45, -0.5, 0.5, -0.5, -0.5, -0.025, 0.45, -0.5, 0.05, 0.5, -0.5, 0.025, 0.45, -0.5, 0.025, 0.475, -0.5, 0.05, 0.5, -0.5, 0.2175, 0.5, -0.5, 0.025, 0.45, -0.5, -0.025, 0.45, -0.5, -0.275, -0.0499994, -0.5, -0.275, 0.463158, -0.5, 0.5, -0.5, -0.5, 0.025, 0.45, -0.5, 0.2425, 0.475, -0.5, 0.282812, 0.475, -0.5, 0.2425, 0.475, -0.5, 0.308209, 0.5, -0.5, 0.5, 0.5, -0.5, 0.282812, 0.475, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.282812, 0.475, -0.5, -0.275, -0.5, 0.5, 0.5, -0.5, 0.5, -0.275, -0.5, 0.5, -0.275, 0.463158, 0.5, -0.275, -0.0499998, 0.5, -0.025, 0.45, 0.5, -0.275, 0.5, -0.5, -0.05, 0.5, -0.5, -0.275, 0.5, 0.5, 0.2175, 0.5, 0.5, 0.025, 0.475, 0.5, 0.025, 0.45, 0.5, 0.282812, 0.475, -0.5, -0.025, 0.45, 0.5, 0.5, 0.5, 0.5, 0.025, 0.475, 0.5, 0.05, 0.5, -0.5, 0.05, 0.5, 0.5, -0.025, 0.475, -0.5, -0.025, 0.475, -0.5, -0.05, 0.5, 0.5, 0.282812, 0.475, 0.5, 0.308209, 0.5, -0.5, 0.308209, 0.5, 0.5, 0.2425, 0.475, -0.5, 0.2425, 0.475, -0.5, 0.2175, 0.5, 0.5, 0.5, -0.5, 0.5, 0.025, 0.45, 0.5, -0.275, -0.092857, 0.5, -0.275, -0.5, 0.5, -0.05, 0.5, 0.5, -0.275, 0.4875, 0.5, -0.275, 0.463158, 0.5, -0.025, 0.45, 0.5, -0.275, -0.0499998, 0.5, -0.275, -0.092857, -0.5, -0.025, 0.45, -0.5, -0.275, 0.463158, -0.5, -0.275, 0.4875, -0.5, 0.5, -0.5, -0.5, -0.275, -0.5, -0.5, -0.275, -0.0499994, -0.5, -0.275, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.275, 0.5, 0.5, -0.05, 0.5, -0.5, -0.05, 0.5),
+		Vector3Array(0.0, -7.11697e-07, 1.0, 0.0, -7.11697e-07, 1.0, 0.0, -7.11697e-07, 1.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, -0.707106, 0.707108, 0.0, -0.707106, 0.707108, 0.0, -0.707106, 0.707108, 0.0, 0.707108, 0.707106, 0.0, 0.707108, 0.707106, 0.0, 0.707108, 0.707106, 0.0, -0.701517, 0.712653, 0.0, -0.701517, 0.712653, 0.0, -0.701517, 0.712653, 0.0, 0.707106, 0.707108, 0.0, 0.707106, 0.707108, 0.0, 0.707106, 0.707108, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, -2.45511e-07, -2.7279e-07, 1.0, -2.45511e-07, -2.7279e-07, 1.0, -2.45511e-07, -2.7279e-07, 1.0, -1.92273e-07, -1.61914e-07, 1.0, -1.92273e-07, -1.61914e-07, 1.0, -1.92273e-07, -1.61914e-07, 1.0, 0.0, 5.96047e-06, 1.0, 0.0, 5.96047e-06, 1.0, 0.0, 5.96047e-06, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 5.96048e-06, 1.0, 0.0, 5.96048e-06, 1.0, 0.0, 5.96048e-06, 1.0, 0.0, 9.71184e-06, 1.0, 0.0, 9.71184e-06, 1.0, 0.0, 9.71184e-06, 1.0, -3.60851e-07, 1.22431e-06, 1.0, -3.60851e-07, 1.22431e-06, 1.0, -3.60851e-07, 1.22431e-06, 1.0, -9.83173e-07, 2.45792e-06, 1.0, -9.83173e-07, 2.45792e-06, 1.0, -9.83173e-07, 2.45792e-06, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 8.23313e-07, 0.0, 1.0, 8.23313e-07, 0.0, 1.0, 8.23313e-07, 0.0, 1.0, 0.0, -1.09798e-06, 1.0, 0.0, -1.09798e-06, 1.0, 0.0, -1.09798e-06, 1.0, -1.69682e-12, 2.22406e-06, 1.0, -1.69682e-12, 2.22406e-06, 1.0, -1.69682e-12, 2.22406e-06, -1.0, -1.28876e-07, 1.28875e-06, -1.0, -1.28876e-07, 1.28875e-06, -1.0, -1.28876e-07, 1.28875e-06, -1.0, -9.83171e-07, 3.07241e-06, -1.0, -9.83171e-07, 3.07241e-06, -1.0, -9.83171e-07, 3.07241e-06, -1.0, -2.20538e-07, -1.19209e-07, -1.0, -2.20538e-07, -1.19209e-07, -1.0, -2.20538e-07, -1.19209e-07, -1.0, 0.0, 5.96047e-06, -1.0, 0.0, 5.96047e-06, -1.0, 0.0, 5.96047e-06, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 5.96048e-06, -1.0, 0.0, 5.96048e-06, -1.0, 0.0, 5.96048e-06, -1.0, -1.69682e-12, 1.77925e-06, -1.0, -1.69682e-12, 1.77925e-06, -1.0, -1.69682e-12, 1.77925e-06, -1.0, -4.82951e-07, -2.32306e-07, -1.0, -4.82951e-07, -2.32306e-07, -1.0, -4.82951e-07, -2.32306e-07, -1.0, -2.45511e-07, -2.04593e-07, -1.0, -2.45511e-07, -2.04593e-07, -1.0, -2.45511e-07, -2.04593e-07, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 9.32337e-06, -1.0, 0.0, 9.32337e-06, -1.0, 0.0, 9.32337e-06, -1.0, 8.23313e-07, 0.0, -1.0, 8.23313e-07, 0.0, -1.0, 8.23313e-07, 0.0, 0.0, -1.15364e-07, -1.0, 0.0, -1.15364e-07, -1.0, 0.0, -1.15364e-07, -1.0, 1.0, -4.82951e-07, -2.32306e-07, 1.0, -4.82951e-07, -2.32306e-07, 1.0, -4.82951e-07, -2.32306e-07, -3.15797e-14, 0.0, 1.0, -3.15797e-14, 0.0, 1.0, -3.15797e-14, 0.0, 1.0, 0.0, -7.11697e-07, 1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, -0.707108, 0.707106, 0.0, -0.707108, 0.707106, 0.0, -0.707108, 0.707106, 0.0, 0.707106, 0.707108, 0.0, 0.707106, 0.707108, 0.0, 0.707106, 0.707108, 0.0, -0.701515, 0.712655, 0.0, -0.701515, 0.712655, 0.0, -0.701515, 0.712655, 0.0, 0.707107, 0.707106, 0.0, 0.707107, 0.707106, 0.0, 0.707107, 0.707106, 0.0, 1.0, 0.0, 1.0, -1.98683e-07, 0.0, 1.0, -1.98683e-07, 0.0, 1.0, -1.98683e-07, 0.0, 1.0, 0.0, -2.59465e-12, 1.0, 0.0, -2.59465e-12, 1.0, 0.0, -2.59465e-12, 1.0, -7.15255e-07, 6.63172e-13, 1.0, -7.15255e-07, 6.63172e-13, 1.0, -7.15255e-07, 6.63172e-13, -1.0, -4.76838e-07, 0.0, -1.0, -4.76838e-07, 0.0, -1.0, -4.76838e-07, 0.0, -1.0, -1.92273e-07, -1.70909e-07, -1.0, -1.92273e-07, -1.70909e-07, -1.0, -1.92273e-07, -1.70909e-07, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, -5.29819e-07, 1.0, 0.0, -5.29819e-07, 1.0, 0.0, -5.29819e-07, 1.0),
+		null, ; No Tangents,
+		null, ; no Vertex Colors,
+		null, ; No UV1,
+		null, ; No UV2,
+		null, ; No Bones,
+		null, ; No Weights,
+		IntArray(0, 2, 1, 3, 5, 4, 6, 8, 7, 9, 11, 10, 12, 14, 13, 15, 17, 16, 18, 20, 19, 21, 23, 22, 24, 26, 25, 27, 29, 28, 30, 32, 31, 33, 35, 34, 36, 38, 37, 39, 41, 40, 42, 44, 43, 45, 47, 46, 48, 50, 49, 51, 53, 52, 54, 56, 55, 57, 59, 58, 60, 62, 61, 63, 65, 64, 66, 68, 67, 69, 71, 70, 72, 74, 73, 75, 77, 76, 78, 80, 79, 81, 83, 82, 84, 86, 85, 87, 89, 88, 90, 92, 91, 93, 95, 94, 96, 98, 97, 99, 100, 85, 101, 103, 102, 104, 106, 105, 107, 109, 108, 110, 112, 111, 113, 115, 114, 0, 1, 116, 3, 4, 117, 6, 7, 118, 9, 10, 119, 12, 13, 120, 15, 16, 121, 122, 124, 123, 125, 127, 126, 128, 130, 129, 131, 133, 132, 30, 31, 134, 135, 137, 136, 138, 140, 139, 141, 143, 142, 144, 146, 145, 147, 149, 148, 150, 152, 151, 153, 155, 154)
+	],
+	"morph_arrays":[]
+}
+[node type="Spatial" name="Scene"]
+
+
+[node name="ZC_Lite_Center_Front_Bottom" type="MeshInstance" parent="."]
+
+mesh = SubResource(5)
+visible = true
+transform = Transform(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0)

@@ -1,0 +1,3300 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/OptionsMenu.gd" type="Script" id=2]
+[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/LanguageOptionButton.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/ScreenResolutionVideoOptionsItem.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/VsyncVideoOptionsItem.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/FPSVideoOptionsItem.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/MSAAVideoOptionsItem.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/SSAOVideoOptionsItem.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/ShadowEnabledVideoOptionsItem.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/HDRVideoOptionsItem.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/MouseSensitivityControlsOptionsItem.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/KeyUpControlKeysOptionsItem.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/KeyDownControlKeysOptionsItem.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/KeyLeftControlKeysOptionsItem.gd" type="Script" id=15]
+[ext_resource path="res://Scenes/KeyRightControlKeysOptionsItem.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/KeyFallControlKeysOptionsItem.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/KeyRotateLeftControlKeysOptionsItem.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/KeyRotateRightControlKeysOptionsItem.gd" type="Script" id=19]
+[ext_resource path="res://Scenes/KeyTurnLeftControlKeysOptionsItem.gd" type="Script" id=20]
+[ext_resource path="res://Scenes/KeyTurnRightControlKeysOptionsItem.gd" type="Script" id=21]
+[ext_resource path="res://Scenes/KeyPauseControlKeysOptionsItem.gd" type="Script" id=22]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 48
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 48
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="OptionsMenuGame" type="Control" index="0"]
+
+pause_mode = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Theme", "Visibility" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="." index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.372549 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags", "Visibility" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1913.0
+margin_bottom = 1073.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+alignment = 1
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="InvisibleExitSaveMenuButton" type="Button" parent="PanelContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 475.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionsMenuPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="1"]
+
+editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 475.0
+margin_right = 955.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 473.0
+margin_bottom = 1059.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 15
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 436.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 429.0
+margin_bottom = 1000.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="GameNameLabel" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 422.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "BUTTON_OPTIONS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 332.0
+margin_right = 422.0
+margin_bottom = 660.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 30.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 0
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 34.0
+margin_right = 388.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 354.0
+margin_bottom = 293.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VideoButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 354.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_VIDEO"
+flat = false
+align = 1
+
+[node name="MusicButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 35.0
+margin_right = 354.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_MUSIC"
+flat = false
+align = 1
+
+[node name="ControlsButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 354.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_CONTROLS"
+flat = false
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 297.0
+margin_right = 354.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 2
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_top = 3.0
+margin_right = 301.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "LANGUAGE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 301.0
+margin_top = 3.0
+margin_right = 315.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = ":  "
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LanguageOptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 315.0
+margin_right = 354.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 1
+items = [  ]
+selected = -1
+script = ExtResource( 4 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 392.0
+margin_right = 422.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 0
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 664.0
+margin_right = 422.0
+margin_bottom = 993.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VideoPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="2"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 955.0
+margin_right = 1906.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 944.0
+margin_bottom = 1059.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 15
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 907.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 900.0
+margin_bottom = 1000.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ButtonVideoLabel" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 893.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "BUTTON_VIDEO"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 893.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 125.0
+margin_right = 893.0
+margin_bottom = 934.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 15.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 88.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 92.0
+margin_right = 800.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 701.0
+margin_bottom = 802.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 1
+_sections_unfolded = [ "Scroll", "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 694.0
+margin_bottom = 795.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ScreenResolutionVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SCREEN_RESOLUTION"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 1
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VsyncVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 49.0
+margin_right = 694.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 6 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "VSYNC"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 135.0
+margin_top = 7.0
+margin_right = 211.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="FPSVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 107.0
+margin_right = 694.0
+margin_bottom = 152.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 7 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "FPS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 1
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MSAAVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 156.0
+margin_right = 694.0
+margin_bottom = 201.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 8 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MSAA"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 1
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="SSAOVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 205.0
+margin_right = 694.0
+margin_bottom = 250.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 9 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SSAO"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 1
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ShadowEnabledVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 254.0
+margin_right = 694.0
+margin_bottom = 308.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 10 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SHADOW"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 135.0
+margin_top = 7.0
+margin_right = 211.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+toggle_mode = true
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HDRVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 312.0
+margin_right = 694.0
+margin_bottom = 366.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 11 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "HDR"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 135.0
+margin_top = 7.0
+margin_right = 211.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 804.0
+margin_right = 893.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 938.0
+margin_right = 893.0
+margin_bottom = 993.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MusicPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="3"]
+
+editor/display_folded = true
+visible = false
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 955.0
+margin_right = 1906.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 944.0
+margin_bottom = 1059.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 15
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 907.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 900.0
+margin_bottom = 1000.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="ButtonMusicLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 893.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "BUTTON_MUSIC"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="ControlsPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="4"]
+
+editor/display_folded = true
+visible = false
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 955.0
+margin_right = 1906.0
+margin_bottom = 1066.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 944.0
+margin_bottom = 1059.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 15
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 907.0
+margin_bottom = 1037.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 900.0
+margin_bottom = 1000.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ButtonControlsLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 893.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "BUTTON_CONTROLS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 893.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 125.0
+margin_right = 893.0
+margin_bottom = 934.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 15.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 88.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 92.0
+margin_right = 800.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 701.0
+margin_bottom = 802.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 1
+_sections_unfolded = [ "Scroll", "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 694.0
+margin_bottom = 795.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MouseLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 694.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MOUSE_LABEL"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MouseSensitivityControlsOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 32.0
+margin_right = 694.0
+margin_bottom = 71.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 12 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MOUSE_SENSITIVITY"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = 0.05
+max_value = 6.0
+step = 0.05
+page = 0.0
+value = 1.1
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 30
+ticks_on_borders = false
+focus_mode = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ViewControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 75.0
+margin_right = 694.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_VIEW"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "MOUSE_LABEL"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ZoomingControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 124.0
+margin_right = 694.0
+margin_bottom = 169.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_ZOOM"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "MOUSE_WHEEL"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 173.0
+margin_right = 694.0
+margin_bottom = 181.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ControlKeysLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 185.0
+margin_right = 694.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CONTROL_KEYS"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 217.0
+margin_right = 694.0
+margin_bottom = 795.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyUpControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 13 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_UP"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyDownControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 49.0
+margin_right = 694.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 14 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_DOWN"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 98.0
+margin_right = 694.0
+margin_bottom = 143.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 15 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_LEFT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 147.0
+margin_right = 694.0
+margin_bottom = 192.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 16 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_RIGHT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyFallControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="4"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 196.0
+margin_right = 694.0
+margin_bottom = 241.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 17 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_ACCELERATION_OF_FALL"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyRotateLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 245.0
+margin_right = 694.0
+margin_bottom = 290.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 18 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_ROTATE_LEFT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyRotateRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="6"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 294.0
+margin_right = 694.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 19 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_ROTATE_RIGHT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyTurnLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="7"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 343.0
+margin_right = 694.0
+margin_bottom = 388.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 20 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_TURN_LEFT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyTurnRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="8"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 392.0
+margin_right = 694.0
+margin_bottom = 437.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 21 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_TURN_RIGHT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="KeyPauseControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="9"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 441.0
+margin_right = 694.0
+margin_bottom = 486.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 22 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 347.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KEY_PAUSE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_right = 694.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 340.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 804.0
+margin_right = 893.0
+margin_bottom = 809.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 938.0
+margin_right = 893.0
+margin_bottom = 993.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/InvisibleExitSaveMenuButton" to="." method="_on_InvisibleExitSaveMenuButton_pressed"]
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/VideoButton" to="." method="_on_VideoButton_pressed"]
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/MusicButton" to="." method="_on_MusicButton_pressed"]
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/ControlsButton" to="." method="_on_ControlsButton_pressed"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_OptionButton_item_selected"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" method="_on_CheckButton_toggled"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_OptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_OptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_OptionButton_item_selected"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" method="_on_CheckButton_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/HDRVideoOptionsItem" method="_on_CheckButton_toggled"]
+
+[connection signal="value_changed" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2/HSlider" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" method="_on_HSlider_value_changed"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" method="_on_Button_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" method="_on_Button_toggled"]
+
+

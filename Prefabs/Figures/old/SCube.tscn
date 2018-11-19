@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Figures/Figure.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Figures/SingleCube.tscn" type="PackedScene" id=2]
+
+[node name="SCube" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+can_y_rotation = true
+
+[node name="Poses" type="Spatial" parent="." index="0"]
+
+[node name="Vertical" type="Spatial" parent="Poses" index="0"]
+
+editor/display_folded = true
+visible = false
+
+[node name="SingleCube" parent="Poses/Vertical" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/Vertical" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SingleCube3" parent="Poses/Vertical" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0 )
+
+[node name="SingleCube4" parent="Poses/Vertical" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0 )
+
+[node name="Horizontal" type="Spatial" parent="Poses" index="1"]
+
+editor/display_folded = true
+
+[node name="SingleCube" parent="Poses/Horizontal" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/Horizontal" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[node name="SingleCube3" parent="Poses/Horizontal" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SingleCube4" parent="Poses/Horizontal" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+
+

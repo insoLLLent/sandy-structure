@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Figures/Figure.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Figures/SingleCube.tscn" type="PackedScene" id=2]
+
+[node name="TCube" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+can_y_rotation = true
+
+[node name="Poses" type="Spatial" parent="." index="0"]
+
+[node name="First" type="Spatial" parent="Poses" index="0"]
+
+editor/display_folded = true
+visible = false
+
+[node name="SingleCube" parent="Poses/First" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/First" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[node name="SingleCube3" parent="Poses/First" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="SingleCube4" parent="Poses/First" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="Second" type="Spatial" parent="Poses" index="1"]
+
+editor/display_folded = true
+visible = false
+
+[node name="SingleCube" parent="Poses/Second" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/Second" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SingleCube3" parent="Poses/Second" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="SingleCube4" parent="Poses/Second" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+
+[node name="Third" type="Spatial" parent="Poses" index="2"]
+
+editor/display_folded = true
+visible = false
+
+[node name="SingleCube" parent="Poses/Third" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/Third" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SingleCube3" parent="Poses/Third" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0 )
+
+[node name="SingleCube4" parent="Poses/Third" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+
+[node name="Fourth" type="Spatial" parent="Poses" index="3"]
+
+[node name="SingleCube" parent="Poses/Fourth" index="0" instance=ExtResource( 2 )]
+
+[node name="SingleCube2" parent="Poses/Fourth" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SingleCube3" parent="Poses/Fourth" index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="SingleCube4" parent="Poses/Fourth" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0 )
+
+

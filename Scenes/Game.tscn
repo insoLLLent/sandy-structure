@@ -1,0 +1,1048 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
+[ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/GameHUD.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=4]
+[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/DeadEndScreen.gd" type="Script" id=7]
+[ext_resource path="res://Environment/CameraPlayerEnvironment.tres" type="Environment" id=8]
+[ext_resource path="res://Scripts/CameraPlayer.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Location.gd" type="Script" id=10]
+[ext_resource path="res://Prefabs/Platform_02.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/CameraLookAtPosition.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/GameZone.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/FallZone.gd" type="Script" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 36
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0, 0, 0, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0, 0, 0, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Expand Margin" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 96
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "OptionsMenu_hide"
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("OptionsMenuGame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OptionsMenuGame:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "OptionsMenu_show"
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("OptionsMenuGame:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OptionsMenuGame:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("GUI/PauseMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("GUI/PauseMenu")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "unpaused"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CameraPlayer:environment:adjustment_saturation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.5, 1.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("GUI/PauseMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CameraPlayer:environment:adjustment_saturation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.5 ]
+}
+
+[sub_resource type="Animation" id=8]
+
+length = 3.0
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("GUI/DeadEndScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("GUI/DeadEndScreen")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "goto_main_menu"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GUI/DeadEndScreen:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+
+[node name="Game" type="Node"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="GUI" type="CanvasLayer" parent="." index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="GameHUD" type="Control" parent="GUI" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Theme" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/GameHUD" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 12
+custom_constants/margin_top = 12
+custom_constants/margin_left = 12
+custom_constants/margin_bottom = 12
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/GameHUD/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 1908.0
+margin_bottom = 1068.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="ScoreContainer" type="HBoxContainer" parent="GUI/GameHUD/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1896.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="GUI/GameHUD/MarginContainer/VBoxContainer/ScoreContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1759.0
+margin_right = 1872.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "GAME_SCORE"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ColonLabel" type="Label" parent="GUI/GameHUD/MarginContainer/VBoxContainer/ScoreContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1872.0
+margin_right = 1886.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = ":  "
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CounterLabel" type="Label" parent="GUI/GameHUD/MarginContainer/VBoxContainer/ScoreContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1886.0
+margin_right = 1896.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "0"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TestFPS" type="HBoxContainer" parent="GUI/GameHUD/MarginContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 1896.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+alignment = 2
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[node name="Label" type="Label" parent="GUI/GameHUD/MarginContainer/VBoxContainer/TestFPS" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1841.0
+margin_right = 1882.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "FPS: "
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="FPSLabel" type="Label" parent="GUI/GameHUD/MarginContainer/VBoxContainer/TestFPS" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1886.0
+margin_right = 1896.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "0"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="PauseMenu" type="Control" parent="GUI" index="1"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Pause", "Theme", "Visibility" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/PauseMenu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="GUI/PauseMenu/HBoxContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 477.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 470.0
+margin_bottom = 1073.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 15
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer" index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 433.0
+margin_bottom = 1051.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 426.0
+margin_bottom = 1014.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="PauseLabelTitle" type="Label" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 419.0
+margin_bottom = 333.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "LABEL_PAUSE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 337.0
+margin_right = 419.0
+margin_bottom = 670.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 30.0
+margin_bottom = 333.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 0
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 34.0
+margin_right = 385.0
+margin_bottom = 333.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ResumeButton" type="Button" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 351.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_RESUME"
+flat = false
+align = 1
+
+[node name="OptionsButton" type="Button" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 35.0
+margin_right = 351.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_OPTIONS"
+flat = false
+align = 1
+
+[node name="SaveAndExitButton" type="Button" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 351.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "BUTTON_SAVE_AND_EXIT"
+flat = false
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 389.0
+margin_right = 419.0
+margin_bottom = 333.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 0
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 674.0
+margin_right = 419.0
+margin_bottom = 1007.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/PauseMenu/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 481.0
+margin_right = 958.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="GUI/PauseMenu/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 962.0
+margin_right = 1439.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer3" type="CenterContainer" parent="GUI/PauseMenu/HBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1443.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="OptionsMenuGame" parent="GUI" index="2" instance=ExtResource( 6 )]
+
+visible = false
+
+[node name="ExitBG" type="Control" parent="GUI" index="3"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Theme" ]
+
+[node name="Panel" type="Panel" parent="GUI/ExitBG" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags", "Visibility" ]
+
+[node name="DeadEndScreen" type="Control" parent="GUI" index="4"]
+
+pause_mode = 2
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 7 )
+_sections_unfolded = [ "Pause", "Size Flags", "Visibility" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="GUI/DeadEndScreen" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+_sections_unfolded = [ "Size Flags", "custom_styles" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/DeadEndScreen/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 714.0
+margin_top = 476.0
+margin_right = 1205.0
+margin_bottom = 604.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "DEAD_END"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags", "custom_fonts" ]
+
+[node name="animation_menu" type="AnimationPlayer" parent="GUI" index="5"]
+
+pause_mode = 2
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/OptionsMenu_hide = SubResource( 4 )
+anims/OptionsMenu_show = SubResource( 5 )
+blend_times = [  ]
+_sections_unfolded = [ "Pause" ]
+
+[node name="PauseMenuAnimation" type="AnimationPlayer" parent="." index="1"]
+
+pause_mode = 2
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/hide = SubResource( 6 )
+anims/show = SubResource( 7 )
+blend_times = [  ]
+_sections_unfolded = [ "Pause" ]
+
+[node name="DeadEndAnimation" type="AnimationPlayer" parent="." index="2"]
+
+pause_mode = 2
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DeadEndScreen_show = SubResource( 8 )
+blend_times = [  ]
+_sections_unfolded = [ "Pause" ]
+
+[node name="CameraPlayer" type="Camera" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 0.739974, 0.672636, 0, -0.672636, 0.739974, 6, 13, 15 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = ExtResource( 8 )
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 60.0
+size = 1.0
+near = 0.05
+far = 500.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+cameraLookAtObjectPath = NodePath("../CameraLookAtPosition")
+
+[node name="Lighting" type="Spatial" parent="." index="4"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Lighting" index="0" groups=[
+"illuminant",
+]]
+
+transform = Transform( 0.999999, 0, 0, 0, -4.37113e-008, 1, 0, -0.999999, -4.37114e-008, 30, 6.5, 20 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+light_negative = false
+light_specular = 1.0
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.5
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = true
+directional_shadow_normal_bias = 0.4
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+_sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Transform" ]
+
+[node name="Location" type="Spatial" parent="." index="5"]
+
+script = ExtResource( 10 )
+
+[node name="Platform_02" parent="." index="6" instance=ExtResource( 11 )]
+
+[node name="CameraLookAtPosition" type="Position3D" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 10, 4.5 )
+script = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="GameZone" type="Spatial" parent="." index="8"]
+
+script = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FallZone" type="Spatial" parent="." index="9"]
+
+script = ExtResource( 14 )
+
+[node name="TimerFall" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = false
+
+[connection signal="update_location" from="." to="Location" method="_on_Game_update_location"]
+
+[connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
+
+[connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ResumeButton" to="GUI/PauseMenu" method="_on_ResumeButton_pressed"]
+
+[connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/OptionsButton" to="GUI/PauseMenu" method="_on_OptionsButton_pressed"]
+
+[connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/SaveAndExitButton" to="GUI/PauseMenu" method="_on_SaveAndExitButton_pressed"]
+
+[connection signal="update_score_sig" from="GameZone" to="." method="_on_GameZone_update_score_sig"]
+
+[connection signal="timeout" from="TimerFall" to="." method="_on_TimerFall_timeout"]
+
+
