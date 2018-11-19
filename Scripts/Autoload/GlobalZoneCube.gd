@@ -8,6 +8,14 @@ enum {
 	SINGLECOLUMN_FRONT_BOTTOM,
 	SINGLECOLUMN_FRONT_CENTER,
 	SINGLECOLUMN_FRONT_TOP,
+	
+	SINGLERECUMBENT_BACK,
+	SINGLERECUMBENT_CENTER,
+	SINGLERECUMBENT_FRONT,
+	SINGLERECUMBENTROT_CENTER,
+	SINGLERECUMBENTROT_LEFT,
+	SINGLERECUMBENTROT_RIGHT,
+	
 	SINGLE_BACK_BOTTOM,
 	SINGLE_BACK_CENTER,
 	SINGLE_BACK_TOP,
@@ -85,6 +93,14 @@ func load_lite():
 	cubes[SINGLECOLUMN_FRONT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleColumn_Front_Center.tscn")
 	cubes[SINGLECOLUMN_FRONT_TOP] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleColumn_Front_Top.tscn")
 	
+	cubes[SINGLERECUMBENT_BACK] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Back.tscn")
+	cubes[SINGLERECUMBENT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Center.tscn")
+	cubes[SINGLERECUMBENT_FRONT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Front.tscn")
+	
+	cubes[SINGLERECUMBENTROT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Center.tscn")
+	cubes[SINGLERECUMBENTROT_LEFT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Left.tscn")
+	cubes[SINGLERECUMBENTROT_RIGHT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Right.tscn")
+	
 	cubes[SINGLE_BACK_BOTTOM] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_Single_Back_Bottom.tscn")
 	cubes[SINGLE_BACK_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_Single_Back_Center.tscn")
 	cubes[SINGLE_BACK_TOP] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_Single_Back_Top.tscn")
@@ -152,6 +168,14 @@ func load_dunes_01():
 	cubes[SINGLECOLUMN_FRONT_BOTTOM] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleColumn_Front_Bottom.tscn")
 	cubes[SINGLECOLUMN_FRONT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleColumn_Front_Center.tscn")
 	cubes[SINGLECOLUMN_FRONT_TOP] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleColumn_Front_Top.tscn")
+	
+	cubes[SINGLERECUMBENT_BACK] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Back.tscn")
+	cubes[SINGLERECUMBENT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Center.tscn")
+	cubes[SINGLERECUMBENT_FRONT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbent_Front.tscn")
+	
+	cubes[SINGLERECUMBENTROT_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Center.tscn")
+	cubes[SINGLERECUMBENTROT_LEFT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Left.tscn")
+	cubes[SINGLERECUMBENTROT_RIGHT] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_SingleRecumbentRot_Right.tscn")
 	
 	cubes[SINGLE_BACK_BOTTOM] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_Single_Back_Bottom.tscn")
 	cubes[SINGLE_BACK_CENTER] = load("res://Prefabs/ZoneCubes/Lite/ZC_Lite_Single_Back_Center.tscn")

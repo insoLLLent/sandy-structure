@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/ZoneCubes/Lite/Materials/ZC_Lite_Bottom_Mat.tres" type="Material" id=3]
 [ext_resource path="res://Prefabs/ZoneCubes/Lite/Materials/ZC_Lite_Top_Mat.tres" type="Material" id=4]
 
-[node name="ZC_Lite_Single" index="0" instance=ExtResource( 1 )]
+[node name="ZC_Lite_Single" instance=ExtResource( 1 )]
 
 [node name="ZC_Lite_Single" parent="." index="0"]
 
