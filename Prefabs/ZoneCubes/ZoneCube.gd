@@ -106,8 +106,20 @@ func _free_current_node():
 			current_node = null
 
 
-## long if
 func _update_current_type():
+	if top_cube == null:
+		if bottom_cube == null:
+			current_type = GlobalZoneCube.SINGLE
+		else:
+			current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_TOP
+	else:
+		if bottom_cube == null:
+			current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_BOTTOM
+		else:
+			current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_CENTER
+
+
+"""func _update_current_type():
 	if top_cube == null:
 		if bottom_cube == null:
 			if right_cube == null:
@@ -118,123 +130,125 @@ func _update_current_type():
 							current_type = GlobalZoneCube.SINGLE
 						else:
 							# 000001
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENT_FRONT
 					else:
 						if back_cube == null:
 							# 000010
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENT_BACK
 						else:
 							# 000011
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENT_CENTER
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 000100
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENTROT_RIGHT
 						else:
 							# 000101
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER
 					else:
 						if back_cube == null:
 							# 000110
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER
 						else:
 							# 000111
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENT_CENTER
 			else:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 001000
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENTROT_LEFT
 						else:
 							# 001001
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER
 					else:
 						if back_cube == null:
 							# 001010
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER
 						else:
 							# 001011
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENT_CENTER
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 001100
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENTROT_CENTER
 						else:
 							# 001101
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENTROT_CENTER
 					else:
 						if back_cube == null:
 							# 001110
-							pass
+							current_type = GlobalZoneCube.SINGLERECUMBENTROT_CENTER
 						else:
 							# 001111
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER
+							# or ->  current_type = GlobalZoneCube.SINGLERECUMBENT_CENTER
+							# or ->  current_type = GlobalZoneCube.SINGLERECUMBENTROT_CENTER
 		else:
 			if right_cube == null:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 010000
-							pass
+							current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_TOP
 						else:
 							# 010001
-							pass
+							current_type = GlobalZoneCube.SINGLE_FRONT_TOP
 					else:
 						if back_cube == null:
 							# 010010
-							pass
+							current_type = GlobalZoneCube.SINGLE_BACK_TOP
 						else:
 							# 010011
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER_TOP
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 010100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_FRONT_TOP
 						else:
 							# 010101
-							pass
+							current_type = GlobalZoneCube.RIGHT_FRONT_TOP
 					else:
 						if back_cube == null:
 							# 010110
-							pass
+							current_type = GlobalZoneCube.RIGHT_BACK_TOP
 						else:
 							# 010111
-							pass
+							current_type = GlobalZoneCube.RIGHT_CENTER_TOP
 			else:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 011000
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_BACK_TOP
 						else:
 							# 011001
-							pass
+							current_type = GlobalZoneCube.LEFT_FRONT_TOP
 					else:
 						if back_cube == null:
 							# 011010
-							pass
+							current_type = GlobalZoneCube.LEFT_BACK_TOP
 						else:
 							# 011011
-							pass
+							current_type = GlobalZoneCube.LEFT_CENTER_TOP
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 011100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_CENTER_TOP
 						else:
 							# 011101
-							pass
+							current_type = GlobalZoneCube.CENTER_FRONT_TOP
 					else:
 						if back_cube == null:
 							# 011110
-							pass
+							current_type = GlobalZoneCube.CENTER_BACK_TOP
 						else:
 							# 011111
-							pass
+							current_type = GlobalZoneCube.CENTER_CENTER_TOP
 	else:
 		if bottom_cube == null:
 			if right_cube == null:
@@ -242,124 +256,124 @@ func _update_current_type():
 					if front_cube == null:
 						if back_cube == null:
 							# 100000
-							pass
+							current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_BOTTOM
 						else:
 							# 100001
-							pass
+							current_type = GlobalZoneCube.SINGLE_FRONT_BOTTOM
 					else:
 						if back_cube == null:
 							# 100010
-							pass
+							current_type = GlobalZoneCube.SINGLE_BACK_BOTTOM
 						else:
 							# 100011
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER_BOTTOM
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 100100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_FRONT_BOTTOM
 						else:
 							# 100101
-							pass
+							current_type = GlobalZoneCube.RIGHT_FRONT_BOTTOM
 					else:
 						if back_cube == null:
 							# 100110
-							pass
+							current_type = GlobalZoneCube.RIGHT_BACK_BOTTOM
 						else:
 							# 100111
-							pass
+							current_type = GlobalZoneCube.RIGHT_CENTER_BOTTOM
 			else:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 101000
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_BACK_BOTTOM
 						else:
 							# 101001
-							pass
+							current_type = GlobalZoneCube.LEFT_FRONT_BOTTOM
 					else:
 						if back_cube == null:
 							# 101010
-							pass
+							current_type = GlobalZoneCube.LEFT_BACK_BOTTOM
 						else:
 							# 101011
-							pass
+							current_type = GlobalZoneCube.LEFT_CENTER_BOTTOM
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 101100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_CENTER_BOTTOM
 						else:
 							# 101101
-							pass
+							current_type = GlobalZoneCube.CENTER_FRONT_BOTTOM
 					else:
 						if back_cube == null:
 							# 101110
-							pass
+							current_type = GlobalZoneCube.CENTER_BACK_BOTTOM
 						else:
 							# 101111
-							pass
+							current_type = GlobalZoneCube.CENTER_CENTER_BOTTOM
 		else:
 			if right_cube == null:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 110000
-							pass
+							current_type = GlobalZoneCube.SINGLECOLUMN_FRONT_CENTER
 						else:
 							# 110001
-							pass
+							current_type = GlobalZoneCube.SINGLE_FRONT_CENTER
 					else:
 						if back_cube == null:
 							# 110010
-							pass
+							current_type = GlobalZoneCube.SINGLE_BACK_CENTER
 						else:
 							# 110011
-							pass
+							current_type = GlobalZoneCube.SINGLE_CENTER_CENTER
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 110100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_FRONT_CENTER
 						else:
 							# 110101
-							pass
+							current_type = GlobalZoneCube.RIGHT_FRONT_CENTER
 					else:
 						if back_cube == null:
 							# 110110
-							pass
+							current_type = GlobalZoneCube.RIGHT_BACK_CENTER
 						else:
 							# 110111
-							pass
+							current_type = GlobalZoneCube.RIGHT_CENTER_CENTER
 			else:
 				if left_cube == null:
 					if front_cube == null:
 						if back_cube == null:
 							# 111000
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_BACK_CENTER
 						else:
 							# 111001
-							pass
+							current_type = GlobalZoneCube.LEFT_FRONT_CENTER
 					else:
 						if back_cube == null:
 							# 111010
-							pass
+							current_type = GlobalZoneCube.LEFT_BACK_CENTER
 						else:
 							# 111011
-							pass
+							current_type = GlobalZoneCube.LEFT_CENTER_CENTER
 				else:
 					if front_cube == null:
 						if back_cube == null:
 							# 111100
-							pass
+							current_type = GlobalZoneCube.SINGLEROT_CENTER_CENTER
 						else:
 							# 111101
-							pass
+							current_type = GlobalZoneCube.CENTER_FRONT_CENTER
 					else:
 						if back_cube == null:
 							# 111110
-							pass
+							current_type = GlobalZoneCube.CENTER_BACK_CENTER
 						else:
 							# 111111
-							pass
-
+							current_type = GlobalZoneCube.CENTER_CENTER_CENTER
+"""
