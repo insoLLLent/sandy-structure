@@ -1,7 +1,7 @@
 extends Spatial
 
 
-var fillerCubePath = preload("res://Prefabs/FallZoneCube.tscn")
+var fillerCubePath = preload("res://Prefabs/FallZoneCube/FallZoneCube.tscn")
 
 # представление зоны подсветки
 var current_zone = []

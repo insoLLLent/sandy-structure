@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
@@ -10,10 +10,9 @@
 [ext_resource path="res://Environment/CameraPlayerEnvironment.tres" type="Environment" id=8]
 [ext_resource path="res://Scripts/CameraPlayer.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Location.gd" type="Script" id=10]
-[ext_resource path="res://Prefabs/Platform_02.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scripts/CameraLookAtPosition.gd" type="Script" id=12]
-[ext_resource path="res://Scripts/GameZone.gd" type="Script" id=13]
-[ext_resource path="res://Scripts/FallZone.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/CameraLookAtPosition.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/GameZone.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/FallZone.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -969,7 +968,7 @@ near = 0.05
 far = 500.0
 script = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
-cameraLookAtObjectPath = NodePath("../CameraLookAtPosition")
+cameraLookAtObjectPath = NodePath("../LookAtCameraPosition")
 
 [node name="Lighting" type="Spatial" parent="." index="4"]
 
@@ -1007,24 +1006,22 @@ _sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Transform" ]
 
 script = ExtResource( 10 )
 
-[node name="Platform_02" parent="." index="6" instance=ExtResource( 11 )]
-
-[node name="CameraLookAtPosition" type="Position3D" parent="." index="7"]
+[node name="LookAtCameraPosition" type="Position3D" parent="." index="6"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 10, 4.5 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="GameZone" type="Spatial" parent="." index="7"]
+
 script = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="GameZone" type="Spatial" parent="." index="8"]
+[node name="FallZone" type="Spatial" parent="." index="8"]
 
 script = ExtResource( 13 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="FallZone" type="Spatial" parent="." index="9"]
-
-script = ExtResource( 14 )
-
-[node name="TimerFall" type="Timer" parent="." index="10"]
+[node name="TimerFall" type="Timer" parent="." index="9"]
 
 process_mode = 1
 wait_time = 0.2

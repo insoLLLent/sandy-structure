@@ -4,7 +4,7 @@ extends Spatial
 signal update_score_sig(score, bonus)
 
 
-var fillerCubePath = preload("res://Prefabs/ZoneCube.tscn")
+var fillerCubePath = preload("res://Prefabs/ZoneCubes/ZoneCube.tscn")
 
 # представление игровой зоны
 var current_zone = []
