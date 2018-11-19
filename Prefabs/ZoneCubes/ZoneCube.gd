@@ -96,6 +96,15 @@ func _update_current_node():
 	current_node = GlobalZoneCube.cubes[current_type].instance()
 
 
+func _free_current_node():
+	if GlobalFunctions.exists_node(current_node):
+		if current_node != null and current_node.has_method("queue_free"):
+			current_node.queue_free()
+			current_type = GlobalZoneCube.EMPTY
+			current_node = null
+
+
+## long if
 func _update_current_type():
 	if (top_cube == null) and (bottom_cube == null) and (right_cube == null) and (left_cube == null) and (front_cube == null) and (back_cube == null):
 		current_type = GlobalZoneCube.SINGLE
@@ -103,11 +112,4 @@ func _update_current_type():
 		current_type = GlobalZoneCube.SINGLE
 
 
-
-func _free_current_node():
-	if GlobalFunctions.exists_node(current_node):
-		if current_node != null and current_node.has_method("queue_free"):
-			current_node.queue_free()
-			current_type = GlobalZoneCube.EMPTY
-			current_node = null
 
