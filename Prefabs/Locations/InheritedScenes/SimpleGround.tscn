@@ -59,6 +59,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 [node name="SimpleGround" parent="." index="0"]
 
 material_override = SubResource( 1 )
+use_in_baked_light = true
 _sections_unfolded = [ "Geometry" ]
 
 
