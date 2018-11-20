@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
@@ -238,6 +238,20 @@ tracks/2/keys = {
 "update": 2,
 "values": [ true ]
 }
+
+[sub_resource type="GIProbeData" id=9]
+
+bounds = AABB( -7, -16, -7, 14, 32, 14 )
+cell_size = 0.25
+to_cell_xform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 28, 64, 28 )
+dynamic_data = PoolIntArray( 0, 8, 64, 128, 64, 1, 0, 0, 0, 0, 386793952, 0, 0, 0, 47165728, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_range = 4
+energy = 1.0
+bias = 1.5
+normal_bias = 0.0
+propagation = 0.7
+interior = false
+compress = false
 
 [node name="Game" type="Node" index="0"]
 
@@ -979,8 +993,8 @@ cameraLookAtObjectPath = NodePath("../LookAtCameraPosition")
 transform = Transform( 0.999999, 0, 0, 0, -4.37113e-008, 1, 0, -0.999999, -4.37114e-008, 30, 6.5, 20 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 2.0
-light_indirect_energy = 2.0
+light_energy = 1.0
+light_indirect_energy = 1.0
 light_negative = false
 light_specular = 1.0
 light_bake_mode = 1
@@ -1001,6 +1015,22 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Transform" ]
+
+[node name="GIProbe" type="GIProbe" parent="Lighting" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 15, 6 )
+layers = 1
+subdiv = 1
+extents = Vector3( 7, 16, 7 )
+dynamic_range = 4
+energy = 1.0
+propagation = 0.7
+bias = 1.5
+normal_bias = 0.0
+interior = false
+compress = false
+data = SubResource( 9 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Location" type="Spatial" parent="." index="5"]
 

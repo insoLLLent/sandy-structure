@@ -42,5 +42,9 @@ func load_lite():
 
 
 func load_dunes_01():
-	load_lite()
+	cubes[SINGLE] = load("res://Prefabs/ZoneCubes/Dunes_01/ZC_Dunes_01_Single.tscn")
+	
+	cubes[SINGLECOLUMN_FRONT_BOTTOM] = load("res://Prefabs/ZoneCubes/Dunes_01/ZC_Dunes_01_SingleColumn_Front_Bottom.tscn")
+	cubes[SINGLECOLUMN_FRONT_CENTER] = load("res://Prefabs/ZoneCubes/Dunes_01/ZC_Dunes_01_SingleColumn_Front_Center.tscn")
+	cubes[SINGLECOLUMN_FRONT_TOP] = load("res://Prefabs/ZoneCubes/Dunes_01/ZC_Dunes_01_SingleColumn_Front_Top.tscn")
 
