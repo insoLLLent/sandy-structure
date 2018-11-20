@@ -59,7 +59,6 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 [node name="Platform_02" parent="." index="0"]
 
 cast_shadow = 2
-use_in_baked_light = true
 material/0 = SubResource( 1 )
 _sections_unfolded = [ "Geometry", "material" ]
 

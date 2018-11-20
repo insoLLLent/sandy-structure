@@ -10,8 +10,6 @@
 [node name="ZC_Lite_Single" parent="." index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
-cast_shadow = 2
-use_in_baked_light = true
 material/0 = ExtResource( 2 )
 material/1 = ExtResource( 3 )
 material/2 = ExtResource( 4 )

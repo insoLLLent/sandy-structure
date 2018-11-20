@@ -20,7 +20,6 @@ shader = ExtResource( 3 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 cast_shadow = 2
-use_in_baked_light = true
 material/1 = SubResource( 1 )
 material/3 = SubResource( 2 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
