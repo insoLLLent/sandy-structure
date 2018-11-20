@@ -21,7 +21,7 @@ var current_hdr = true
 var current_vsync = false
 var current_fps = GlobalData.FPS_DEFAULT
 var current_msaa = Viewport.MSAA_8X
-var current_ssao = GlobalData.EnvironmentSSAO.LOW
+var current_ssao = GlobalData.EnvironmentSSAO.DISABLED
 var current_shadow_enabled = true
 
 # controls
