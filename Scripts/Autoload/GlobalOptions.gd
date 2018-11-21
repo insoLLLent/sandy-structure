@@ -19,7 +19,7 @@ var current_quality = GlobalData.QualitySettings.MEDIUM
 var current_screen_size = GlobalData.SCREEN_SIZES[GlobalData.SCREEN_SIZE_AUTO]
 var current_language = GlobalData.L18N_AUTO
 var current_hdr = true
-var current_vsync = false
+var current_vsync = true
 var current_fps = GlobalData.FPS_DEFAULT
 var current_msaa = Viewport.MSAA_8X
 var current_ssao = GlobalData.EnvironmentSSAO.DISABLED
@@ -285,7 +285,7 @@ func set_quality_low():
 	settings_shadow_enabled(false)
 
 func set_quality_medium():
-	settings_vsync(false)
+	settings_vsync(true)
 	settings_msaa(Viewport.MSAA_8X)
 	settings_ssao(GlobalData.EnvironmentSSAO.DISABLED)
 	settings_shadow_enabled(true)
