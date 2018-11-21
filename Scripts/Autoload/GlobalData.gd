@@ -70,6 +70,7 @@ const MAIN_MENU_SCENE_RES = "res://Scenes/MainMenu.tscn"
 const GAME_SCENE_RES = "res://Scenes/Game.tscn"
 
 
+enum QualitySettings { CUSTOM = -1, LOW = 0, MEDIUM = 1, HIGH = 2 }
 enum EnvironmentSSAO { DISABLED = -1, LOW = 0, MEDIUM = 1, HIGH = 2 }
 
 # группа объектов освещения, которым можно отключить тень

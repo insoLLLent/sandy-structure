@@ -57,3 +57,8 @@ LOCATION,Карта,Location
 LOCATION_RANDOM,Случайная,Random
 LOCATION_LITE,Легкая,Lite
 LOCATION_DUNES_01,Дюны 1,Dunes 1
+QUALITY_SETTINGS,Качество,Quality
+QUALITY_CUSTOM,Пользовательский,Custom
+QUALITY_LOW,Низкий,Low
+QUALITY_MEDIUM,Средний,Medium
+QUALITY_HIGH,Высокий,High

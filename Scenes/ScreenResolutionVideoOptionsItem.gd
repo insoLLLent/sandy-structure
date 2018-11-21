@@ -17,6 +17,9 @@ func _on_OptionButton_item_selected(ID):
 	   new_screen_size == GlobalData.SCREEN_SIZES[GlobalData.SCREEN_SIZE_AUTO]:
 		GlobalOptions.settings_screen_size(new_screen_size)
 		update_items()
+		
+		GlobalOptions.settings_quality(GlobalData.QualitySettings.CUSTOM)
+		$"../QualitySettingsVideoOptionsItem".update_items()
 
 
 # реакция на изменение языка

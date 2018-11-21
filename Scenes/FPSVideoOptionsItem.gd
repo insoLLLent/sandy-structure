@@ -19,6 +19,9 @@ func _on_OptionButton_item_selected(ID):
 		GlobalOptions.settings_fps(new_fps)
 	
 	update_items()
+	
+	GlobalOptions.settings_quality(GlobalData.QualitySettings.CUSTOM)
+	$"../QualitySettingsVideoOptionsItem".update_items()
 
 
 # реакция на изменение языка

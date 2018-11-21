@@ -16,6 +16,9 @@ func _on_OptionButton_item_selected(ID):
 	if GlobalOptions.current_msaa != new_msaa:
 		GlobalOptions.settings_msaa(new_msaa)
 		update_items()
+		
+		GlobalOptions.settings_quality(GlobalData.QualitySettings.CUSTOM)
+		$"../QualitySettingsVideoOptionsItem".update_items()
 
 
 # реакция на изменение языка

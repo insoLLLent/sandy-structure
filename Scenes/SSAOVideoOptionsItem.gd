@@ -16,6 +16,9 @@ func _on_OptionButton_item_selected(ID):
 	if GlobalOptions.current_ssao != new_ssao:
 		GlobalOptions.settings_ssao(new_ssao)
 		update_items()
+		
+		GlobalOptions.settings_quality(GlobalData.QualitySettings.CUSTOM)
+		$"../QualitySettingsVideoOptionsItem".update_items()
 
 
 # реакция на изменение языка

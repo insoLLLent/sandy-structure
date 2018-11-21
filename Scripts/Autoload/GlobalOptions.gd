@@ -15,6 +15,7 @@ var list_environments_for_options = [
 
 # Значения настроек по-умолчанию
 # Video
+var current_quality = GlobalData.QualitySettings.MEDIUM
 var current_screen_size = GlobalData.SCREEN_SIZES[GlobalData.SCREEN_SIZE_AUTO]
 var current_language = GlobalData.L18N_AUTO
 var current_hdr = true
@@ -69,7 +70,7 @@ func is_valid_data(data):
 	   typeof(data["options"]["video"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["music"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["controls"]) == TYPE_DICTIONARY and \
-	   data["options"]["video"].has_all(["screen_size", "hdr", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
+	   data["options"]["video"].has_all(["quality", "screen_size", "hdr", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
 	   data["options"]["controls"].has_all(["mouse_sensitivity", "control_keys"]) and \
 	   typeof(data["options"]["controls"]["control_keys"]) == TYPE_DICTIONARY and \
 	   data["options"]["controls"]["control_keys"].has_all(["up", "down", "left", "right", "fall", "rot_y_left", "rot_y_right", "change_pose_prev", "change_pose_next", "pause"]):
@@ -84,6 +85,7 @@ func get_save_data():
 		"language": current_language,
 		"options": {
 			"video": {
+				"quality": current_quality,
 				"screen_size": current_screen_size,
 				"hdr": current_hdr,
 				"vsync": current_vsync,
@@ -123,6 +125,7 @@ func set_settings_by_options_file():
 		return
 	
 	#video
+	current_quality = data.options.video.quality
 	current_language = data.language
 	current_screen_size = data.options.video.screen_size
 	current_hdr = data.options.video.hdr
@@ -205,6 +208,7 @@ func init_settings():
 
 
 func init_video_settings():
+	settings_quality()
 	settings_screen_size()
 	settings_language()
 	settings_vsync()
@@ -256,6 +260,43 @@ func settings_language(lang = null):
 	
 	save_if_param_not_null(lang)
 
+
+########### quality ###########
+func settings_quality(quality = null):
+	if quality != null:
+		current_quality = quality
+	
+	has_changed = true
+	
+	match current_quality:
+		GlobalData.QualitySettings.LOW:
+			set_quality_low()
+		GlobalData.QualitySettings.MEDIUM:
+			set_quality_medium()
+		GlobalData.QualitySettings.HIGH:
+			set_quality_high()
+	
+	save_if_param_not_null(quality)
+
+func set_quality_low():
+	settings_vsync(false)
+	settings_msaa(Viewport.MSAA_2X)
+	settings_ssao(GlobalData.EnvironmentSSAO.DISABLED)
+	settings_shadow_enabled(false)
+
+func set_quality_medium():
+	settings_vsync(false)
+	settings_msaa(Viewport.MSAA_8X)
+	settings_ssao(GlobalData.EnvironmentSSAO.DISABLED)
+	settings_shadow_enabled(true)
+
+func set_quality_high():
+	settings_vsync(true)
+	settings_msaa(Viewport.MSAA_16X)
+	settings_ssao(GlobalData.EnvironmentSSAO.LOW)
+	settings_shadow_enabled(true)
+
+###############################
 
 func settings_screen_size(screen_size = null):
 	if screen_size != null:
