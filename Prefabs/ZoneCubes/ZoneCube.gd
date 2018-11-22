@@ -3,6 +3,8 @@ extends Spatial
 
 var game_zone_node = null
 
+var cubes = {}
+
 var current_type = GlobalZoneCube.EMPTY
 var current_node = null
 
@@ -16,6 +18,12 @@ var bottom_cube = null
 
 func _enter_tree():
 	game_zone_node = $"/root/Game/GameZone"
+	
+	for key in GlobalZoneCube.cubes.keys():
+		if key == GlobalZoneCube.EMPTY:
+			cubes[key] = GlobalZoneCube.cubes[key]
+		else:
+			cubes[key] = GlobalZoneCube.cubes[key].instance()
 
 
 func _process(delta):
@@ -61,7 +69,7 @@ func _update_current_node():
 		_free_current_node()
 		
 		if current_type != GlobalZoneCube.EMPTY:
-			current_node = GlobalZoneCube.cubes[current_type].instance()
+			current_node = cubes[current_type]
 			add_child(current_node)
 
 
@@ -91,8 +99,10 @@ func _update_current_type():
 
 func _free_current_node():
 	if GlobalFunctions.exists_node(current_node):
-		if current_node != null and current_node.has_method("queue_free"):
-			current_node.queue_free()
+		#if current_node != null and current_node.has_method("queue_free"):
+			#current_node.queue_free()
+		if current_node != null:
+			remove_child(current_node)
 			current_node = null
 
 
