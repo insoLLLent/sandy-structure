@@ -18,7 +18,6 @@ var list_environments_for_options = [
 var current_quality = GlobalData.QualitySettings.MEDIUM
 var current_screen_size = GlobalData.SCREEN_SIZES[GlobalData.SCREEN_SIZE_AUTO]
 var current_language = GlobalData.L18N_AUTO
-var current_hdr = true
 var current_vsync = true
 var current_fps = GlobalData.FPS_DEFAULT
 var current_msaa = Viewport.MSAA_8X
@@ -70,7 +69,7 @@ func is_valid_data(data):
 	   typeof(data["options"]["video"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["music"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["controls"]) == TYPE_DICTIONARY and \
-	   data["options"]["video"].has_all(["quality", "screen_size", "hdr", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
+	   data["options"]["video"].has_all(["quality", "screen_size", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
 	   data["options"]["controls"].has_all(["mouse_sensitivity", "control_keys"]) and \
 	   typeof(data["options"]["controls"]["control_keys"]) == TYPE_DICTIONARY and \
 	   data["options"]["controls"]["control_keys"].has_all(["up", "down", "left", "right", "fall", "rot_y_left", "rot_y_right", "change_pose_prev", "change_pose_next", "pause"]):
@@ -87,7 +86,6 @@ func get_save_data():
 			"video": {
 				"quality": current_quality,
 				"screen_size": current_screen_size,
-				"hdr": current_hdr,
 				"vsync": current_vsync,
 				"fps": current_fps,
 				"msaa": current_msaa,
@@ -128,7 +126,6 @@ func set_settings_by_options_file():
 	current_quality = data.options.video.quality
 	current_language = data.language
 	current_screen_size = data.options.video.screen_size
-	current_hdr = data.options.video.hdr
 	current_vsync = data.options.video.vsync
 	current_fps = data.options.video.fps
 	current_msaa = data.options.video.msaa
@@ -213,7 +210,6 @@ func init_video_settings():
 	settings_language()
 	settings_vsync()
 	settings_fps()
-	settings_hdr()
 	settings_msaa()
 	settings_ssao()
 	settings_shadow_enabled()
@@ -341,17 +337,6 @@ func settings_fps(fps = null):
 	Engine.target_fps = current_fps
 	
 	save_if_param_not_null(fps)
-
-
-func settings_hdr(hdr = null):
-	if hdr != null:
-		current_hdr = hdr
-	
-	has_changed = true
-	
-	get_tree().get_root().hdr = current_hdr
-	
-	save_if_param_not_null(hdr)
 
 
 func settings_msaa(msaa = null):

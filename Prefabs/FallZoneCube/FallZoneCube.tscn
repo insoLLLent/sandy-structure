@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Prefabs/FallZoneCube/FallZoneCube.gd" type="Script" id=1]
 
-[node name="FallZoneCube" type="Spatial" index="0"]
+[node name="FallZoneCube" type="Spatial"]
 
 script = ExtResource( 1 )
 
