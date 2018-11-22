@@ -58,11 +58,19 @@ var dead_end_screen_node = null
 # можно ли играть
 var can_playing = true
 
-
-func _ready():
+func _enter_tree():
 	if not is_connected("update_location", GlobalZoneCube, "load_cube_view"):
 		connect("update_location", GlobalZoneCube, "load_cube_view")
 	
+	if GlobalData.current_game_mode == GlobalData.GameMode.SAVE:
+		var data = GlobalSave.game_load_data()
+		if is_valid_data(data):
+			GlobalData.current_location = data.game.location
+	
+	emit_signal("update_location")
+
+
+func _ready():
 	GlobalOptions.settings_shadow_enabled()
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
