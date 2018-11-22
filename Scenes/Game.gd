@@ -190,7 +190,6 @@ func zone_cube_update():
 		for y in range(GlobalData.MAX_Y_CUBES):
 			for z in range(GlobalData.MAX_Z_CUBES):
 				if game_zone.current_zone[x][y][z].visible:
-					#game_zone.current_zone[x][y][z].call_deferred("update_view")
 					game_zone.current_zone[x][y][z].update_view()
 
 

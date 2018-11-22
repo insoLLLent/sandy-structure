@@ -37,3 +37,4 @@ func _send_pause_to_material(pause):
 					var mat = current_cube_child.get_surface_material(i)
 					if mat != null and mat.has_method("set_pause_material"):
 						mat.set_pause_material(pause)
+

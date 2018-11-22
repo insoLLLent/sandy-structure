@@ -17,7 +17,8 @@ var timer_destroy = 0
 
 var score_bonus = 0
 
-func _ready():
+
+func _enter_tree():
 	generate_zone()
 
 
@@ -34,18 +35,24 @@ func _process(delta):
 				is_check_filled = false
 			
 			timer_destroy = 0
-	
+
 
 
 # заполнение игровой зоны невидимыми кубами 
 func generate_zone():
 	for x in range(GlobalData.MAX_X_CUBES):
+		var xChild = Spatial.new()
+		add_child(xChild)
+		
 		for y in range(GlobalData.MAX_Y_CUBES):
+			var yChild = Spatial.new()
+			xChild.add_child(yChild)
 			current_zone.append([])
+			
 			for z in range(GlobalData.MAX_Z_CUBES):
 				current_zone[x].append([])
 				current_zone[x][y].append(fillerCubePath.instance())
-				add_child(current_zone[x][y][z])
+				yChild.add_child(current_zone[x][y][z])
 				current_zone[x][y][z].translation = Vector3(x, y, z)
 				current_zone[x][y][z].hide()
 				
