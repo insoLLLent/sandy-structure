@@ -38,6 +38,16 @@ func _process(delta):
 			can_visible = false
 
 
+func _exit_tree():
+	for key in cubes.keys():
+		if cubes[key] == null:
+			continue
+		
+		cubes[key].queue_free()
+	
+	cubes.clear()
+
+
 # обновить вид куба в зависимости от его положения и от соседних кубов
 func update_view():
 	_update_neighbors()
