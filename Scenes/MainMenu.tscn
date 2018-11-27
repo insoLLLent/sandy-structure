@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
-[ext_resource path="res://Scripts/GeneralMenu.gd" type="Script" id=3]
-[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Scenes/NewGameMenu.gd" type="Script" id=5]
-[ext_resource path="res://Other/empty_save.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Top10.gd" type="Script" id=8]
+[ext_resource path="res://Environment/MainMenuCameraEnvironment.tres" type="Environment" id=2]
+[ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Scripts/GeneralMenu.gd" type="Script" id=4]
+[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scenes/NewGameMenu.gd" type="Script" id=6]
+[ext_resource path="res://Other/empty_save.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Top10.gd" type="Script" id=9]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -74,7 +75,7 @@ subdivide_depth = 10
 size = 48
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -111,7 +112,7 @@ _sections_unfolded = [ "Border", "Border Width" ]
 size = 48
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=6]
@@ -309,7 +310,7 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -352,7 +353,7 @@ _sections_unfolded = [ "Geometry" ]
 transform = Transform( 0.970612, 0.100942, -0.218458, 0, 0.907778, 0.419452, 0.240651, -0.407125, 0.881099, -2.52033, 3.17391, 7.46522 )
 keep_aspect = 1
 cull_mask = 1048575
-environment = null
+environment = ExtResource( 2 )
 h_offset = 0.0
 v_offset = 0.0
 doppler_tracking = 0
@@ -416,8 +417,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 2 )
-script = ExtResource( 3 )
+theme = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/GeneralMenu" index="0"]
@@ -844,8 +845,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 2 )
-script = ExtResource( 5 )
+theme = ExtResource( 3 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu" index="0"]
@@ -1102,7 +1103,7 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "LOCATION_RANDOM"
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
 align = 1
 
@@ -1126,7 +1127,7 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "LOCATION_LITE"
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
 align = 1
 
@@ -1150,7 +1151,7 @@ enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "LOCATION_DUNES_01"
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
 align = 1
 
@@ -1212,7 +1213,7 @@ size_flags_stretch_ratio = 2.0
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionsMenu" parent="Menu" index="2" instance=ExtResource( 7 )]
+[node name="OptionsMenu" parent="Menu" index="2" instance=ExtResource( 8 )]
 
 [node name="Top10" type="Control" parent="Menu" index="3"]
 
@@ -1228,8 +1229,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 2 )
-script = ExtResource( 8 )
+theme = ExtResource( 3 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Theme", "Visibility" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu/Top10" index="0"]

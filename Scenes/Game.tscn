@@ -254,7 +254,7 @@ propagation = 0.7
 interior = false
 compress = false
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]

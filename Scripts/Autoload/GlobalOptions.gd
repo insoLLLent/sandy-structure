@@ -8,8 +8,9 @@ extends Node
 
 # список environments, на которые распространяется настройка ssao
 var list_environments_for_options = [
+	preload("res://Environment/MainMenuCameraEnvironment.tres"),
 	preload("res://Environment/CameraPlayerEnvironmentLite.tres"),
-	preload("res://Environment/CameraPlayerEnvironmentDunes.tres")
+	preload("res://Environment/CameraPlayerEnvironmentDunes.tres"),
 ]
 
 
