@@ -1,6 +1,11 @@
 extends Camera
 
 
+var environments = {
+	GlobalData.GameLocation.LITE: preload("res://Environment/CameraPlayerEnvironmentLite.tres"),
+	GlobalData.GameLocation.DUNES_01: preload("res://Environment/CameraPlayerEnvironmentDunes.tres"),
+}
+
 # объект, вокруг которого камера должна вращаться
 export(NodePath) var cameraLookAtObjectPath
 # объект, вокруг которого в данный момент вращается камера
@@ -50,6 +55,8 @@ func _ready():
 		cameraLookAtObjectPath = s.get_path()
 	
 	tracked_target = get_node(cameraLookAtObjectPath)
+	
+	change_environment()
 
 
 
@@ -150,3 +157,15 @@ func change_current_view_direction():
 	elif camera_rot_y >= 45.0 and camera_rot_y < 135.0:
 		current_view_direction = CAMERA_RIGHT
 
+
+# Изменить Environment в соответствии с текущей локацией.
+# Также, вызывается по сигналу из ноды Game
+func change_environment():
+	environment = environments[GlobalData.current_location]
+	match GlobalData.current_location:
+		GlobalData.GameLocation.LITE:
+			environment = environments[GlobalData.GameLocation.LITE]
+		GlobalData.GameLocation.DUNES_01:
+			environment = environments[GlobalData.GameLocation.DUNES_01]
+		_:
+			environment = environments[GlobalData.GameLocation.LITE]

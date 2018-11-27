@@ -349,7 +349,7 @@ _sections_unfolded = [ "Geometry" ]
 
 [node name="MainMenuCamera" type="Camera" parent="." index="2"]
 
-transform = Transform( 0.973579, -0.0957824, 0.207292, 0, 0.907778, 0.419452, -0.228351, -0.40837, 0.883793, -2.52033, 3.17391, 7.46522 )
+transform = Transform( 0.970612, 0.100942, -0.218458, 0, 0.907778, 0.419452, 0.240651, -0.407125, 0.881099, -2.52033, 3.17391, 7.46522 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -371,8 +371,8 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 0.0803573, -0.833301, 0.546947, 0.524763, 0.501888, 0.687555, -0.847447, 0.231767, 0.477617, 0, 3.25838, 10.0769 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 2.0
-light_indirect_energy = 2.0
+light_energy = 1.0
+light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
 light_bake_mode = 1
