@@ -25,7 +25,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.537255, 0.470588, 0.411765, 0.498039 )
+albedo_color = Color( 0.539063, 0.0842285, 0.14819, 0.623529 )
 metallic = 0.0
 metallic_specular = 1.0
 metallic_texture_channel = 0
@@ -50,17 +50,17 @@ uv2_scale = Vector3( 1, 1, 1 )
 uv2_offset = Vector3( 0, 0, 0 )
 uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
+proximity_fade_enable = true
+proximity_fade_distance = 0.4
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Flags", "Metallic", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Distance Fade", "Flags", "Metallic", "Proximity Fade", "Roughness" ]
 
-[node name="FallZoneCube" instance=ExtResource( 1 )]
+[node name="FallZoneCube" index="0" instance=ExtResource( 1 )]
 
 [node name="FallZoneCube" parent="." index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 material_override = SubResource( 1 )
-cast_shadow = 2
 _sections_unfolded = [ "Geometry", "Transform" ]
 
 
