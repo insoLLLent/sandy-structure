@@ -1,4 +1,4 @@
-extends Node
+extends Spatial
 
 signal game_over_sig
 signal update_score_sig(current_score)

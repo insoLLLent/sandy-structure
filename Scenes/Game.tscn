@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
@@ -10,11 +10,10 @@
 [ext_resource path="res://Environment/CameraPlayerEnvironmentDunes.tres" type="Environment" id=8]
 [ext_resource path="res://Scripts/CameraPlayer.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Location.gd" type="Script" id=10]
-[ext_resource path="res://Prefabs/ZoneCubes/Dunes_01/ZC_Dunes_01_Single.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Locations/Dune_01.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scripts/CameraLookAtPosition.gd" type="Script" id=13]
-[ext_resource path="res://Scripts/GameZone.gd" type="Script" id=14]
-[ext_resource path="res://Scripts/FallZone.gd" type="Script" id=15]
+[ext_resource path="res://Prefabs/Locations/Dune_01.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/CameraLookAtPosition.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/GameZone.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/FallZone.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -241,21 +240,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="GIProbeData" id=9]
-
-bounds = AABB( -7, -16, -7, 14, 32, 14 )
-cell_size = 0.25
-to_cell_xform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 28, 64, 28 )
-dynamic_data = PoolIntArray( 0, 8, 64, 128, 64, 1, 0, 0, 231335168, 0, 0, 0, 0, 0, 47165728, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
-dynamic_range = 5
-energy = 1.0
-bias = 1.5
-normal_bias = 0.0
-propagation = 0.7
-interior = false
-compress = false
-
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -993,7 +978,7 @@ cameraLookAtObjectPath = NodePath("../LookAtCameraPosition")
 "illuminant",
 ]]
 
-transform = Transform( 0.999999, 0, 4.37114e-008, -4.37113e-008, 1.91068e-015, 1, 0, -0.999999, 1.91069e-015, 30, 6.5, 20 )
+transform = Transform( 0.999999, 0, 0, 0, 0.0871557, 0.996195, 0, -0.996194, 0.0871558, 30, 6.5, 20 )
 layers = 1
 light_color = Color( 1, 0.984314, 0.74902, 1 )
 light_energy = 1.0
@@ -1019,44 +1004,26 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Transform" ]
 
-[node name="GIProbe" type="GIProbe" parent="Lighting" index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 15.95, 6 )
-layers = 1
-subdiv = 1
-extents = Vector3( 7, 16, 7 )
-dynamic_range = 5
-energy = 1.0
-propagation = 0.7
-bias = 1.5
-normal_bias = 0.0
-interior = false
-compress = false
-data = SubResource( 9 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="Location" type="Spatial" parent="." index="5"]
 
 script = ExtResource( 10 )
 
-[node name="ZC_Dunes_01_Single" parent="Location" index="0" instance=ExtResource( 11 )]
-
-[node name="Dune_01" parent="Location" index="1" instance=ExtResource( 12 )]
+[node name="Dune_01" parent="Location" index="0" instance=ExtResource( 11 )]
 
 [node name="LookAtCameraPosition" type="Position3D" parent="." index="6"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 10, 4.5 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="GameZone" type="Spatial" parent="." index="7"]
 
-script = ExtResource( 14 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="FallZone" type="Spatial" parent="." index="8"]
 
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
 [node name="TimerFall" type="Timer" parent="." index="9"]
 
@@ -1076,8 +1043,6 @@ autostart = false
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/OptionsButton" to="GUI/PauseMenu" method="_on_OptionsButton_pressed"]
 
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/SaveAndExitButton" to="GUI/PauseMenu" method="_on_SaveAndExitButton_pressed"]
-
-[connection signal="update_score_sig" from="GameZone" to="." method="_on_GameZone_update_score_sig"]
 
 [connection signal="timeout" from="TimerFall" to="." method="_on_TimerFall_timeout"]
 

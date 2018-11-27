@@ -1,6 +1,6 @@
 extends Spatial
 
-const COUNT_MATERIALS = 4
+const COUNT_MATERIALS = 3
 
 var current_cube_inst = null
 var current_cube = null
