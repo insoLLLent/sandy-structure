@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Prefabs/Figures/SingleCube.gd" type="Script" id=1]
 
-[node name="SingleCube" type="Spatial" index="0"]
+[node name="SingleCube" type="Spatial"]
 
 pause_mode = 2
 script = ExtResource( 1 )

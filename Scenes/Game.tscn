@@ -1044,4 +1044,6 @@ autostart = false
 
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/SaveAndExitButton" to="GUI/PauseMenu" method="_on_SaveAndExitButton_pressed"]
 
+[connection signal="timeout" from="TimerFall" to="." method="_on_TimerFall_timeout"]
+
 
