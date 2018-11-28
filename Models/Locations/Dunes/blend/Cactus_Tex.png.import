@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DuneLandscape_Tex.png-86b02ed61e2527a7d7b1a10580f7d590.stex"
+path="res://.import/Cactus_Tex.png-807ee962fc7f5c0396a9822061ee4d4c.stex"
 
 [deps]
 
-source_file="res://Models/Locations/Dunes/blend/DuneLandscape_Tex.png"
-dest_files=[ "res://.import/DuneLandscape_Tex.png-86b02ed61e2527a7d7b1a10580f7d590.stex" ]
+source_file="res://Models/Locations/Dunes/blend/Cactus_Tex.png"
+dest_files=[ "res://.import/Cactus_Tex.png-807ee962fc7f5c0396a9822061ee4d4c.stex" ]
 
 [params]
 
