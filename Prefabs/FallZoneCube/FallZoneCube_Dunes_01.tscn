@@ -51,7 +51,7 @@ uv2_offset = Vector3( 0, 0, 0 )
 uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = true
-proximity_fade_distance = 0.4
+proximity_fade_distance = 0.1
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Distance Fade", "Flags", "Metallic", "Proximity Fade", "Roughness" ]
 
