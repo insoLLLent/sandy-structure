@@ -18,7 +18,7 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/Cactus/MultiMesh/Cactus2_15.tres" type="MultiMesh" id=16]
 [ext_resource path="res://Prefabs/Locations/Dunes/Cactus/MultiMesh/Cactus2_16.tres" type="MultiMesh" id=17]
 
-[node name="CactusField" type="Spatial"]
+[node name="CactusField" type="Spatial" index="0"]
 
 editor/display_folded = true
 
