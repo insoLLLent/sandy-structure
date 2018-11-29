@@ -5,11 +5,12 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/CactusField.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Locations/Dunes/GrassField.tscn" type="PackedScene" id=4]
 
-[node name="Dune_01" type="Spatial" index="0"]
+[node name="Dune_01" type="Spatial"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
 transform = Transform( 0.999999, 0, 0, 0, 0.0871557, 0.996195, 0, -0.996194, 0.0871558, 30, 6.5, 20 )
+visible = false
 layers = 1
 light_color = Color( 1, 0.984314, 0.74902, 1 )
 light_energy = 1.0
@@ -45,8 +46,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="CactusField" parent="DuneLandscape" index="1" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8047, 0 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="GrassField" parent="DuneLandscape" index="2" instance=ExtResource( 4 )]
+
+[node name="RockField" type="Spatial" parent="DuneLandscape" index="3"]
 
 
