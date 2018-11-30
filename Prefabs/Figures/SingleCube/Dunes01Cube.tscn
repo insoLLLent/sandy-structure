@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/Figures/SingleCube/FrontEmissionMat.tres" type="Material" id=3]
 [ext_resource path="res://Prefabs/Figures/SingleCube/BackEmissionMat.tres" type="Material" id=4]
 
-[node name="Dunes01Cube" index="0" instance=ExtResource( 1 )]
+[node name="Dunes01Cube" instance=ExtResource( 1 )]
 
 [node name="Dunes01Cube" parent="." index="0"]
 

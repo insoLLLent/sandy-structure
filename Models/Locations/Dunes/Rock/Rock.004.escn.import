@@ -2,17 +2,17 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/DuneLandscapeNearFiller.escn-fee6ba4fbd34aef2c5d47c9b2075b7c7.scn"
+path="res://.import/Rock.004.escn-d3242e3beecb1722d01f3576c24fb93c.scn"
 
 [deps]
 
-source_file="res://Models/Locations/Dunes/DuneLandscapeNearFiller.escn"
-dest_files=[ "res://.import/DuneLandscapeNearFiller.escn-fee6ba4fbd34aef2c5d47c9b2075b7c7.scn" ]
+source_file="res://Models/Locations/Dunes/Rock/Rock.004.escn"
+dest_files=[ "res://.import/Rock.004.escn-d3242e3beecb1722d01f3576c24fb93c.scn" ]
 
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="DuneLandscapeNearFiller"
+nodes/root_name="Rock.004"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
