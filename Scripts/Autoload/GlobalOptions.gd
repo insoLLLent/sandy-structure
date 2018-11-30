@@ -307,7 +307,7 @@ func settings_screen_size(screen_size = null):
 	
 	
 	get_tree().get_root().size = current_screen_size
-	OS.window_size = current_screen_size
+	#OS.window_size = current_screen_size
 	
 	save_if_param_not_null(screen_size)
 
