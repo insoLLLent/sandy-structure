@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/RockField.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Locations/Dunes/SnagField.tscn" type="PackedScene" id=6]
 
-[node name="Dune_01" type="Spatial" index="0"]
+[node name="Dune_01" type="Spatial"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
