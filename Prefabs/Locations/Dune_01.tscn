@@ -12,7 +12,6 @@
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
 transform = Transform( 0.999999, 0, 0, 0, 0.0871557, 0.996195, 0, -0.996194, 0.0871558, 30, 6.5, 20 )
-visible = false
 layers = 1
 light_color = Color( 1, 0.984314, 0.74902, 1 )
 light_energy = 1.0
