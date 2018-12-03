@@ -6,13 +6,13 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/Snag/MultiMesh/Snag3.tres" type="MultiMesh" id=4]
 [ext_resource path="res://Prefabs/Locations/Dunes/Snag/MultiMesh/Snag4.tres" type="MultiMesh" id=5]
 
-[node name="SnagField" type="Spatial"]
+[node name="SnagField" type="Spatial" index="0"]
 
 [node name="Snag1_MultiMeshInstance" type="MultiMeshInstance" parent="." index="0"]
 
 layers = 1
 material_override = ExtResource( 1 )
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
@@ -26,7 +26,7 @@ _sections_unfolded = [ "Geometry", "Transform" ]
 
 layers = 1
 material_override = ExtResource( 1 )
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
@@ -40,7 +40,7 @@ _sections_unfolded = [ "Geometry" ]
 
 layers = 1
 material_override = ExtResource( 1 )
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
@@ -54,7 +54,7 @@ _sections_unfolded = [ "Geometry" ]
 
 layers = 1
 material_override = ExtResource( 1 )
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
