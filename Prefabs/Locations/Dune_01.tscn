@@ -41,6 +41,7 @@ _sections_unfolded = [ "Directional Shadow", "Editor", "Light", "Shadow" ]
 
 [node name="DuneLandscape" parent="." index="2" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.8047, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -54,5 +55,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="RockField" parent="DuneLandscape" index="3" instance=ExtResource( 5 )]
 
 [node name="SnagField" parent="DuneLandscape" index="4" instance=ExtResource( 6 )]
+
+[node name="Village" type="Spatial" parent="." index="3"]
 
 
