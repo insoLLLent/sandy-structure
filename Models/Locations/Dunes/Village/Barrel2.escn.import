@@ -11,7 +11,7 @@ dest_files=[ "res://.import/Barrel2.escn-a49a43ccea517d9c083c6ee0180683ed.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="RigidBody"
 nodes/root_name="Barrel2"
 nodes/root_scale=1.0
 nodes/custom_script=""

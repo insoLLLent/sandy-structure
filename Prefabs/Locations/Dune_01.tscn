@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Prefabs/Locations/Dunes/DunePlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Locations/Dunes/DuneLandscape.tscn" type="PackedScene" id=2]
@@ -6,6 +6,28 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/GrassField.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Locations/Dunes/RockField.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Locations/Dunes/SnagField.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Vilage_Building3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Vilage_Building6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Vilage_Well.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Fence3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Fence2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Bonfire2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile5.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile6.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile7.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Cauldron2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Logs.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Fence1.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Box.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Bonfire1.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile8.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile4.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile1.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Tile2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Fence4.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/SimpleSticks1.tscn" type="PackedScene" id=28]
 
 [node name="Dune_01" type="Spatial" index="0"]
 
@@ -56,6 +78,267 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="SnagField" parent="DuneLandscape" index="4" instance=ExtResource( 6 )]
 
-[node name="Village" type="Spatial" parent="." index="3"]
+[node name="Villages" type="Spatial" parent="." index="3"]
+
+[node name="Village1" type="Spatial" parent="Villages" index="0"]
+
+editor/display_folded = true
+
+[node name="Vilage_Building3" type="Spatial" parent="Villages/Village1" index="0" instance=ExtResource( 7 )]
+
+transform = Transform( -0.997506, -0.0693148, 0.0133497, -0.0700197, 0.995573, -0.0627029, -0.00894433, -0.0634813, -0.997943, -69.6483, -24.91, 188.379 )
+
+[node name="Vilage_Building6" type="Spatial" parent="Villages/Village1" index="1" instance=ExtResource( 8 )]
+
+transform = Transform( -0.634682, 0.00228295, 0.77277, 0.000676927, 0.999997, -0.00239826, -0.772773, -0.000999026, -0.634681, -102.495, -26.1365, 178.069 )
+
+[node name="Vilage_Well" type="Spatial" parent="Villages/Village1" index="2" instance=ExtResource( 9 )]
+
+transform = Transform( 0.907461, -0.0568785, 0.416268, 0.062556, 0.998041, 0, -0.415453, 0.0260401, 0.909242, -81.1567, -26.3064, 171.64 )
+
+[node name="Barrel2" type="RigidBody" parent="Villages/Village1" index="3" instance=ExtResource( 10 )]
+
+transform = Transform( 0.907461, -0.0568785, 0.416268, 0.062556, 0.998041, -3.72863e-009, -0.415453, 0.0260401, 0.909242, -82.2415, -25.794, 173.817 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Fence3" type="Spatial" parent="Villages/Village1" index="4" instance=ExtResource( 11 )]
+
+transform = Transform( 1, 1.86265e-009, 0, -1.86265e-009, 1, 0, 0, -5.58794e-009, 1, -93.9023, -25.9955, 178.661 )
+
+[node name="Fence2" type="Spatial" parent="Villages/Village1" index="5" instance=ExtResource( 12 )]
+
+transform = Transform( 0.442418, 0.0357232, 0.896097, -0.0804835, 0.996756, -9.31323e-010, -0.89319, -0.072121, 0.443858, -90.1739, -26.2143, 176.794 )
+
+[node name="Fence4" parent="Villages/Village1" index="6" instance=ExtResource( 12 )]
+
+transform = Transform( -0.527741, -0.0173563, -0.849228, -0.0203838, 0.999763, -0.0077657, 0.849161, 0.0132122, -0.527969, -100.593, -26.1347, 170.524 )
+
+[node name="Bonfire2" type="Spatial" parent="Villages/Village1" index="7" instance=ExtResource( 13 )]
+
+transform = Transform( 1, 1.86265e-009, 0, -1.86265e-009, 1, 0, 0, -5.58794e-009, 1, -97.6189, -26.1202, 171.825 )
+
+[node name="Tile5" type="Spatial" parent="Villages/Village1" index="8" instance=ExtResource( 14 )]
+
+transform = Transform( 1, 1.86265e-009, 0, -1.86265e-009, 1, 0, 0, -5.58794e-009, 1, -96.2671, -26.0967, 176.336 )
+
+[node name="Tile3" type="Spatial" parent="Villages/Village1" index="9" instance=ExtResource( 15 )]
+
+transform = Transform( 0.874715, 1.86265e-009, 0.484638, -3.72529e-009, 1, -3.25963e-009, -0.484638, -5.58794e-009, 0.874715, -96.1559, -26.134, 174.69 )
+
+[node name="Tile6" type="Spatial" parent="Villages/Village1" index="10" instance=ExtResource( 16 )]
+
+transform = Transform( 0.925225, 1.86265e-009, 0.379419, -3.72529e-009, 1, 0, -0.379419, -5.58794e-009, 0.925225, -93.5805, -26.1665, 175.469 )
+
+[node name="Tile7" type="Spatial" parent="Villages/Village1" index="11" instance=ExtResource( 17 )]
+
+transform = Transform( 0.782397, 1.86265e-009, 0.62278, 0, 1, -8.73115e-010, -0.62278, -5.58794e-009, 0.782397, -94.0408, -26.1844, 173.938 )
+
+[node name="Cauldron2" type="Spatial" parent="Villages/Village1" index="12" instance=ExtResource( 18 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100.429, -26.0997, 171.786 )
+
+[node name="Logs2" type="Spatial" parent="Villages/Village1" index="13" instance=ExtResource( 19 )]
+
+transform = Transform( -0.157763, -0.015342, 0.987358, -0.0578008, 0.998308, 0.00627655, -0.985784, -0.0560799, -0.158383, -79.1749, -25.4226, 187.227 )
+
+[node name="Logs" type="Spatial" parent="Villages/Village1" index="14" instance=ExtResource( 19 )]
+
+transform = Transform( -0.132562, 0.007058, 0.99115, 0.041553, 0.999135, -0.00155733, -0.990303, 0.0409788, -0.13274, -98.2684, -25.8097, 165.032 )
+
+[node name="Fence1" type="Spatial" parent="Villages/Village1" index="15" instance=ExtResource( 20 )]
+
+transform = Transform( 0.313792, 0.0197966, -0.949285, -0.0629631, 0.998016, 1.74967e-011, 0.947402, 0.0597699, 0.314415, -81.506, -25.795, 161.642 )
+
+[node name="Fence5" type="Spatial" parent="Villages/Village1" index="16" instance=ExtResource( 20 )]
+
+transform = Transform( -0.79135, 0.0295922, 0.610647, 0.0390159, 0.999236, 0.00213807, -0.610117, 0.0255169, -0.7919, -84.3887, -25.5285, 157.827 )
+
+[node name="Box" type="RigidBody" parent="Villages/Village1" index="17" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.7605, -24.5865, 187.306 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Box2" type="RigidBody" parent="Villages/Village1" index="18" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.7181, -24.6432, 186.394 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Box3" type="RigidBody" parent="Villages/Village1" index="19" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.7263, -24.658, 186.94 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Bonfire1" type="Spatial" parent="Villages/Village1" index="20" instance=ExtResource( 22 )]
+
+transform = Transform( 0.999162, -0.040821, -0.00313979, 0.0409415, 0.996219, 0.0766253, 2.32831e-010, -0.0766896, 0.997055, -72.0467, -25.7819, 175.865 )
+
+[node name="Box4" type="RigidBody" parent="Villages/Village1" index="21" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.1098, -23.7178, 186.926 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Fence6" type="Spatial" parent="Villages/Village1" index="22" instance=ExtResource( 11 )]
+
+transform = Transform( 0.998927, -0.0463195, 0, 0.0463195, 0.998927, 0, 0, 0, 1, -76.3139, -25.1646, 189.498 )
+
+[node name="Tile8" type="Spatial" parent="Villages/Village1" index="23" instance=ExtResource( 23 )]
+
+transform = Transform( 0.98957, 0, 0.144055, 0, 1, 0, -0.144055, 0, 0.98957, -69.145, -24.9486, 184.739 )
+
+[node name="Tile4" type="Spatial" parent="Villages/Village1" index="24" instance=ExtResource( 24 )]
+
+transform = Transform( 0.927058, 0, -0.374917, 0, 1, 0, 0.374917, 0, 0.927058, -70.3674, -25.0784, 183.685 )
+
+[node name="Tile9" type="Spatial" parent="Villages/Village1" index="25" instance=ExtResource( 14 )]
+
+transform = Transform( 0.943314, 0, 0.331901, 0, 1, 0, -0.331901, 0, 0.943314, -69.1043, -25.1127, 182.345 )
+
+[node name="Tile1" type="Spatial" parent="Villages/Village1" index="26" instance=ExtResource( 25 )]
+
+transform = Transform( 0.872549, 0, 0.488527, 0, 1, 0, -0.488527, 0, 0.872549, -80.4738, -26.3064, 173.252 )
+
+[node name="Tile2" type="Spatial" parent="Villages/Village1" index="27" instance=ExtResource( 26 )]
+
+transform = Transform( 1, 0, 0, 0, 0.995884, -0.0906336, 0, 0.0906336, 0.995884, -82.9823, -26.4253, 172.305 )
+
+[node name="Fence7" type="Spatial" parent="Villages/Village1" index="28" instance=ExtResource( 27 )]
+
+transform = Transform( 0.487373, 0.0316114, 0.872622, -0.0647249, 0.997903, 7.07644e-011, -0.870792, -0.0564803, 0.488397, -63.8693, -23.8128, 184.95 )
+
+[node name="Fence8" type="Spatial" parent="Villages/Village1" index="29" instance=ExtResource( 11 )]
+
+transform = Transform( 0.491529, 0.0121222, 0.870777, -0.0246547, 0.999696, 0, -0.870512, -0.0214688, 0.491678, -60.838, -24.952, 180.024 )
+
+[node name="SimpleSticks1" type="Spatial" parent="Villages/Village1" index="30" instance=ExtResource( 28 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85.8751, -25.639, 159.538 )
+
+[node name="SimpleSticks2" type="Spatial" parent="Villages/Village1" index="31" instance=ExtResource( 28 )]
+
+transform = Transform( 0.997481, -0.0709097, 0.00211053, 0.0709411, 0.997039, -0.0296755, 0, 0.0297505, 0.999557, -70.342, -25.7355, 174.515 )
+
+[node name="SimpleSticks3" type="Spatial" parent="Villages/Village1" index="32" instance=ExtResource( 28 )]
+
+transform = Transform( 0.999773, -0.0213265, -2.75283e-010, 0.0212823, 0.997703, 0.0643049, -0.0013714, -0.0642903, 0.99793, -74.6886, -25.8706, 176.862 )
 
 

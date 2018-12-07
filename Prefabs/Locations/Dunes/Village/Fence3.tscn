@@ -7,7 +7,6 @@
 
 [node name="Fence3" parent="." index="0"]
 
-cast_shadow = 2
 material/0 = ExtResource( 2 )
 _sections_unfolded = [ "Geometry", "material" ]
 

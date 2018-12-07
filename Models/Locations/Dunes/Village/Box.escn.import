@@ -11,7 +11,7 @@ dest_files=[ "res://.import/Box.escn-4383a6bab43b6435cddc374f616f362c.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="RigidBody"
 nodes/root_name="Box"
 nodes/root_scale=1.0
 nodes/custom_script=""
