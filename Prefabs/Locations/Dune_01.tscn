@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Prefabs/Locations/Dunes/DunePlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Locations/Dunes/DuneLandscape.tscn" type="PackedScene" id=2]
@@ -39,12 +39,14 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel1.tscn" type="PackedScene" id=37]
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Box_Static.tscn" type="PackedScene" id=38]
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel2_Static.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel1_Static.tscn" type="PackedScene" id=40]
 
 [node name="Dune_01" type="Spatial" index="0"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
 transform = Transform( 0.999999, 0, 0, 0, 0.0871557, 0.996195, 0, -0.996194, 0.0871558, 30, 6.5, 20 )
+visible = false
 layers = 1
 light_color = Color( 1, 0.984314, 0.74902, 1 )
 light_energy = 1.0
@@ -983,5 +985,110 @@ transform = Transform( 0.369634, 0.232672, -0.899575, -0.532714, 0.846295, 0, 0.
 [node name="Vilage_Building3" type="Spatial" parent="Villages/Village4" index="26" instance=ExtResource( 7 )]
 
 transform = Transform( 0.368238, 0.435392, -0.821483, 0, 0.88357, 0.468299, 0.929732, -0.172445, 0.325364, 249.284, -28.6924, 59.2943 )
+
+[node name="Village5" type="Spatial" parent="Villages" index="4"]
+
+editor/display_folded = true
+
+[node name="Tile7" type="Spatial" parent="Villages/Village5" index="0" instance=ExtResource( 17 )]
+
+transform = Transform( 0.547957, 0.032091, -0.83589, -0.0572992, 0.998357, 0.000766476, 0.834541, 0.0474759, 0.548896, 75.1493, -27.2521, 102.682 )
+
+[node name="Cauldron2" type="Spatial" parent="Villages/Village5" index="1" instance=ExtResource( 18 )]
+
+transform = Transform( -0.0133755, 3.98622e-010, -0.999911, -0.0572993, 0.998357, 0.000766476, 0.998267, 0.0573043, -0.0133535, 81.7333, -24.3294, 111.568 )
+
+[node name="SimpleSticks1" parent="Villages/Village5" index="2" instance=ExtResource( 28 )]
+
+transform = Transform( -0.0133755, 2.98966e-010, -0.999911, -0.0572993, 0.998357, 0.000766476, 0.998267, 0.0573043, -0.0133535, 80.9968, -24.6322, 112.812 )
+
+[node name="Fence1" type="Spatial" parent="Villages/Village5" index="3" instance=ExtResource( 20 )]
+
+transform = Transform( -1.18487, 0.0294259, 0.00761085, 0.0248285, 0.999692, 0.000240253, -0.00437375, 0.000272533, -0.68197, 85.4733, -19.3765, 105.971 )
+
+[node name="Fence3" type="Spatial" parent="Villages/Village5" index="4" instance=ExtResource( 11 )]
+
+transform = Transform( -0.811642, -0.0146934, 0.465669, 0.0123323, 0.999159, 0.0271849, -0.72492, 0.0397614, -0.496962, 83.871, -27.0778, 101.563 )
+
+[node name="Fence4" parent="Villages/Village5" index="5" instance=ExtResource( 11 )]
+
+transform = Transform( -0.180537, 0.00985241, 0.674579, 0.0389185, 0.999022, -0.0022992, -0.729307, 0.0106684, -0.0661696, 85.5244, -27.2046, 103.93 )
+
+[node name="Fence2" parent="Villages/Village5" index="6" instance=ExtResource( 20 )]
+
+transform = Transform( 0.00404261, -0.000264156, 0.681333, 0.0602414, 0.998283, -0.00036209, -1.08664, 0.0595536, 0.0184936, 87.6499, -19.5687, 108.178 )
+
+[node name="Vilage_Building1" type="Spatial" parent="Villages/Village5" index="7" instance=ExtResource( 33 )]
+
+transform = Transform( -0.0133755, 0, -0.999911, -0.0572992, 0.998357, 0.000766476, 0.998267, 0.0573044, -0.0133535, 83.3505, -27.901, 109.769 )
+
+[node name="Tile8" type="Spatial" parent="Villages/Village5" index="8" instance=ExtResource( 23 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.2711, -27.4672, 105.684 )
+
+[node name="Tile6" type="Spatial" parent="Villages/Village5" index="9" instance=ExtResource( 16 )]
+
+transform = Transform( 0.169716, 0, -0.985493, 0, 1, 0, 0.985493, 0, 0.169716, 75.4245, -27.7768, 110.481 )
+
+[node name="Tile9" type="Spatial" parent="Villages/Village5" index="10" instance=ExtResource( 17 )]
+
+transform = Transform( 0.684417, 0, -0.72909, 0, 1, 0, 0.72909, 0, 0.684417, 78.336, -27.1427, 102.034 )
+
+[node name="Barrel1_Static" type="Spatial" parent="Villages/Village5" index="11" instance=ExtResource( 40 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.5709, -26.5613, 104.482 )
+
+[node name="Barrel1_Static2" type="Spatial" parent="Villages/Village5" index="12" instance=ExtResource( 40 )]
+
+transform = Transform( 0.99593, -0.0901306, 0, 0.0901306, 0.99593, 0, 0, 0, 1, 83.1884, -26.5746, 104.671 )
+
+[node name="Box" type="RigidBody" parent="Villages/Village5" index="13" instance=ExtResource( 21 )]
+
+transform = Transform( 0.866286, 0, -0.499549, 0, 1, 0, 0.499549, 0, 0.866286, 83.386, -26.4244, 103.427 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+
+[node name="Box2" parent="Villages/Village5" index="14" instance=ExtResource( 21 )]
+
+transform = Transform( 0.953461, 0, 0.301516, 0, 1, 0, -0.301516, 0, 0.953461, 83.4826, -26.3196, 102.193 )
+
+[node name="Bonfire1" type="Spatial" parent="Villages/Village5" index="15" instance=ExtResource( 22 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.65, -27.947, 113.411 )
+
+[node name="Bonfire2" type="Spatial" parent="Villages/Village5" index="16" instance=ExtResource( 22 )]
+
+transform = Transform( 0.999361, 0.0357525, 0, -0.0357525, 0.999361, 0, 0, 0, 1, 67.7058, -27.3863, 109.964 )
+
+[node name="Box_Static" type="Spatial" parent="Villages/Village5" index="17" instance=ExtResource( 38 )]
+
+transform = Transform( 1.47337, 0.00574111, -0.000362723, -0.00575256, 1.47044, -0.0929021, 0, 0.0929028, 1.47045, 83.6099, -23.7437, 111.278 )
+
+[node name="Box_Static2" type="Spatial" parent="Villages/Village5" index="18" instance=ExtResource( 38 )]
+
+transform = Transform( 1, 0, 0, 0, 0.99945, -0.0331753, 0, 0.0331753, 0.99945, 83.9222, -24.023, 113.312 )
 
 
