@@ -100,7 +100,7 @@ func is_valid_data(data):
 	   typeof(data["game_zone"]) == TYPE_DICTIONARY and \
 	   data["game_zone"].has("visible") and \
 	   typeof(data["camera_player"]) == TYPE_DICTIONARY and \
-	   data["camera_player"].has_all(["view_direction", "translation", "rotation_degrees", "current_distance", "target_distance", "total_yaw", "total_pitch"]) and \
+	   data["camera_player"].has_all(["view_direction", "global_translation", "rotation_degrees", "current_distance", "target_distance", "yaw", "pitch"]) and \
 	   data["game"].has_all(["location", "current_score", "cube"]) and \
 	   typeof(data["game"]["cube"]) == TYPE_DICTIONARY and \
 	   data["game"]["cube"].has_all(["cube_number", "translation", "rotation_degrees", "pose"]):
@@ -124,12 +124,12 @@ func get_save_data():
 		},
 		"camera_player": {
 			"view_direction": camera_node.current_view_direction,
-			"translation": camera_node.translation,
+			"global_translation": camera_node.global_transform.origin,
 			"rotation_degrees": camera_node.rotation_degrees,
 			"current_distance": camera_node.current_distance,
 			"target_distance": camera_node.target_distance,
-			"total_yaw": camera_node.total_yaw,
-			"total_pitch": camera_node.total_pitch,
+			"yaw": camera_node.yaw,
+			"pitch": camera_node.pitch,
 		},
 		"game_zone": {
 			"visible": game_zone.get_list_all_visualised_blocks(),
@@ -151,12 +151,12 @@ func init_load_data():
 	game_zone.set_visible_blocks_by_array(data.game_zone.visible)
 	
 	camera_node.current_view_direction = data.camera_player.view_direction
-	camera_node.translation = data.camera_player.translation
+	camera_node.global_transform.origin = data.camera_player.global_translation
 	camera_node.rotation_degrees = data.camera_player.rotation_degrees
 	camera_node.current_distance = data.camera_player.current_distance
 	camera_node.target_distance = data.camera_player.target_distance
-	camera_node.total_yaw = data.camera_player.total_yaw
-	camera_node.total_pitch = data.camera_player.total_pitch
+	camera_node.yaw = data.camera_player.yaw
+	camera_node.pitch = data.camera_player.pitch
 	
 	instance_cube(data.game.cube.cube_number, data.game.cube.translation, \
 	              data.game.cube.rotation_degrees, data.game.cube.pose)

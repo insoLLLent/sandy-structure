@@ -240,7 +240,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -955,7 +955,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="CameraPlayer" type="Camera" parent="." index="3"]
 
-transform = Transform( 1, 0, 0, 0, 0.739974, 0.672636, 0, -0.672636, 0.739974, 6, 13, 15 )
+transform = Transform( 1, 0, 0, 0, 0.925356, 0.3791, 0, -0.3791, 0.925356, 6, 13, 28.8409 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = ExtResource( 8 )
