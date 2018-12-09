@@ -38,7 +38,7 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Cauldron1.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel1.tscn" type="PackedScene" id=37]
 
-[node name="Dune_01" type="Spatial"]
+[node name="Dune_01" type="Spatial" index="0"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
