@@ -45,7 +45,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Intro" type="Node" index="0"]
+[node name="Intro" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -86,9 +86,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 791.0
+margin_left = 762.0
 margin_top = 508.0
-margin_right = 1129.0
+margin_right = 1157.0
 margin_bottom = 572.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
