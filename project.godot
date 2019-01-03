@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="3Dmino"
-run/main_scene="res://Scenes/Intro.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="3Dmino"
 boot_splash/fullsize=false
