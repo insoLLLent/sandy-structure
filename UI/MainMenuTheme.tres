@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=15 format=2]
+[gd_resource type="Theme" load_steps=14 format=2]
 
 [ext_resource path="res://UI/ButtonOptionsDisabled.tres" type="StyleBox" id=1]
 [ext_resource path="res://UI/ButtonOptionsHover.tres" type="StyleBox" id=2]
@@ -6,9 +6,8 @@
 [ext_resource path="res://UI/ButtonOptionsPressed.tres" type="StyleBox" id=4]
 [ext_resource path="res://UI/img/CheckButtonImageOff.png" type="Texture" id=5]
 [ext_resource path="res://UI/img/CheckButtonImageOn.png" type="Texture" id=6]
-[ext_resource path="res://UI/CheckButtonEmpty.tres" type="StyleBox" id=7]
-[ext_resource path="res://UI/SeparatorOptions.tres" type="StyleBox" id=8]
-[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://UI/SeparatorOptions.tres" type="StyleBox" id=7]
+[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -102,7 +101,7 @@ _sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 size = 26
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
@@ -110,7 +109,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
 [resource]
@@ -152,10 +151,10 @@ CheckButton/constants/check_vadjust = 0
 CheckButton/constants/hseparation = 4
 CheckButton/icons/off = ExtResource( 5 )
 CheckButton/icons/on = ExtResource( 6 )
-CheckButton/styles/disabled = ExtResource( 7 )
-CheckButton/styles/hover = ExtResource( 7 )
-CheckButton/styles/normal = ExtResource( 7 )
-CheckButton/styles/pressed = ExtResource( 7 )
+CheckButton/styles/disabled = null
+CheckButton/styles/hover = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
 ColorPicker/constants/h_width = 30
 ColorPicker/constants/label_width = 10
 ColorPicker/constants/margin = 8
@@ -819,7 +818,7 @@ HScrollBar/styles/grabber_highlight = null
 HScrollBar/styles/grabber_pressed = null
 HScrollBar/styles/scroll = null
 HScrollBar/styles/scroll_focus = null
-HSeparator/styles/separator = ExtResource( 8 )
+HSeparator/styles/separator = ExtResource( 7 )
 HSlider/icons/grabber = null
 HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = null
@@ -997,7 +996,7 @@ VScrollBar/styles/grabber_highlight = null
 VScrollBar/styles/grabber_pressed = null
 VScrollBar/styles/scroll = null
 VScrollBar/styles/scroll_focus = null
-VSeparator/styles/separator = ExtResource( 8 )
+VSeparator/styles/separator = ExtResource( 7 )
 VSlider/icons/grabber = null
 VSlider/icons/grabber_highlight = null
 VSlider/styles/grabber_area = null
@@ -1013,5 +1012,5 @@ WindowDialog/fonts/title_font = SubResource( 2 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
-_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LinkButton/colors", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu/colors", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
+_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphEdit/styles", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LinkButton/colors", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu/colors", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
 
