@@ -45,7 +45,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Intro" type="Node" index="0"]
+[node name="Intro" type="Node"]
 
 script = ExtResource( 1 )
 
