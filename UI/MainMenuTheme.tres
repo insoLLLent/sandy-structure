@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
 [ext_resource path="res://UI/ButtonOptionsDisabled.tres" type="StyleBox" id=1]
 [ext_resource path="res://UI/ButtonOptionsHover.tres" type="StyleBox" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://UI/ButtonOptionsPressed.tres" type="StyleBox" id=4]
 [ext_resource path="res://UI/img/CheckButtonImageOff.png" type="Texture" id=5]
 [ext_resource path="res://UI/img/CheckButtonImageOn.png" type="Texture" id=6]
-[ext_resource path="res://UI/SeparatorOptions.tres" type="StyleBox" id=7]
-[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://UI/CheckButtonEmpty.tres" type="StyleBox" id=7]
+[ext_resource path="res://UI/SeparatorOptions.tres" type="StyleBox" id=8]
+[ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -43,7 +44,7 @@ _sections_unfolded = [ "Anti Aliasing", "Border", "Border Width", "Corner Radius
 size = 26
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
@@ -51,7 +52,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
 [resource]
@@ -93,10 +94,10 @@ CheckButton/constants/check_vadjust = 0
 CheckButton/constants/hseparation = 4
 CheckButton/icons/off = ExtResource( 5 )
 CheckButton/icons/on = ExtResource( 6 )
-CheckButton/styles/disabled = null
-CheckButton/styles/hover = null
-CheckButton/styles/normal = null
-CheckButton/styles/pressed = null
+CheckButton/styles/disabled = ExtResource( 7 )
+CheckButton/styles/hover = ExtResource( 7 )
+CheckButton/styles/normal = ExtResource( 7 )
+CheckButton/styles/pressed = ExtResource( 7 )
 ColorPicker/constants/h_width = 30
 ColorPicker/constants/label_width = 10
 ColorPicker/constants/margin = 8
@@ -760,7 +761,7 @@ HScrollBar/styles/grabber_highlight = null
 HScrollBar/styles/grabber_pressed = null
 HScrollBar/styles/scroll = null
 HScrollBar/styles/scroll_focus = null
-HSeparator/styles/separator = ExtResource( 7 )
+HSeparator/styles/separator = ExtResource( 8 )
 HSlider/icons/grabber = null
 HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = null
@@ -808,10 +809,10 @@ MenuButton/styles/focus = null
 MenuButton/styles/hover = null
 MenuButton/styles/normal = null
 MenuButton/styles/pressed = null
-OptionButton/colors/font_color = Color( 1, 1, 1, 1 )
-OptionButton/colors/font_color_disabled = Color( 1, 1, 1, 1 )
-OptionButton/colors/font_color_hover = Color( 1, 1, 1, 1 )
-OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/colors/font_color = Color( 0.27451, 0.219608, 0.137255, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.537255, 0.494118, 0.415686, 1 )
+OptionButton/colors/font_color_hover = Color( 0.184314, 0.156863, 0.109804, 1 )
+OptionButton/colors/font_color_pressed = Color( 0.411765, 0.337255, 0.211765, 1 )
 OptionButton/colors/icon_color_hover = Color( 0, 0, 0, 1 )
 OptionButton/constants/arrow_margin = 4
 OptionButton/constants/modulate_arrow = 1
@@ -938,7 +939,7 @@ VScrollBar/styles/grabber_highlight = null
 VScrollBar/styles/grabber_pressed = null
 VScrollBar/styles/scroll = null
 VScrollBar/styles/scroll_focus = null
-VSeparator/styles/separator = ExtResource( 7 )
+VSeparator/styles/separator = ExtResource( 8 )
 VSlider/icons/grabber = null
 VSlider/icons/grabber_highlight = null
 VSlider/styles/grabber_area = null
@@ -954,5 +955,5 @@ WindowDialog/fonts/title_font = SubResource( 2 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
-_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "ItemList/colors", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LinkButton/colors", "MenuButton/colors", "OptionButton/colors", "PanelContainer", "PanelContainer/styles", "PopupMenu/colors", "ProgressBar/colors", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
+_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "ItemList/colors", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LinkButton/colors", "MenuButton/colors", "OptionButton", "OptionButton/colors", "PanelContainer", "PanelContainer/styles", "PopupMenu/colors", "ProgressBar/colors", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
 
