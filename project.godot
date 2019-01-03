@@ -10,10 +10,10 @@ config_version=3
 
 [application]
 
-config/name="3Dmino"
+config/name="Sandy Structure"
 run/main_scene="res://Scenes/Intro.tscn"
 config/use_custom_user_dir=true
-config/custom_user_dir_name="3Dmino"
+config/custom_user_dir_name="SandyStructure"
 boot_splash/fullsize=false
 config/icon="res://Other/empty_save.png"
 
