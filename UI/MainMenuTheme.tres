@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=21 format=2]
+[gd_resource type="Theme" load_steps=23 format=2]
 
 [ext_resource path="res://UI/ButtonOptionsDisabled.tres" type="StyleBox" id=1]
 [ext_resource path="res://UI/ButtonOptionsHover.tres" type="StyleBox" id=2]
@@ -8,6 +8,64 @@
 [ext_resource path="res://UI/img/CheckButtonImageOn.png" type="Texture" id=6]
 [ext_resource path="res://UI/SeparatorOptions.tres" type="StyleBox" id=7]
 [ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="StyleBoxFlat" id=14]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.345098, 0.290196, 0.203922, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 0 )
+border_blend = false
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=13]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.901961, 0.831373, 0.698039, 1 )
+draw_center = true
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.690196, 0.564706, 0.329412, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -1024,8 +1082,8 @@ HScrollBar/styles/scroll_focus = null
 HSeparator/styles/separator = ExtResource( 7 )
 HSlider/icons/grabber = null
 HSlider/icons/grabber_highlight = null
-HSlider/styles/grabber_area = null
-HSlider/styles/slider = null
+HSlider/styles/grabber_area = SubResource( 14 )
+HSlider/styles/slider = SubResource( 13 )
 HSplitContainer/constants/separation = 8
 HSplitContainer/icons/grabber = null
 HSplitContainer/styles/bg = null
@@ -1215,5 +1273,5 @@ WindowDialog/fonts/title_font = SubResource( 2 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
-_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphEdit/styles", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LineEdit/styles", "LinkButton/colors", "LinkButton/styles", "MarginContainer/constants", "MenuButton", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
+_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphEdit/styles", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "HSlider", "HSlider/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LineEdit/styles", "LinkButton/colors", "LinkButton/styles", "MarginContainer/constants", "MenuButton", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
 
