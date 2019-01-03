@@ -17,12 +17,12 @@ content_margin_top = -1.0
 content_margin_bottom = -1.0
 bg_color = Color( 0.345098, 0.290196, 0.203922, 1 )
 draw_center = true
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color( 0, 0, 0, 0 )
-border_blend = false
+border_width_left = 5
+border_width_top = 8
+border_width_right = 5
+border_width_bottom = 7
+border_color = Color( 0.690196, 0.564706, 0.329412, 0 )
+border_blend = true
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -36,7 +36,7 @@ shadow_color = Color( 0, 0, 0, 0.6 )
 shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Expand Margin" ]
 
 [sub_resource type="StyleBoxFlat" id=13]
 
@@ -47,9 +47,9 @@ content_margin_bottom = -1.0
 bg_color = Color( 0.901961, 0.831373, 0.698039, 1 )
 draw_center = true
 border_width_left = 5
-border_width_top = 5
+border_width_top = 8
 border_width_right = 5
-border_width_bottom = 5
+border_width_bottom = 7
 border_color = Color( 0.690196, 0.564706, 0.329412, 1 )
 border_blend = true
 corner_radius_top_left = 5
@@ -65,7 +65,7 @@ shadow_color = Color( 0, 0, 0, 0.6 )
 shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Expand Margin", "Shadow" ]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -1273,5 +1273,5 @@ WindowDialog/fonts/title_font = SubResource( 2 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
-_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorIcons/icons", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphEdit/styles", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "HSlider", "HSlider/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LineEdit/styles", "LinkButton/colors", "LinkButton/styles", "MarginContainer/constants", "MenuButton", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
+_sections_unfolded = [ "BoxContainer/constants", "Button", "Button/colors", "Button/styles", "CheckBox", "CheckBox/colors", "CheckButton", "CheckButton/colors", "CheckButton/icons", "CheckButton/styles", "ColorPicker/constants", "Editor/colors", "EditorFonts/fonts", "EditorStyles/styles", "FileDialog/colors", "GraphEdit/colors", "GraphEdit/styles", "GraphNode/colors", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "HScrollBar/styles", "HSeparator", "HSeparator/styles", "HSlider", "HSlider/icons", "HSlider/styles", "ItemList/colors", "ItemList/styles", "Label", "Label/colors", "Label/constants", "Label/styles", "LineEdit/colors", "LineEdit/styles", "LinkButton/colors", "LinkButton/styles", "MarginContainer/constants", "MenuButton", "MenuButton/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/icons", "OptionButton/styles", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "ProgressBar", "ProgressBar/colors", "ProgressBar/styles", "Resource", "RichTextLabel/colors", "RichTextLabel/styles", "TabContainer/colors", "Tabs/colors", "Tabs/styles", "TextEdit/colors", "TextEdit/icons", "TextEdit/styles", "ToolButton/colors", "TooltipLabel/colors", "Tree/colors", "Tree/constants", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "VSlider/styles", "WindowDialog", "WindowDialog/colors", "WindowDialog/fonts" ]
 
