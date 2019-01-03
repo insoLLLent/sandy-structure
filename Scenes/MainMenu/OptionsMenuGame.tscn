@@ -115,6 +115,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="OptionsMenuPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="1"]
 
+editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -480,6 +481,8 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="VideoPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="2"]
 
+editor/display_folded = true
+visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1535,8 +1538,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="ControlsPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="4"]
 
-editor/display_folded = true
-visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1868,7 +1869,6 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="ViewControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -3175,11 +3175,11 @@ _sections_unfolded = [ "Size Flags" ]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" method="_on_LanguageOptionButton_item_selected"]
 
