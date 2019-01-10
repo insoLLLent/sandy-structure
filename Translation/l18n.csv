@@ -1,6 +1,7 @@
 ,ru,en
 GAME_NAME,Sandy Structure,Sandy Structure
 GAME_SCORE,Счет,Score
+GAME_SPEED,Скорость,Speed
 BUTTON_CONTINUE,Продолжить,Continue
 BUTTON_NEW_GAME,Новая игра,New Game
 BUTTON_SAVES,Сохранения,Save
