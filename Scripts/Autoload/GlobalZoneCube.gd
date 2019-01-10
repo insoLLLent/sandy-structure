@@ -26,11 +26,13 @@ func load_cube_view():
 	
 	match GlobalData.current_location:
 		GlobalData.GameLocation.LITE:
-			load_lite()
+			#load_lite()
+			load_dunes_01()
 		GlobalData.GameLocation.DUNES_01:
 			load_dunes_01()
 		_:
-			load_lite()
+			#load_lite()
+			load_dunes_01()
 
 
 func load_lite():

@@ -20,11 +20,13 @@ func _process(delta):
 func _load_cube_view():
 	match GlobalData.current_location:
 		GlobalData.GameLocation.LITE:
-			current_cube_inst = load("res://Prefabs/Figures/SingleCube/LiteCube.tscn")
+			#current_cube_inst = load("res://Prefabs/Figures/SingleCube/LiteCube.tscn")
+			current_cube_inst = load("res://Prefabs/Figures/SingleCube/Dunes01Cube.tscn")
 		GlobalData.GameLocation.DUNES_01:
 			current_cube_inst = load("res://Prefabs/Figures/SingleCube/Dunes01Cube.tscn")
 		_:
-			current_cube_inst = load("res://Prefabs/Figures/SingleCube/LiteCube.tscn")
+			#current_cube_inst = load("res://Prefabs/Figures/SingleCube/LiteCube.tscn")
+			current_cube_inst = load("res://Prefabs/Figures/SingleCube/Dunes01Cube.tscn")
 
 
 

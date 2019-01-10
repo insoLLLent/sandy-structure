@@ -14,8 +14,10 @@ func _ready():
 func load_cube_view():
 	match GlobalData.current_location:
 		GlobalData.GameLocation.LITE:
-			current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Lite.tscn")
+			#current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Lite.tscn")
+			current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Dunes_01.tscn")
 		GlobalData.GameLocation.DUNES_01:
 			current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Dunes_01.tscn")
 		_:
-			current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Lite.tscn")
+			#current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Lite.tscn")
+			current_cube_inst = load("res://Prefabs/FallZoneCube/FallZoneCube_Dunes_01.tscn")
