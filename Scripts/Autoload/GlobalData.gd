@@ -23,7 +23,7 @@ const CHANCE_OF_TRICK = .95
 const CAMERA_LOOK_AT_POSITION = Vector3(4.5, 10, 4.5)
 
 # Координаты спавна фигур
-const SPAWN_COORD = Vector3(6, 25, 6)
+const SPAWN_COORD = Vector3(4, 18, 4)
 # Шаг движения (или падения) фигуры
 const STEP_MOVE = 1
 # Шаг поворота фигуры
@@ -37,13 +37,13 @@ const SPEED_FALL_FORCE = .06
 var current_speed_fall = SPEED_FALL_NORMAL
 
 # Размеры игровой зоны
-const MAX_X_CUBES = 13
-const MAX_Y_CUBES = 30
+const MAX_X_CUBES = 9
+const MAX_Y_CUBES = 23
 const MAX_Z_CUBES = MAX_X_CUBES
 
 # если кубы визуализируются по этой координате,
 # то игра прекращается
-const GAME_OVER_BORDER = 25
+const GAME_OVER_BORDER = 18
 
 # варианты количества кадров в секунду
 const FPS_30 = 30

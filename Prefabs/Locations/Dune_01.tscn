@@ -41,7 +41,7 @@
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel2_Static.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Prefabs/Locations/Dunes/Village/Barrel1_Static.tscn" type="PackedScene" id=40]
 
-[node name="Dune_01" type="Spatial"]
+[node name="Dune_01" type="Spatial" index="0"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
