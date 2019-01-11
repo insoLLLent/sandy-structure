@@ -55,6 +55,13 @@ var pause_menu_node = null
 # экран окончания игры
 var dead_end_screen_node = null
 
+# счетчик скорости падения фигуры
+var speed_timer = 0
+# текущая прибавка к скорости
+var current_extra_speed = 0
+# нод лейбла счетчика скорости
+var speed_counter_label_node = null
+
 # можно ли играть
 var can_playing = true
 
@@ -81,10 +88,14 @@ func _ready():
 	pause_menu_node = $GUI/PauseMenu
 	dead_end_screen_node = $GUI/DeadEndScreen
 	timer_fall_node = $TimerFall
-	timer_fall_node.wait_time = GlobalData.current_speed_fall
+	speed_counter_label_node = $"GUI/GameHUD/MarginContainer/VBoxContainer/SpeedContainer/CounterLabel"
 	
 	if GlobalData.current_game_mode == GlobalData.GameMode.SAVE:
 		init_load_data()
+	
+	update_speed_counter_label_node()
+	
+	timer_fall_node.wait_time = GlobalData.current_speed_fall
 	
 	emit_signal("update_location")
 	emit_signal("update_score_sig", current_score)
@@ -101,7 +112,7 @@ func is_valid_data(data):
 	   data["game_zone"].has("visible") and \
 	   typeof(data["camera_player"]) == TYPE_DICTIONARY and \
 	   data["camera_player"].has_all(["view_direction", "global_translation", "rotation_degrees", "current_distance", "target_distance", "yaw", "pitch"]) and \
-	   data["game"].has_all(["location", "current_score", "cube"]) and \
+	   data["game"].has_all(["location", "current_score", "speed_timer", "cube"]) and \
 	   typeof(data["game"]["cube"]) == TYPE_DICTIONARY and \
 	   data["game"]["cube"].has_all(["cube_number", "translation", "rotation_degrees", "pose"]):
 		
@@ -115,6 +126,7 @@ func get_save_data():
 		"game": {
 			"location": GlobalData.current_location,
 			"current_score": int(current_score),
+			"speed_timer": float(speed_timer),
 			"cube": {
 				"cube_number": int(current_cube_number),
 				"translation": current_cube.translation,
@@ -145,6 +157,8 @@ func init_load_data():
 	if not is_valid_data(data):
 		return
 	
+	speed_timer = data.game.speed_timer
+	
 	GlobalData.current_location = data.game.location
 	
 	current_score = int(data.game.current_score)
@@ -172,6 +186,8 @@ func _process(delta):
 	if not can_playing or game_zone.is_check_filled:
 		return
 	
+	speed_timer += delta
+	
 	if game_zone.is_game_over():
 		game_over()
 	else:
@@ -181,6 +197,8 @@ func _process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 		if current_cube_is_exists():
+			update_current_extra_speed()
+			
 			if timer_fall_node.wait_time != GlobalData.current_speed_fall:
 				timer_fall_node.wait_time = GlobalData.current_speed_fall
 			
@@ -207,7 +225,8 @@ func current_cube_is_exists():
 
 # создание куба
 func instance_cube(load_cube_number = null, load_translation = null, load_rotation_degrees = null, load_pose = null):
-	GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL
+	update_current_extra_speed()
+	GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL - current_extra_speed
 	
 	if load_cube_number == null:
 		randomize()
@@ -400,7 +419,7 @@ func game_over():
 		bottom_fillers = []
 	
 	timer_fall_node.stop()
-	GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL
+	GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL - current_extra_speed
 	can_playing = false
 	emit_signal("game_over_sig")
 	GlobalSave.game_save_remove()
@@ -428,11 +447,65 @@ func cube_fall():
 		bottom_fillers.clear()
 		fillers = []
 		bottom_fillers = []
-		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL
+		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL - current_extra_speed
 		game_zone.is_check_filled = true
 	else:
 		current_cube.translation.y -= GlobalData.STEP_MOVE
 
+
+# обновить текущее значение дополнительной скорости в зависимости от
+# счетчика скорости падения
+func update_current_extra_speed():
+	if speed_timer > 1780:
+		if current_extra_speed != .42:
+			current_extra_speed = .42
+			update_speed_counter_label_node()
+	elif speed_timer > 1705:
+		if current_extra_speed != .26:
+			current_extra_speed = .26
+			update_speed_counter_label_node()
+	elif speed_timer > 1605:
+		if current_extra_speed != .16:
+			current_extra_speed = .16
+			update_speed_counter_label_node()
+	elif speed_timer > 1450:
+		if current_extra_speed != .10:
+			current_extra_speed = .10
+			update_speed_counter_label_node()
+	elif speed_timer > 1250:
+		if current_extra_speed != .06:
+			current_extra_speed = .06
+			update_speed_counter_label_node()
+	elif speed_timer > 965:
+		if current_extra_speed != .04:
+			current_extra_speed = .04
+			update_speed_counter_label_node()
+	elif speed_timer > 565:
+		if current_extra_speed != .02:
+			current_extra_speed = .02
+			update_speed_counter_label_node()
+	else:
+		if current_extra_speed != .0:
+			current_extra_speed = .0
+			update_speed_counter_label_node()
+
+func update_speed_counter_label_node():
+	if speed_timer > 1780:
+		speed_counter_label_node.text = "8"
+	elif speed_timer > 1705:
+		speed_counter_label_node.text = "7"
+	elif speed_timer > 1605:
+		speed_counter_label_node.text = "6"
+	elif speed_timer > 1450:
+		speed_counter_label_node.text = "5"
+	elif speed_timer > 1250:
+		speed_counter_label_node.text = "4"
+	elif speed_timer > 965:
+		speed_counter_label_node.text = "3"
+	elif speed_timer > 565:
+		speed_counter_label_node.text = "2"
+	else:
+		speed_counter_label_node.text = "1"
 
 # изменение позиции
 func position_controller():
@@ -539,10 +612,10 @@ func fall_controller():
 		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_FORCE
 		show_FallZone_by_fillers()
 	elif Input.is_action_just_released("game_fall"):
-		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL
+		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL - current_extra_speed
 		show_FallZone_by_fillers()
 	elif not Input.is_action_pressed("game_fall"): # важное уточнение; на случай, если игрок выходит из паузы
-		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL
+		GlobalData.current_speed_fall = GlobalData.SPEED_FALL_NORMAL - current_extra_speed
 		show_FallZone_by_fillers()
 
 

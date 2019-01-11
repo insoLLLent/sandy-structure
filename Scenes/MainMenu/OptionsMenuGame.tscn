@@ -3180,9 +3180,9 @@ _sections_unfolded = [ "Size Flags" ]
 
 [connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/ControlsButton" to="." method="_on_ControlsButton_pressed"]
 
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
