@@ -163,7 +163,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.5, 1.0 ]
+"values": [ 0.4, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CameraPlayer:environment:adjustment_contrast")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.4, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CameraPlayer:environment:adjustment_brightness")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.4, 1.0 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -193,7 +217,31 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.5 ]
+"values": [ 1.0, 0.4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CameraPlayer:environment:adjustment_contrast")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.4 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CameraPlayer:environment:adjustment_brightness")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.4 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -240,7 +288,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -255,6 +303,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="GameHUD" type="Control" parent="GUI" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -470,6 +519,7 @@ max_lines_visible = -1
 
 pause_mode = 2
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0

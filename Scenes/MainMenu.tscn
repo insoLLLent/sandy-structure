@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Environment/MainMenuCameraEnvironment.tres" type="Environment" id=2]
@@ -7,70 +7,41 @@
 [ext_resource path="res://UI/Font/PT_Serif-Web-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scenes/NewGameMenu.gd" type="Script" id=6]
 [ext_resource path="res://Other/empty_save.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Top10.gd" type="Script" id=9]
+[ext_resource path="res://Other/lite_icon.png" type="Texture" id=8]
+[ext_resource path="res://Other/dunes_icon.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Top10.gd" type="Script" id=11]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="StyleBoxFlat" id=1]
 
-render_priority = 0
-flags_transparent = false
-flags_unshaded = false
-flags_vertex_lighting = false
-flags_no_depth_test = false
-flags_use_point_size = false
-flags_world_triplanar = false
-flags_fixed_size = false
-flags_albedo_tex_force_srgb = false
-vertex_color_use_as_albedo = false
-vertex_color_is_srgb = false
-params_diffuse_mode = 0
-params_specular_mode = 0
-params_blend_mode = 0
-params_cull_mode = 0
-params_depth_draw_mode = 0
-params_line_width = 1.0
-params_point_size = 1.0
-params_billboard_mode = 0
-params_grow = false
-params_use_alpha_scissor = false
-albedo_color = Color( 0.257843, 0.554688, 0.554688, 1 )
-metallic = 0.0
-metallic_specular = 1.0
-metallic_texture_channel = 0
-roughness = 1.0
-roughness_texture_channel = 0
-emission_enabled = false
-normal_enabled = false
-rim_enabled = false
-clearcoat_enabled = false
-anisotropy_enabled = false
-ao_enabled = false
-depth_enabled = false
-subsurf_scatter_enabled = false
-transmission_enabled = false
-refraction_enabled = false
-detail_enabled = false
-uv1_scale = Vector3( 1, 1, 1 )
-uv1_offset = Vector3( 0, 0, 0 )
-uv1_triplanar = false
-uv1_triplanar_sharpness = 1.0
-uv2_scale = Vector3( 1, 1, 1 )
-uv2_offset = Vector3( 0, 0, 0 )
-uv2_triplanar = false
-uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
-distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.67451, 0.623529, 0.521569, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.67451, 0.623529, 0.521569, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Corner Radius", "Expand Margin", "Shadow" ]
 
-[sub_resource type="CubeMesh" id=2]
-
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-size = Vector3( 3, 1, 5 )
-subdivide_width = 10
-subdivide_height = 10
-subdivide_depth = 10
-
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 
 size = 48
 use_mipmaps = false
@@ -78,7 +49,7 @@ use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -107,7 +78,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 
 size = 48
 use_mipmaps = false
@@ -115,7 +86,7 @@ use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 
 length = 0.1
 loop = false
@@ -145,7 +116,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 
 length = 0.1
 loop = false
@@ -175,7 +146,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 
 length = 0.1
 loop = false
@@ -205,7 +176,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 
 length = 0.1
 loop = false
@@ -235,7 +206,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 
 resource_name = "Top10_hide"
 length = 0.1
@@ -266,7 +237,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 
 length = 0.1
 loop = false
@@ -310,45 +281,12 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
-
-layers = 1
-material_override = SubResource( 1 )
-cast_shadow = 2
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
-skeleton = NodePath("..")
-material/0 = null
-_sections_unfolded = [ "Geometry" ]
-
-[node name="MeshInstance2" type="MeshInstance" parent="." index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.809625, 0.738326, -1.94596 )
-layers = 1
-material_override = SubResource( 1 )
-cast_shadow = 2
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
-skeleton = NodePath("..")
-material/0 = null
-_sections_unfolded = [ "Geometry" ]
-
-[node name="MainMenuCamera" type="Camera" parent="." index="2"]
+[node name="MainMenuCamera" type="Camera" parent="." index="0"]
 
 transform = Transform( 0.970612, 0.100942, -0.218458, 0, 0.907778, 0.419452, 0.240651, -0.407125, 0.881099, -2.52033, 3.17391, 7.46522 )
 keep_aspect = 1
@@ -365,7 +303,7 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="3" groups=[
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="1" groups=[
 "illuminant",
 ]]
 
@@ -395,7 +333,7 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Directional Shadow", "Light", "Shadow" ]
 
-[node name="Menu" type="CanvasLayer" parent="." index="4"]
+[node name="Menu" type="CanvasLayer" parent="." index="2"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -403,7 +341,40 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="GeneralMenu" type="Control" parent="Menu" index="0"]
+[node name="BGMainMenu" type="Control" parent="Menu" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Panel" type="Panel" parent="Menu/BGMainMenu" index="0"]
+
+modulate = Color( 0.807843, 0.745098, 0.623529, 0.784314 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 1 )
+_sections_unfolded = [ "Size Flags", "Theme", "Visibility", "custom_styles" ]
+
+[node name="GeneralMenu" type="Control" parent="Menu" index="1"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -521,7 +492,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "GAME_NAME"
 align = 1
 valign = 1
@@ -822,7 +793,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Ver. 0.9.6.12"
+text = "Ver. 0.9.7.12"
 align = 2
 valign = 1
 percent_visible = 1.0
@@ -849,7 +820,7 @@ size_flags_stretch_ratio = 3.0
 use_top_left = false
 _sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="NewGameMenu" type="Control" parent="Menu" index="1"]
+[node name="NewGameMenu" type="Control" parent="Menu" index="2"]
 
 pause_mode = 2
 editor/display_folded = true
@@ -870,7 +841,6 @@ _sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu" index="0"]
 
-editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.372549 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -886,7 +856,6 @@ _sections_unfolded = [ "Size Flags", "Visibility" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/NewGameMenu/PanelContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -928,7 +897,6 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="OptionsMenuPanelContainer" type="PanelContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer" index="1"]
 
-editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1013,7 +981,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "LOCATION"
 align = 1
 valign = 1
@@ -1102,6 +1070,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="LocationRandomButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1129,6 +1098,29 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_right = 382.0
+margin_bottom = 134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "LOCATION_LITE"
+icon = ExtResource( 8 )
+flat = true
+align = 1
+
+[node name="LocationDunes01Button" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 138.0
 margin_right = 382.0
 margin_bottom = 272.0
@@ -1142,32 +1134,8 @@ toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "LOCATION_LITE"
-icon = ExtResource( 7 )
-flat = true
-align = 1
-
-[node name="LocationDunes01Button" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 276.0
-margin_right = 382.0
-margin_bottom = 410.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "LOCATION_DUNES_01"
-icon = ExtResource( 7 )
+icon = ExtResource( 9 )
 flat = true
 align = 1
 
@@ -1229,11 +1197,11 @@ size_flags_stretch_ratio = 2.0
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionsMenu" parent="Menu" index="2" instance=ExtResource( 8 )]
+[node name="OptionsMenu" parent="Menu" index="3" instance=ExtResource( 10 )]
 
 visible = false
 
-[node name="Top10" type="Control" parent="Menu" index="3"]
+[node name="Top10" type="Control" parent="Menu" index="4"]
 
 editor/display_folded = true
 visible = false
@@ -1248,7 +1216,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Theme", "Visibility" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu/Top10" index="0"]
@@ -1263,7 +1231,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 _sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/Top10/PanelContainer" index="0"]
@@ -1350,7 +1318,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.886719, 0.81904, 0.67543, 1 )
 text = "BUTTON_TOP_TEN"
 align = 1
@@ -2643,19 +2611,19 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="animation_menu" type="AnimationPlayer" parent="Menu" index="4"]
+[node name="animation_menu" type="AnimationPlayer" parent="Menu" index="5"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/NewGameMenu_hide = SubResource( 6 )
-anims/NewGameMenu_show = SubResource( 7 )
-anims/OptionsMenu_hide = SubResource( 8 )
-anims/OptionsMenu_show = SubResource( 9 )
-anims/Top10_hide = SubResource( 10 )
-anims/Top10_show = SubResource( 11 )
+anims/NewGameMenu_hide = SubResource( 5 )
+anims/NewGameMenu_show = SubResource( 6 )
+anims/OptionsMenu_hide = SubResource( 7 )
+anims/OptionsMenu_show = SubResource( 8 )
+anims/Top10_hide = SubResource( 9 )
+anims/Top10_show = SubResource( 10 )
 blend_times = [  ]
 
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ContinueButton" to="Menu/GeneralMenu" method="_on_ContinueButton_pressed"]

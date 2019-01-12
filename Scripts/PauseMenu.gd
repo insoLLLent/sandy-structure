@@ -91,6 +91,8 @@ func _on_SaveAndExitButton_pressed():
 	
 	if camera_player.environment.adjustment_enabled:
 		camera_player.environment.adjustment_saturation = 1
+		camera_player.environment.adjustment_contrast = 1
+		camera_player.environment.adjustment_brightness = 1
 	
 	show_exitbg_screen()
 	
