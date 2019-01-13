@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
@@ -60,9 +60,16 @@ use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="DynamicFont" id=4]
 
-resource_name = "OptionsMenu_hide"
+size = 36
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="Animation" id=5]
+
 length = 0.1
 loop = false
 step = 0.01
@@ -91,9 +98,8 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 
-resource_name = "OptionsMenu_show"
 length = 0.1
 loop = false
 step = 0.01
@@ -122,7 +128,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 0.1
 loop = false
@@ -190,7 +196,7 @@ tracks/4/keys = {
 "values": [ 0.4, 1.0 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
 length = 0.1
 loop = false
@@ -244,7 +250,7 @@ tracks/3/keys = {
 "values": [ 1.0, 0.4 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 3.0
 loop = false
@@ -288,7 +294,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -518,6 +524,7 @@ max_lines_visible = -1
 [node name="PauseMenu" type="Control" parent="GUI" index="1"]
 
 pause_mode = 2
+editor/display_folded = true
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
@@ -904,7 +911,6 @@ _sections_unfolded = [ "Size Flags", "Visibility" ]
 pause_mode = 2
 editor/display_folded = true
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -954,25 +960,130 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 714.0
-margin_top = 476.0
+margin_top = 449.0
 margin_right = 1205.0
-margin_bottom = 604.0
+margin_bottom = 630.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TitleLabel" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 491.0
+margin_bottom = 128.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "DEAD_END"
 align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags", "custom_fonts" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 132.0
+margin_right = 491.0
+margin_bottom = 181.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ScoreLabel" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 102.0
+margin_right = 332.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "GAME_SCORE"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags", "custom_fonts" ]
+
+[node name="ColonLabel" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 336.0
+margin_right = 366.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+text = ":  "
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags", "custom_fonts" ]
+
+[node name="CounterLabel" type="Label" parent="GUI/DeadEndScreen/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 370.0
+margin_right = 389.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "0"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -987,8 +1098,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/OptionsMenu_hide = SubResource( 4 )
-anims/OptionsMenu_show = SubResource( 5 )
+anims/OptionsMenu_hide = SubResource( 5 )
+anims/OptionsMenu_show = SubResource( 6 )
 blend_times = [  ]
 _sections_unfolded = [ "Pause" ]
 
@@ -1000,8 +1111,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/hide = SubResource( 6 )
-anims/show = SubResource( 7 )
+anims/hide = SubResource( 7 )
+anims/show = SubResource( 8 )
 blend_times = [  ]
 _sections_unfolded = [ "Pause" ]
 
@@ -1013,7 +1124,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/DeadEndScreen_show = SubResource( 8 )
+anims/DeadEndScreen_show = SubResource( 9 )
 blend_times = [  ]
 _sections_unfolded = [ "Pause" ]
 
@@ -1096,11 +1207,13 @@ wait_time = 0.2
 one_shot = false
 autostart = false
 
-[connection signal="update_location" from="." to="CameraPlayer" method="change_environment"]
-
 [connection signal="update_location" from="." to="Location" method="_on_Game_update_location"]
 
+[connection signal="update_location" from="." to="CameraPlayer" method="change_environment"]
+
 [connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
+
+[connection signal="update_score_sig" from="." to="GUI/DeadEndScreen" method="_on_Game_update_score_sig"]
 
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ResumeButton" to="GUI/PauseMenu" method="_on_ResumeButton_pressed"]
 
