@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/OptionsMenu.gd" type="Script" id=2]
@@ -13,17 +13,18 @@
 [ext_resource path="res://Scenes/MSAAVideoOptionsItem.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/SSAOVideoOptionsItem.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/ShadowEnabledVideoOptionsItem.gd" type="Script" id=13]
-[ext_resource path="res://Scenes/MouseSensitivityControlsOptionsItem.gd" type="Script" id=14]
-[ext_resource path="res://Scenes/KeyUpControlKeysOptionsItem.gd" type="Script" id=15]
-[ext_resource path="res://Scenes/KeyDownControlKeysOptionsItem.gd" type="Script" id=16]
-[ext_resource path="res://Scenes/KeyLeftControlKeysOptionsItem.gd" type="Script" id=17]
-[ext_resource path="res://Scenes/KeyRightControlKeysOptionsItem.gd" type="Script" id=18]
-[ext_resource path="res://Scenes/KeyFallControlKeysOptionsItem.gd" type="Script" id=19]
-[ext_resource path="res://Scenes/KeyRotateLeftControlKeysOptionsItem.gd" type="Script" id=20]
-[ext_resource path="res://Scenes/KeyRotateRightControlKeysOptionsItem.gd" type="Script" id=21]
-[ext_resource path="res://Scenes/KeyTurnLeftControlKeysOptionsItem.gd" type="Script" id=22]
-[ext_resource path="res://Scenes/KeyTurnRightControlKeysOptionsItem.gd" type="Script" id=23]
-[ext_resource path="res://Scenes/KeyPauseControlKeysOptionsItem.gd" type="Script" id=24]
+[ext_resource path="res://Scenes/VolumeMusicOptionsItem.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/MouseSensitivityControlsOptionsItem.gd" type="Script" id=15]
+[ext_resource path="res://Scenes/KeyUpControlKeysOptionsItem.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/KeyDownControlKeysOptionsItem.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/KeyLeftControlKeysOptionsItem.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/KeyRightControlKeysOptionsItem.gd" type="Script" id=19]
+[ext_resource path="res://Scenes/KeyFallControlKeysOptionsItem.gd" type="Script" id=20]
+[ext_resource path="res://Scenes/KeyRotateLeftControlKeysOptionsItem.gd" type="Script" id=21]
+[ext_resource path="res://Scenes/KeyRotateRightControlKeysOptionsItem.gd" type="Script" id=22]
+[ext_resource path="res://Scenes/KeyTurnLeftControlKeysOptionsItem.gd" type="Script" id=23]
+[ext_resource path="res://Scenes/KeyTurnRightControlKeysOptionsItem.gd" type="Script" id=24]
+[ext_resource path="res://Scenes/KeyPauseControlKeysOptionsItem.gd" type="Script" id=25]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -41,10 +42,9 @@ use_filter = true
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="OptionsMenuGame" type="Control"]
+[node name="OptionsMenuGame" type="Control" index="0"]
 
 pause_mode = 2
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -524,6 +524,7 @@ _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer" index="0"]
 
+editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -542,6 +543,7 @@ _sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -600,6 +602,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1450,8 +1453,6 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="MusicPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="3"]
 
-editor/display_folded = true
-visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1546,14 +1547,330 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 930.0
+margin_bottom = 124.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 128.0
+margin_right = 930.0
+margin_bottom = 974.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 15.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 92.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 833.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+custom_styles/panel = ExtResource( 5 )
+_sections_unfolded = [ "Size Flags", "custom_styles" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 737.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 1
+_sections_unfolded = [ "Scroll", "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 737.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VolumeLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 737.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "VOLUME"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VolumeMusicOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 737.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 14 )
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 368.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 152.0
+margin_right = 216.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+_sections_unfolded = [ "Size Flags", "custom_styles" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 368.0
+margin_right = 737.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 369.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = -60.0
+max_value = 0.0
+step = 0.01
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 10
+ticks_on_borders = false
+focus_mode = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 737.0
+margin_bottom = 78.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 82.0
+margin_right = 737.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 22.0
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 837.0
+margin_right = 930.0
+margin_bottom = 846.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 978.0
+margin_right = 930.0
+margin_bottom = 1035.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
 [node name="ControlsPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="4"]
 
+visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 960.0
+margin_left = 1332.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -1571,7 +1888,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 960.0
+margin_right = 588.0
 margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1593,7 +1910,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 30.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 1065.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1609,7 +1926,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 1035.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1626,7 +1943,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1650,7 +1967,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 68.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 124.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1662,12 +1979,13 @@ use_top_left = false
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 128.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 974.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1685,7 +2003,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 92.0
+margin_right = 55.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1701,8 +2019,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 96.0
-margin_right = 833.0
+margin_left = 59.0
+margin_right = 499.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1720,7 +2038,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -1741,7 +2059,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1758,7 +2076,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1782,7 +2100,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 36.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 61.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1792,7 +2110,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" index="0"]
@@ -1801,7 +2119,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1817,7 +2135,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1839,8 +2157,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1856,7 +2174,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1884,7 +2202,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 65.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 96.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1902,7 +2220,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1918,7 +2236,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1940,8 +2258,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1957,7 +2275,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1984,7 +2302,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 100.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 131.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2002,7 +2320,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2018,7 +2336,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2040,8 +2358,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2057,7 +2375,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2084,7 +2402,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 135.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 144.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2103,7 +2421,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 148.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 180.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2127,7 +2445,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 184.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2145,7 +2463,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2155,7 +2473,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" index="0"]
@@ -2164,7 +2482,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2180,7 +2498,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2202,8 +2520,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2219,7 +2537,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2245,7 +2563,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 35.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 66.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2255,7 +2573,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" index="0"]
@@ -2264,7 +2582,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2280,7 +2598,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2302,8 +2620,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2319,7 +2637,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2345,7 +2663,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 70.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 101.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2355,7 +2673,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" index="0"]
@@ -2364,7 +2682,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2380,7 +2698,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2402,8 +2720,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2419,7 +2737,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2445,7 +2763,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 105.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 136.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2455,7 +2773,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" index="0"]
@@ -2464,7 +2782,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2480,7 +2798,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2502,8 +2820,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2519,7 +2837,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2545,7 +2863,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 140.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2555,7 +2873,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" index="0"]
@@ -2564,7 +2882,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 252.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2580,7 +2898,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 252.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2602,8 +2920,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 252.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2619,7 +2937,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 188.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2645,7 +2963,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 175.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 206.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2655,7 +2973,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" index="0"]
@@ -2664,7 +2982,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2680,7 +2998,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2702,8 +3020,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2719,7 +3037,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2745,7 +3063,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 210.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 241.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2755,7 +3073,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" index="0"]
@@ -2764,7 +3082,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2780,7 +3098,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2802,8 +3120,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2819,7 +3137,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2845,7 +3163,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 245.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 276.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2855,7 +3173,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 22 )
+script = ExtResource( 23 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" index="0"]
@@ -2864,7 +3182,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2880,7 +3198,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2902,8 +3220,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2919,7 +3237,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2945,7 +3263,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 280.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 311.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2955,7 +3273,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 23 )
+script = ExtResource( 24 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" index="0"]
@@ -2964,7 +3282,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2980,7 +3298,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3002,8 +3320,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3019,7 +3337,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3044,7 +3362,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 315.0
-margin_right = 737.0
+margin_right = 440.0
 margin_bottom = 346.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3054,7 +3372,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 24 )
+script = ExtResource( 25 )
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" index="0"]
@@ -3063,7 +3381,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3079,7 +3397,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 368.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3101,8 +3419,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 368.0
-margin_right = 737.0
+margin_left = 220.0
+margin_right = 440.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3118,7 +3436,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 369.0
+margin_right = 220.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3142,8 +3460,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 837.0
-margin_right = 930.0
+margin_left = 503.0
+margin_right = 558.0
 margin_bottom = 846.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3161,7 +3479,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 978.0
-margin_right = 930.0
+margin_right = 558.0
 margin_bottom = 1035.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -3186,9 +3504,9 @@ _sections_unfolded = [ "Size Flags" ]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" method="_on_LanguageOptionButton_item_selected"]
 
@@ -3205,6 +3523,10 @@ _sections_unfolded = [ "Size Flags" ]
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_OptionButton_item_selected"]
 
 [connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" method="_on_CheckButton_toggled"]
+
+[connection signal="toggled" from="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer/CheckButton" to="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" method="_on_CheckButton_toggled"]
+
+[connection signal="value_changed" from="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer2/HSlider" to="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" method="_on_HSlider_value_changed"]
 
 [connection signal="value_changed" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2/HSlider" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" method="_on_HSlider_value_changed"]
 

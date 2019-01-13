@@ -17,9 +17,14 @@ var timer_destroy = 0
 
 var score_bonus = 0
 
+var block_destroing_sound_node = null
 
 func _enter_tree():
 	generate_zone()
+
+
+func _ready():
+	block_destroing_sound_node = $BlockDestroingSound
 
 
 func _process(delta):
@@ -30,6 +35,10 @@ func _process(delta):
 			if has_filled_line():
 				score_bonus += GlobalData.BONUS_FACTOR
 				destroy_filled_line()
+				
+				if not block_destroing_sound_node.playing:
+					block_destroing_sound_node.play()
+				
 			else:
 				score_bonus = 0
 				is_check_filled = false

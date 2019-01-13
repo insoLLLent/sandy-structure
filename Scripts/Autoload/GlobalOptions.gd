@@ -25,6 +25,10 @@ var current_msaa = Viewport.MSAA_8X
 var current_ssao = GlobalData.EnvironmentSSAO.DISABLED
 var current_shadow_enabled = true
 
+# music
+var current_mute = true
+var current_volume = 0
+
 # controls
 var current_mouse_sensitivity = 1.1
 
@@ -71,6 +75,7 @@ func is_valid_data(data):
 	   typeof(data["options"]["music"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["controls"]) == TYPE_DICTIONARY and \
 	   data["options"]["video"].has_all(["quality", "screen_size", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
+	   data["options"]["music"].has_all(["mute", "volume"]) and \
 	   data["options"]["controls"].has_all(["mouse_sensitivity", "control_keys"]) and \
 	   typeof(data["options"]["controls"]["control_keys"]) == TYPE_DICTIONARY and \
 	   data["options"]["controls"]["control_keys"].has_all(["up", "down", "left", "right", "fall", "rot_y_left", "rot_y_right", "change_pose_prev", "change_pose_next", "pause"]):
@@ -94,7 +99,8 @@ func get_save_data():
 				"shadow_enabled": current_shadow_enabled,
 			},
 			"music": {
-				
+				"mute": current_mute,
+				"volume": current_volume,
 			},
 			"controls": {
 				"mouse_sensitivity": current_mouse_sensitivity,
@@ -133,6 +139,9 @@ func set_settings_by_options_file():
 	current_ssao = data.options.video.ssao
 	current_shadow_enabled = data.options.video.shadow_enabled
 	
+	# music
+	current_mute = data.options.music.mute
+	current_volume = data.options.music.volume
 	
 	#controls
 	current_mouse_sensitivity = data.options.controls.mouse_sensitivity
@@ -217,7 +226,8 @@ func init_video_settings():
 
 
 func init_music_settings():
-	pass
+	settings_mute()
+	settings_volume()
 
 
 func init_controls_settings():
@@ -378,6 +388,28 @@ func settings_shadow_enabled(shadow_enabled = null):
 	
 	save_if_param_not_null(shadow_enabled)
 
+
+func settings_mute(mute = null):
+	if mute != null:
+		current_mute = mute
+	
+	has_changed = true
+	
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), current_mute)
+	
+	save_if_param_not_null(mute)
+
+
+func settings_volume(vol = null):
+	if vol != null:
+		current_volume = vol
+	
+	has_changed = true
+	
+	# Здесь ничего не происходит, т.к. current_volume
+	# используется в другом скрипте.
+	
+	save_if_param_not_null(vol)
 
 
 func settings_mouse_sensitivity(mouse_sensitivity = null):
