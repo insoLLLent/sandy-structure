@@ -294,7 +294,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -1207,13 +1207,13 @@ wait_time = 0.2
 one_shot = false
 autostart = false
 
-[connection signal="update_location" from="." to="Location" method="_on_Game_update_location"]
-
 [connection signal="update_location" from="." to="CameraPlayer" method="change_environment"]
 
-[connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
+[connection signal="update_location" from="." to="Location" method="_on_Game_update_location"]
 
 [connection signal="update_score_sig" from="." to="GUI/DeadEndScreen" method="_on_Game_update_score_sig"]
+
+[connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
 
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ResumeButton" to="GUI/PauseMenu" method="_on_ResumeButton_pressed"]
 
