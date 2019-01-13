@@ -395,7 +395,7 @@ func settings_mute(mute = null):
 	
 	has_changed = true
 	
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), current_mute)
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), not current_mute)
 	
 	save_if_param_not_null(mute)
 
@@ -406,8 +406,7 @@ func settings_volume(vol = null):
 	
 	has_changed = true
 	
-	# Здесь ничего не происходит, т.к. current_volume
-	# используется в другом скрипте.
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), current_volume)
 	
 	save_if_param_not_null(vol)
 

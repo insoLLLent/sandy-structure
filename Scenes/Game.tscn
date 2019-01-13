@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/MainMenuTheme.tres" type="Theme" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Scripts/GameZone.gd" type="Script" id=13]
 [ext_resource path="res://Sound/block_destroing.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Scripts/FallZone.gd" type="Script" id=15]
+[ext_resource path="res://Sound/ambient.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Sound/fall_fig_01.ogg" type="AudioStream" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -295,7 +297,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -1210,7 +1212,27 @@ bus = "Master"
 
 script = ExtResource( 15 )
 
-[node name="TimerFall" type="Timer" parent="." index="9"]
+[node name="Sound" type="Spatial" parent="." index="9"]
+
+[node name="AmbientStream" type="AudioStreamPlayer" parent="Sound" index="0"]
+
+stream = ExtResource( 16 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="FigIsFallStream" type="AudioStreamPlayer" parent="Sound" index="1"]
+
+stream = ExtResource( 17 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="TimerFall" type="Timer" parent="." index="10"]
 
 process_mode = 1
 wait_time = 0.2
@@ -1221,9 +1243,9 @@ autostart = false
 
 [connection signal="update_location" from="." to="Location" method="_on_Game_update_location"]
 
-[connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
-
 [connection signal="update_score_sig" from="." to="GUI/DeadEndScreen" method="_on_Game_update_score_sig"]
+
+[connection signal="update_score_sig" from="." to="GUI/GameHUD" method="_on_Game_update_score_sig"]
 
 [connection signal="pressed" from="GUI/PauseMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ResumeButton" to="GUI/PauseMenu" method="_on_ResumeButton_pressed"]
 

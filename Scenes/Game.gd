@@ -62,6 +62,9 @@ var current_extra_speed = 0
 # нод лейбла счетчика скорости
 var speed_counter_label_node = null
 
+# звук, который проигрывается при падении фигуры
+var fig_is_fall_stream_node = null
+
 # можно ли играть
 var can_playing = true
 
@@ -89,6 +92,7 @@ func _ready():
 	dead_end_screen_node = $GUI/DeadEndScreen
 	timer_fall_node = $TimerFall
 	speed_counter_label_node = $"GUI/GameHUD/MarginContainer/VBoxContainer/SpeedContainer/CounterLabel"
+	fig_is_fall_stream_node = $"Sound/FigIsFallStream"
 	
 	if GlobalData.current_game_mode == GlobalData.GameMode.SAVE:
 		init_load_data()
@@ -437,6 +441,9 @@ func cube_fall():
 	if (current_cube.translation.y > 0 and _is_bottom_filler()) \
 	   or current_cube.translation.y <= 0:
 		# фигура коснулась поверхности
+		#if not fig_is_fall_stream_node.playing:
+		fig_is_fall_stream_node.play()
+		
 		show_GameZone_filler()
 		timer_fall_node.stop()
 		current_cube.queue_free()

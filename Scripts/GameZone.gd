@@ -36,8 +36,8 @@ func _process(delta):
 				score_bonus += GlobalData.BONUS_FACTOR
 				destroy_filled_line()
 				
-				if not block_destroing_sound_node.playing:
-					block_destroing_sound_node.play()
+				#if not block_destroing_sound_node.playing:
+				block_destroing_sound_node.play()
 				
 			else:
 				score_bonus = 0
