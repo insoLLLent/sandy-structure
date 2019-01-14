@@ -20,5 +20,5 @@ func _on_CheckButton_toggled(button_pressed):
 
 
 func _on_HSlider_value_changed(value):
-	# slider_node.hint_tooltip = str(value)
+	slider_node.hint_tooltip = str(value) + "dB"
 	GlobalOptions.settings_volume(value)

@@ -27,6 +27,7 @@ var current_shadow_enabled = true
 
 # music
 var current_mute = true
+var current_music_mute = true
 var current_volume = 0
 
 # controls
@@ -75,7 +76,7 @@ func is_valid_data(data):
 	   typeof(data["options"]["music"]) == TYPE_DICTIONARY and \
 	   typeof(data["options"]["controls"]) == TYPE_DICTIONARY and \
 	   data["options"]["video"].has_all(["quality", "screen_size", "vsync", "fps", "msaa", "ssao", "shadow_enabled"]) and \
-	   data["options"]["music"].has_all(["mute", "volume"]) and \
+	   data["options"]["music"].has_all(["mute", "music_mute", "volume"]) and \
 	   data["options"]["controls"].has_all(["mouse_sensitivity", "control_keys"]) and \
 	   typeof(data["options"]["controls"]["control_keys"]) == TYPE_DICTIONARY and \
 	   data["options"]["controls"]["control_keys"].has_all(["up", "down", "left", "right", "fall", "rot_y_left", "rot_y_right", "change_pose_prev", "change_pose_next", "pause"]):
@@ -100,6 +101,7 @@ func get_save_data():
 			},
 			"music": {
 				"mute": current_mute,
+				"music_mute": current_music_mute,
 				"volume": current_volume,
 			},
 			"controls": {
@@ -141,6 +143,7 @@ func set_settings_by_options_file():
 	
 	# music
 	current_mute = data.options.music.mute
+	current_music_mute = data.options.music.music_mute
 	current_volume = data.options.music.volume
 	
 	#controls
@@ -227,6 +230,7 @@ func init_video_settings():
 
 func init_music_settings():
 	settings_mute()
+	settings_music_mute()
 	settings_volume()
 
 
@@ -395,9 +399,20 @@ func settings_mute(mute = null):
 	
 	has_changed = true
 	
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), not current_mute)
+	AudioServer.set_bus_mute(AudioServer.get_bus_index(GlobalData.AUDIO_BUS_MASTER), not current_mute)
 	
 	save_if_param_not_null(mute)
+
+
+func settings_music_mute(music_mute = null):
+	if music_mute != null:
+		current_music_mute = music_mute
+	
+	has_changed = true
+	
+	AudioServer.set_bus_mute(AudioServer.get_bus_index(GlobalData.AUDIO_BUS_MUSIC), not current_music_mute)
+	
+	save_if_param_not_null(music_mute)
 
 
 func settings_volume(vol = null):
@@ -406,7 +421,7 @@ func settings_volume(vol = null):
 	
 	has_changed = true
 	
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), current_volume)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(GlobalData.AUDIO_BUS_MASTER), current_volume)
 	
 	save_if_param_not_null(vol)
 

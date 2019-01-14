@@ -76,6 +76,9 @@ enum EnvironmentSSAO { DISABLED = -1, LOW = 0, MEDIUM = 1, HIGH = 2 }
 # группа объектов освещения, которым можно отключить тень
 const GROUP_ILLUMINANT = "illuminant"
 
+const AUDIO_BUS_MASTER = "Master"
+const AUDIO_BUS_MUSIC = "Music"
+
 
 # список разрешений экрана
 const SCREEN_SIZE_AUTO = "auto"
