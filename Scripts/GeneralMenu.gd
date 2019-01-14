@@ -5,6 +5,7 @@ var continue_button_node = null
 var game_mode_menu_node = null
 var options_menu_node = null
 var top10_node = null
+var credits_screen_node = null
 
 var animation_menu_node = null
 
@@ -14,6 +15,7 @@ func _ready():
 	game_mode_menu_node = $"../NewGameMenu"
 	options_menu_node = $"../OptionsMenu"
 	top10_node = $"../Top10"
+	credits_screen_node = $"../CreditsScreen"
 	
 	animation_menu_node = $"../animation_menu"
 	
@@ -46,5 +48,12 @@ func _on_Top10Button_pressed():
 		top10_node.set_process(true)
 
 
+func _on_CreditsButton_pressed():
+	if not animation_menu_node.is_playing():
+		animation_menu_node.play("CreditsScreen_show")
+		credits_screen_node.set_process(true)
+
+
 func _on_ExitButton_pressed():
 	get_tree().quit()
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Environment/MainMenuCameraEnvironment.tres" type="Environment" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Other/dunes_icon.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/MainMenu/OptionsMenuGame.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Top10.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/CreditsScreen.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -86,7 +87,117 @@ use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="DynamicFont" id=5]
+
+size = 24
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=18]
+
+size = 14
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 24
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 14
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 14
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 16
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=10]
+
+resource_name = "CreditsScreen_hide"
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CreditsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CreditsScreen:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=11]
+
+resource_name = "CreditsScreen_show"
+length = 0.1
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CreditsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CreditsScreen:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=12]
 
 length = 0.1
 loop = false
@@ -116,7 +227,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=13]
 
 length = 0.1
 loop = false
@@ -146,7 +257,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=14]
 
 length = 0.1
 loop = false
@@ -176,7 +287,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=15]
 
 length = 0.1
 loop = false
@@ -206,9 +317,8 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=16]
 
-resource_name = "Top10_hide"
 length = 0.1
 loop = false
 step = 0.01
@@ -237,7 +347,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=17]
 
 length = 0.1
 loop = false
@@ -281,7 +391,7 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -377,7 +487,6 @@ _sections_unfolded = [ "Size Flags", "Theme", "Visibility", "custom_styles" ]
 [node name="GeneralMenu" type="Control" parent="Menu" index="1"]
 
 pause_mode = 2
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -653,22 +762,19 @@ align = 1
 
 [node name="CreditsButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="4"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 140.0
-margin_right = 353.0
+margin_right = 382.0
 margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -683,9 +789,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 140.0
+margin_top = 175.0
 margin_right = 382.0
-margin_bottom = 171.0
+margin_bottom = 206.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -739,46 +845,6 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 106.0
-margin_top = 153.0
-margin_right = 344.0
-margin_bottom = 178.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="EngineLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 238.0
-margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Made using The Godot Engine"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="VersionLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
 
 anchor_left = 0.0
@@ -794,7 +860,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Ver. 0.9.7.12"
+text = "Ver. 0.9.8.14"
 align = 2
 valign = 1
 percent_visible = 1.0
@@ -825,6 +891,7 @@ _sections_unfolded = [ "Size Flags", "Theme" ]
 
 pause_mode = 2
 editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -1205,6 +1272,7 @@ visible = false
 
 editor/display_folded = true
 visible = false
+modulate = Color( 1, 1, 1, 5.96046e-008 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -2611,19 +2679,612 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="animation_menu" type="AnimationPlayer" parent="Menu" index="5"]
+[node name="CreditsScreen" type="Control" parent="Menu" index="5"]
+
+modulate = Color( 1, 1, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+script = ExtResource( 12 )
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="Menu/CreditsScreen" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 637.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 641.0
+margin_right = 1278.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 637.0
+margin_bottom = 148.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="TitleLabel" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 152.0
+margin_right = 637.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.886719, 0.81904, 0.67543, 1 )
+text = "BUTTON_CREDITS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 220.0
+margin_right = 637.0
+margin_bottom = 319.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="DeveloperVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 323.0
+margin_right = 637.0
+margin_bottom = 422.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+alignment = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 637.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_right = 423.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 210.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "DEVELOPER_TITLE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 36.0
+margin_right = 210.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 15
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 51.0
+margin_right = 637.0
+margin_bottom = 99.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 163.0
+margin_top = 11.0
+margin_right = 348.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 5
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "DEVELOPER_NAME_01"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors" ]
+
+[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 352.0
+margin_top = 14.0
+margin_right = 474.0
+margin_bottom = 33.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 5
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "(vitaly@lifanoff.ru)"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 426.0
+margin_right = 637.0
+margin_bottom = 475.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="MusicVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 479.0
+margin_right = 637.0
+margin_bottom = 578.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+alignment = 0
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 637.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 228.0
+margin_right = 408.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 180.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "BUTTON_MUSIC"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 36.0
+margin_right = 180.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 15
+_sections_unfolded = [ "Size Flags", "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 51.0
+margin_right = 637.0
+margin_bottom = 134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 637.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "Desert City Kevin MacLeod (incompetech.com)"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors" ]
+
+[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 637.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "Licensed under Creative Commons: By Attribution 3.0 License"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="Label3" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 58.0
+margin_right = 637.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
+text = "http://creativecommons.org/licenses/by/3.0/"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="CenterContainer4" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 582.0
+margin_right = 637.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 263.0
+margin_top = 238.0
+margin_right = 374.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 111.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.886275, 0.811765, 0.67451, 1 )
+text = "MADE_ENGINE"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1282.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="animation_menu" type="AnimationPlayer" parent="Menu" index="6"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/NewGameMenu_hide = SubResource( 5 )
-anims/NewGameMenu_show = SubResource( 6 )
-anims/OptionsMenu_hide = SubResource( 7 )
-anims/OptionsMenu_show = SubResource( 8 )
-anims/Top10_hide = SubResource( 9 )
-anims/Top10_show = SubResource( 10 )
+anims/CreditsScreen_hide = SubResource( 10 )
+anims/CreditsScreen_show = SubResource( 11 )
+anims/NewGameMenu_hide = SubResource( 12 )
+anims/NewGameMenu_show = SubResource( 13 )
+anims/OptionsMenu_hide = SubResource( 14 )
+anims/OptionsMenu_show = SubResource( 15 )
+anims/Top10_hide = SubResource( 16 )
+anims/Top10_show = SubResource( 17 )
 blend_times = [  ]
 
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ContinueButton" to="Menu/GeneralMenu" method="_on_ContinueButton_pressed"]
@@ -2633,6 +3294,8 @@ blend_times = [  ]
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/OptionsButton" to="Menu/GeneralMenu" method="_on_OptionsButton_pressed"]
 
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Top10Button" to="Menu/GeneralMenu" method="_on_Top10Button_pressed"]
+
+[connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/CreditsButton" to="Menu/GeneralMenu" method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="Menu/GeneralMenu" method="_on_ExitButton_pressed"]
 

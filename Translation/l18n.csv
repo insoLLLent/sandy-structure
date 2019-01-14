@@ -65,3 +65,8 @@ QUALITY_MEDIUM,Средний,Medium
 QUALITY_HIGH,Высокий,High
 COMPANY_NAME,Mad Onion's Cube,Mad Onion's Cube
 VOLUME,Громкость,Volume
+DEVELOPER_TITLE,Разработчик,Developer
+DEVELOPER_NAME_01,Виталий Лифанов,Vitaly Lifanov
+MUSIC_01_AUTHOR,Kevin MacLeod,Kevin MacLeod
+MUSIC_01_NAME,Desert City,Desert City
+MADE_ENGINE,Создано на движке Godot,Made using The Godot Engine
