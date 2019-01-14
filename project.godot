@@ -15,7 +15,7 @@ run/main_scene="res://Scenes/Intro.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SandyStructure"
 boot_splash/fullsize=false
-config/icon="res://Other/empty_save.png"
+config/icon="res://Other/icon.png"
 
 [autoload]
 
