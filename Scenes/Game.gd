@@ -695,7 +695,7 @@ func show_FallZone_by_fillers():
 # увеличить счет
 func _on_GameZone_update_score_sig(score, bonus):
 	var add_score = round(GlobalData.SCORE_FACTOR * score * bonus)
-	current_score += add_score + (add_score * current_extra_speed)
+	current_score += add_score + round(add_score * current_extra_speed)
 	emit_signal("update_score_sig", current_score)
 
 
