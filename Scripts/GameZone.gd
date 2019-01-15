@@ -67,16 +67,15 @@ func generate_zone():
 				
 				# показать блоки в случайных местах, 
 				# чтобы при старте игры поле не было пустым
-				randomize()
-				if randi() % 2 == 1:
-					if y > 0:
-						randomize()
-						if (randi() % 2 == 1) and current_zone[x][y-1][z].visible:
+				if y < 7:
+					randomize()
+					if randi() % 2 == 1:
+						if y == 0:
 							current_zone[x][y][z].show()
-					else:
-						current_zone[x][y][z].show()
-#					if y < 15:
-#						current_zone[x][y][z].show()
+						else:
+							randomize()
+							if (randi() % 2 == 1) and current_zone[x][y-1][z].visible:
+								current_zone[x][y][z].show()
 
 
 # есть ли заполненные кубами линии

@@ -58,7 +58,7 @@ var dead_end_screen_node = null
 # счетчик скорости падения фигуры
 var speed_timer = 0
 # текущая прибавка к скорости
-var current_extra_speed = 0
+var current_extra_speed = .0
 # нод лейбла счетчика скорости
 var speed_counter_label_node = null
 
@@ -694,7 +694,8 @@ func show_FallZone_by_fillers():
 
 # увеличить счет
 func _on_GameZone_update_score_sig(score, bonus):
-	current_score += round(GlobalData.SCORE_FACTOR * score * bonus)
+	var add_score = round(GlobalData.SCORE_FACTOR * score * bonus)
+	current_score += add_score + (add_score * current_extra_speed)
 	emit_signal("update_score_sig", current_score)
 
 
