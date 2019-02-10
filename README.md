@@ -8,3 +8,7 @@
 
 Размер игровой зоны 9x21x9.
 
+----
+
+[Sandy Structure on itch.io](https://bitbucket.org/SymBioTech_/sandystructure/src/master/)
+
