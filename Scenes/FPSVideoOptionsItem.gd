@@ -5,7 +5,7 @@ var fps_list = []
 var option_button_node = null
 
 func _ready():
-	option_button_node = $"PanelContainer2/OptionButton"
+	option_button_node = $"./PanelContainer2/OptionButton"
 	update_items()
 
 
@@ -30,6 +30,9 @@ func _on_LanguageOptionButton_item_selected(ID):
 
 
 func update_items():
+	if option_button_node == null:
+		return
+	
 	option_button_node.clear()
 	
 	update_fps_list()

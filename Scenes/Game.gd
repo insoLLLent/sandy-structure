@@ -177,7 +177,7 @@ func init_load_data():
 	camera_node.pitch = data.camera_player.pitch
 	
 	instance_cube(data.game.cube.cube_number, data.game.cube.translation, \
-	              data.game.cube.rotation_degrees, data.game.cube.pose)
+				  data.game.cube.rotation_degrees, data.game.cube.pose)
 
 ##################
 
@@ -286,7 +286,7 @@ func random_cube_rotation_y():
 		return
 	
 	current_cube.rotation_degrees.y = \
-	            GlobalData.STEP_ROTATION * round(rand_range(0, 3))
+				GlobalData.STEP_ROTATION * round(rand_range(0, 3))
 	
 	normalize_rotation_y_current_cube()
 
@@ -328,8 +328,8 @@ func init_bottom_fillers():
 func _is_bottom_filler():
 	for filler in fillers:
 		var under_filler = game_zone.current_zone[round(filler.global_transform.origin.x)]\
-		                                         [round(filler.global_transform.origin.y - 1)]\
-		                                         [round(filler.global_transform.origin.z)]
+												 [round(filler.global_transform.origin.y - 1)]\
+												 [round(filler.global_transform.origin.z)]
 		
 		if under_filler.visible:
 			return true
@@ -341,8 +341,8 @@ func _is_bottom_filler():
 func show_GameZone_filler():
 	for filler in fillers:
 		var need_show_cube = game_zone.current_zone[round(filler.global_transform.origin.x)]\
-		                                           [round(filler.global_transform.origin.y)]\
-		                                           [round(filler.global_transform.origin.z)]
+												   [round(filler.global_transform.origin.y)]\
+												   [round(filler.global_transform.origin.z)]
 		need_show_cube.show()
 
 
@@ -364,8 +364,8 @@ func fillers_in_zone():
 func fillers_in_visible_cube():
 	for filler in fillers:
 		var cube = game_zone.current_zone[round(filler.global_transform.origin.x)]\
-		                                 [round(filler.global_transform.origin.y)]\
-		                                 [round(filler.global_transform.origin.z)]
+										 [round(filler.global_transform.origin.y)]\
+										 [round(filler.global_transform.origin.z)]
 		
 		if cube.visible:
 			return true
@@ -377,7 +377,7 @@ func fillers_in_visible_cube():
 # чтобы значение не выходило за заданный диапазон
 func normalize_rotation_y_current_cube():
 	current_cube.rotation_degrees.y = \
-	                wrapi(current_cube.rotation_degrees.y, 0, 360)
+					wrapi(current_cube.rotation_degrees.y, 0, 360)
 
 
 # следующая поза фигуры

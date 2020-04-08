@@ -28,3579 +28,1468 @@
 [ext_resource path="res://Scenes/KeyPauseControlKeysOptionsItem.gd" type="Script" id=26]
 
 [sub_resource type="DynamicFont" id=1]
-
 size = 48
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
-
 size = 48
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="OptionsMenuGame" type="Control"]
-
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="." index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="."]
 self_modulate = Color( 1, 1, 1, 0.372549 )
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags", "Visibility" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "Theme", "custom_constants" ]
 
-[node name="InvisibleExitSaveMenuButton" type="Button" parent="PanelContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="InvisibleExitSaveMenuButton" type="Button" parent="PanelContainer/HBoxContainer"]
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-toggle_mode = false
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 flat = true
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionsMenuPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="1"]
-
-editor/display_folded = true
+[node name="OptionsMenuPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 480.0
 margin_right = 960.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer"]
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 450.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer"]
 margin_right = 450.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 alignment = 1
 
-[node name="GameNameLabel" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="GameNameLabel" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 450.0
 margin_bottom = 342.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 text = "BUTTON_OPTIONS"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 346.0
 margin_right = 450.0
 margin_bottom = 688.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_right = 30.0
 margin_bottom = 342.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 34.0
 margin_right = 416.0
 margin_bottom = 342.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_right = 382.0
 margin_bottom = 307.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VideoButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VideoButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_right = 382.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_VIDEO"
-flat = false
-align = 1
 
-[node name="MusicButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MusicButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_top = 35.0
 margin_right = 382.0
 margin_bottom = 66.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_MUSIC"
-flat = false
-align = 1
 
-[node name="ControlsButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ControlsButton" type="Button" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_top = 70.0
 margin_right = 382.0
 margin_bottom = 101.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_CONTROLS"
-flat = false
-align = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 311.0
 margin_right = 382.0
 margin_bottom = 342.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 margin_right = 184.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "LANGUAGE"
 align = 2
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 margin_left = 184.0
 margin_top = 3.0
 margin_right = 198.0
 margin_bottom = 28.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 text = ":  "
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="LanguageOptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LanguageOptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 margin_left = 198.0
 margin_right = 382.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
 script = ExtResource( 4 )
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 420.0
 margin_right = 450.0
 margin_bottom = 342.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 692.0
 margin_right = 450.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VideoPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="2"]
-
-editor/display_folded = true
+[node name="VideoPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 745.0
 margin_right = 1332.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer"]
 margin_right = 587.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 557.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer"]
 margin_right = 557.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ButtonVideoLabel" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonVideoLabel" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 557.0
 margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 text = "BUTTON_VIDEO"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 68.0
 margin_right = 557.0
 margin_bottom = 124.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 128.0
 margin_right = 557.0
 margin_bottom = 974.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 15.0
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_right = 54.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 58.0
 margin_right = 497.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 8.0
 custom_styles/panel = ExtResource( 5 )
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer"]
 margin_right = 439.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
 scroll_deadzone = 1
-_sections_unfolded = [ "Scroll", "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer"]
 margin_right = 439.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="QualitySettingsVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="QualitySettingsVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 6 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "QUALITY_SETTINGS"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 35.0
 margin_right = 439.0
 margin_bottom = 50.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="ScreenResolutionVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScreenResolutionVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 54.0
 margin_right = 439.0
 margin_bottom = 85.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 7 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SCREEN_RESOLUTION"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VsyncVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VsyncVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 89.0
 margin_right = 439.0
 margin_bottom = 115.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 8 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "VSYNC"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer2"]
 margin_left = 78.0
 margin_right = 142.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 6
 size_flags_vertical = 3
 custom_styles/hover = ExtResource( 9 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 0
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="FPSVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="FPSVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 119.0
 margin_right = 439.0
 margin_bottom = 150.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 10 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "FPS"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MSAAVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MSAAVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 154.0
 margin_right = 439.0
 margin_bottom = 185.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 11 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "MSAA"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="SSAOVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SSAOVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 189.0
 margin_right = 439.0
 margin_bottom = 220.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 12 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SSAO"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = false
-action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
 align = 1
-items = [  ]
-selected = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ShadowEnabledVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ShadowEnabledVideoOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 224.0
 margin_right = 439.0
 margin_bottom = 250.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 13 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem"]
 margin_right = 219.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer"]
 margin_right = 219.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SHADOW"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem"]
 margin_left = 219.0
 margin_right = 439.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2"]
 margin_left = 78.0
 margin_right = 142.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 6
 size_flags_vertical = 3
 custom_styles/hover = ExtResource( 9 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
-toggle_mode = true
 enabled_focus_mode = 0
-shortcut = null
-group = null
-flat = false
-align = 0
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 501.0
 margin_right = 557.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 978.0
 margin_right = 557.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MusicPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="3"]
-
+[node name="MusicPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 960.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer"]
 margin_right = 960.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 930.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer"]
 margin_right = 930.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="ButtonMusicLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonMusicLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 930.0
 margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 text = "BUTTON_MUSIC"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 68.0
 margin_right = 930.0
 margin_bottom = 124.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 128.0
 margin_right = 930.0
 margin_bottom = 974.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 15.0
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 92.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 96.0
 margin_right = 833.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 8.0
 custom_styles/panel = ExtResource( 5 )
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer"]
 margin_right = 737.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
 scroll_deadzone = 1
-_sections_unfolded = [ "Scroll", "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer"]
 margin_right = 737.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="SwitchMusicOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SwitchMusicOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_right = 737.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 14 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="VolumeLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VolumeLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem"]
 margin_right = 368.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "BUTTON_MUSIC"
 align = 1
 valign = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem"]
 margin_left = 368.0
 margin_right = 432.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem/PanelContainer"]
 margin_right = 64.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/hover = ExtResource( 9 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
-toggle_mode = true
 pressed = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 0
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="VolumeMusicOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VolumeMusicOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 30.0
 margin_right = 737.0
 margin_bottom = 56.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 15 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="VolumeLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VolumeLabel" type="Label" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem"]
 margin_right = 368.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "VOLUME"
 align = 1
 valign = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem"]
 margin_left = 368.0
 margin_right = 432.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CheckButton" type="CheckButton" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer"]
 margin_right = 64.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/hover = ExtResource( 9 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
-toggle_mode = true
 pressed = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 0
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem"]
 margin_left = 441.0
 margin_right = 737.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer2"]
 margin_right = 296.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 min_value = -60.0
 max_value = 0.0
 step = 0.01
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
 tick_count = 10
-ticks_on_borders = false
-focus_mode = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 837.0
 margin_right = 930.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 978.0
 margin_right = 930.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ControlsPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" index="4"]
-
-editor/display_folded = true
+[node name="ControlsPanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 1332.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer"]
 margin_right = 588.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 558.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer"]
 margin_right = 558.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ButtonControlsLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonControlsLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 558.0
 margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 text = "BUTTON_CONTROLS"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 68.0
 margin_right = 558.0
 margin_bottom = 124.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 128.0
 margin_right = 558.0
 margin_bottom = 974.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 15.0
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 55.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 59.0
 margin_right = 499.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 8.0
 custom_styles/panel = ExtResource( 5 )
-_sections_unfolded = [ "Size Flags", "custom_styles" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer"]
 margin_right = 440.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
 scroll_deadzone = 1
-_sections_unfolded = [ "Scroll", "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer"]
 margin_right = 440.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MouseLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MouseLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_right = 440.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "MOUSE_LABEL"
 align = 1
 valign = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MouseSensitivityControlsOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MouseSensitivityControlsOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 440.0
 margin_bottom = 61.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 16 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem"]
 margin_right = 220.0
 margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "MOUSE_SENSITIVITY"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 min_value = 0.05
 max_value = 6.0
 step = 0.05
-page = 0.0
 value = 1.1
-exp_edit = false
-rounded = false
-editable = true
 tick_count = 30
-ticks_on_borders = false
-focus_mode = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ViewControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ViewControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 65.0
 margin_right = 440.0
 margin_bottom = 96.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_VIEW"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ViewControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 disabled = true
-toggle_mode = false
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "MOUSE_LABEL"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ZoomingControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ZoomingControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 100.0
 margin_right = 440.0
 margin_bottom = 131.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_ZOOM"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/ZoomingControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 disabled = true
-toggle_mode = false
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "MOUSE_WHEEL"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 135.0
 margin_right = 440.0
 margin_bottom = 144.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ControlKeysLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ControlKeysLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 148.0
 margin_right = 440.0
 margin_bottom = 180.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "CONTROL_KEYS"
 align = 1
 valign = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer"]
 margin_top = 184.0
 margin_right = 440.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyUpControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyUpControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 17 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_UP"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyDownControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyDownControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 35.0
 margin_right = 440.0
 margin_bottom = 66.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 18 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_DOWN"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 70.0
 margin_right = 440.0
 margin_bottom = 101.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 19 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_LEFT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 105.0
 margin_right = 440.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 20 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_RIGHT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyFallControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="4"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyFallControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 140.0
 margin_right = 440.0
 margin_bottom = 171.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 21 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem"]
 margin_right = 252.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer"]
 margin_right = 252.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_ACCELERATION_OF_FALL"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem"]
 margin_left = 252.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer2"]
 margin_right = 188.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyRotateLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="5"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyRotateLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 175.0
 margin_right = 440.0
 margin_bottom = 206.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 22 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_ROTATE_LEFT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyRotateRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="6"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyRotateRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 210.0
 margin_right = 440.0
 margin_bottom = 241.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 23 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_ROTATE_RIGHT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyTurnLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="7"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyTurnLeftControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 245.0
 margin_right = 440.0
 margin_bottom = 276.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 24 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_TURN_LEFT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyTurnRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="8"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyTurnRightControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 280.0
 margin_right = 440.0
 margin_bottom = 311.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 25 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_TURN_RIGHT"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="KeyPauseControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer" index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="KeyPauseControlKeysOptionsItem" type="HBoxContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 margin_top = 315.0
 margin_right = 440.0
 margin_bottom = 346.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 custom_constants/separation = 0
 alignment = 1
 script = ExtResource( 26 )
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NameLabel" type="Label" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "KEY_PAUSE"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem"]
 margin_left = 220.0
 margin_right = 440.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer2"]
 margin_right = 220.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "."
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 503.0
 margin_right = 558.0
 margin_bottom = 846.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 978.0
 margin_right = 558.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
-
 [connection signal="pressed" from="PanelContainer/HBoxContainer/InvisibleExitSaveMenuButton" to="." method="_on_InvisibleExitSaveMenuButton_pressed"]
-
 [connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/VideoButton" to="." method="_on_VideoButton_pressed"]
-
 [connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/MusicButton" to="." method="_on_MusicButton_pressed"]
-
 [connection signal="pressed" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/ControlsButton" to="." method="_on_ControlsButton_pressed"]
-
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
-[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" method="_on_LanguageOptionButton_item_selected"]
-
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
+[connection signal="item_selected" from="PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/LanguageOptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_LanguageOptionButton_item_selected"]
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/QualitySettingsVideoOptionsItem" method="_on_OptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ScreenResolutionVideoOptionsItem" method="_on_OptionButton_item_selected"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VsyncVideoOptionsItem" method="_on_CheckButton_toggled"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/FPSVideoOptionsItem" method="_on_OptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/MSAAVideoOptionsItem" method="_on_OptionButton_item_selected"]
-
 [connection signal="item_selected" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem/PanelContainer2/OptionButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/SSAOVideoOptionsItem" method="_on_OptionButton_item_selected"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem/PanelContainer2/CheckButton" to="PanelContainer/HBoxContainer/VideoPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ShadowEnabledVideoOptionsItem" method="_on_CheckButton_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem/PanelContainer/CheckButton" to="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/SwitchMusicOptionsItem" method="_on_CheckButton_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer/CheckButton" to="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" method="_on_CheckButton_toggled"]
-
 [connection signal="value_changed" from="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem/PanelContainer2/HSlider" to="PanelContainer/HBoxContainer/MusicPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VolumeMusicOptionsItem" method="_on_HSlider_value_changed"]
-
 [connection signal="value_changed" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem/PanelContainer2/HSlider" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/MouseSensitivityControlsOptionsItem" method="_on_HSlider_value_changed"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyUpControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyDownControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyLeftControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRightControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyFallControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateLeftControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyRotateRightControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnLeftControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyTurnRightControlKeysOptionsItem" method="_on_Button_toggled"]
-
 [connection signal="toggled" from="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem/PanelContainer2/Button" to="PanelContainer/HBoxContainer/ControlsPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/PanelContainer/ScrollContainer/VBoxContainer/VBoxContainer/KeyPauseControlKeysOptionsItem" method="_on_Button_toggled"]
-
-

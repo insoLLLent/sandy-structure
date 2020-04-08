@@ -14,132 +14,54 @@
 [ext_resource path="res://Scenes/CreditsScreen.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.67451, 0.623529, 0.521569, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
 border_color = Color( 0.67451, 0.623529, 0.521569, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Corner Radius", "Expand Margin", "Shadow" ]
 
 [sub_resource type="DynamicFont" id=2]
-
 size = 48
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=3]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0, 0, 0, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
 border_color = Color( 0, 0, 0, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width" ]
 
 [sub_resource type="DynamicFont" id=4]
-
 size = 48
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=5]
-
 size = 24
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=18]
-
-size = 14
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=6]
-
-size = 24
-use_mipmaps = false
+size = 14
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=7]
-
-size = 14
-use_mipmaps = false
+size = 24
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=8]
-
 size = 14
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=9]
-
-size = 16
-use_mipmaps = false
+size = 14
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="DynamicFont" id=10]
+use_filter = true
+font_data = ExtResource( 5 )
 
-resource_name = "CreditsScreen_hide"
+[sub_resource type="Animation" id=11]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("CreditsScreen:modulate")
@@ -164,43 +86,38 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ false ]
-}
-
-[sub_resource type="Animation" id=11]
-
-resource_name = "CreditsScreen_show"
-length = 0.1
-loop = false
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("CreditsScreen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CreditsScreen:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ true ]
 }
 
 [sub_resource type="Animation" id=12]
-
 length = 0.1
-loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CreditsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CreditsScreen:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.1
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("NewGameMenu:modulate")
@@ -227,10 +144,8 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=13]
-
+[sub_resource type="Animation" id=14]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("NewGameMenu:modulate")
@@ -257,10 +172,8 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=14]
-
+[sub_resource type="Animation" id=15]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("OptionsMenu:modulate")
@@ -287,10 +200,8 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=15]
-
+[sub_resource type="Animation" id=16]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("OptionsMenu:visible")
@@ -317,10 +228,8 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=16]
-
+[sub_resource type="Animation" id=17]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Top10:modulate")
@@ -347,10 +256,8 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=17]
-
+[sub_resource type="Animation" id=18]
 length = 0.1
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Top10:modulate")
@@ -391,2503 +298,1020 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="MainMenu" type="Node" index="0"]
-
+[node name="MainMenu" type="Node"]
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
 
-[node name="MainMenuCamera" type="Camera" parent="." index="0"]
-
+[node name="MainMenuCamera" type="Camera" parent="."]
 transform = Transform( 0.970612, 0.100942, -0.218458, 0, 0.907778, 0.419452, 0.240651, -0.407125, 0.881099, -2.52033, 3.17391, 7.46522 )
-keep_aspect = 1
-cull_mask = 1048575
 environment = ExtResource( 2 )
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
 fov = 60.0
-size = 1.0
-near = 0.05
-far = 100.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="1" groups=[
+[node name="DirectionalLight" type="DirectionalLight" parent="." groups=[
 "illuminant",
 ]]
-
 transform = Transform( 0.0803573, -0.833301, 0.546947, 0.524763, 0.501888, 0.687555, -0.847447, 0.231767, 0.477617, 0, 3.25838, 10.0769 )
-layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
-light_indirect_energy = 1.0
-light_negative = false
-light_specular = 0.5
-light_bake_mode = 1
-light_cull_mask = -1
 shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.1
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
-directional_shadow_mode = 2
-directional_shadow_split_1 = 0.1
-directional_shadow_split_2 = 0.2
-directional_shadow_split_3 = 0.5
 directional_shadow_blend_splits = true
 directional_shadow_normal_bias = 0.4
-directional_shadow_bias_split_scale = 0.25
-directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
-_sections_unfolded = [ "Directional Shadow", "Light", "Shadow" ]
 
-[node name="Menu" type="CanvasLayer" parent="." index="2"]
+[node name="Menu" type="CanvasLayer" parent="."]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="BGMainMenu" type="Control" parent="Menu" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="BGMainMenu" type="Control" parent="Menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 3 )
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="Panel" type="Panel" parent="Menu/BGMainMenu" index="0"]
-
+[node name="Panel" type="Panel" parent="Menu/BGMainMenu"]
 modulate = Color( 0.807843, 0.745098, 0.623529, 0.784314 )
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 3 )
 custom_styles/panel = SubResource( 1 )
-_sections_unfolded = [ "Size Flags", "Theme", "Visibility", "custom_styles" ]
 
-[node name="GeneralMenu" type="Control" parent="Menu" index="1"]
-
+[node name="GeneralMenu" type="Control" parent="Menu"]
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 3 )
 script = ExtResource( 4 )
-_sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/GeneralMenu" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/GeneralMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
-alignment = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/GeneralMenu/HBoxContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="Menu/GeneralMenu/HBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer"]
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 450.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer"]
 margin_right = 450.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 alignment = 1
 
-[node name="GameNameLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="GameNameLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 450.0
 margin_bottom = 332.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "GAME_NAME"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 336.0
 margin_right = 450.0
 margin_bottom = 668.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_right = 30.0
 margin_bottom = 332.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 34.0
 margin_right = 416.0
 margin_bottom = 332.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ContinueButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ContinueButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_right = 382.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 disabled = true
-toggle_mode = false
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_CONTINUE"
-flat = false
-align = 1
 
-[node name="NewGameButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NewGameButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 35.0
 margin_right = 382.0
 margin_bottom = 66.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_NEW_GAME"
-flat = false
-align = 1
 
-[node name="OptionsButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="OptionsButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 70.0
 margin_right = 382.0
 margin_bottom = 101.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_OPTIONS"
-flat = false
-align = 1
 
-[node name="Top10Button" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Top10Button" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 105.0
 margin_right = 382.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_TOP_TEN"
-flat = false
-align = 1
 
-[node name="CreditsButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CreditsButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 140.0
 margin_right = 382.0
 margin_bottom = 171.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_CREDITS"
-flat = false
-align = 1
 
-[node name="ExitButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ExitButton" type="Button" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 175.0
 margin_right = 382.0
 margin_bottom = 206.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "BUTTON_EXIT"
-flat = false
-align = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer2" type="MarginContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 420.0
 margin_right = 450.0
 margin_bottom = 332.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 672.0
 margin_right = 450.0
 margin_bottom = 1004.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VersionLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VersionLabel" type="Label" parent="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 1008.0
 margin_right = 450.0
 margin_bottom = 1033.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Ver. 0.9.8.14"
 align = 2
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/GeneralMenu/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/GeneralMenu/HBoxContainer"]
 margin_left = 480.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
-use_top_left = false
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="NewGameMenu" type="Control" parent="Menu" index="2"]
-
+[node name="NewGameMenu" type="Control" parent="Menu"]
 pause_mode = 2
-editor/display_folded = true
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 3 )
 script = ExtResource( 6 )
-_sections_unfolded = [ "Pause", "Theme", "Visibility" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu"]
 self_modulate = Color( 1, 1, 1, 0.372549 )
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags", "Visibility" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/NewGameMenu/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/NewGameMenu/PanelContainer"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="InvisibleExitSaveMenuButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="InvisibleExitSaveMenuButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer"]
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-toggle_mode = false
 action_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 flat = true
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionsMenuPanelContainer" type="PanelContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer" index="1"]
-
+[node name="OptionsMenuPanelContainer" type="PanelContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 480.0
 margin_right = 960.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Visibility" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer"]
 margin_right = 480.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 15
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer" index="0"]
-
+[node name="PanelContainer" type="PanelContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 30.0
 margin_right = 450.0
 margin_bottom = 1065.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Visibility", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer"]
 margin_right = 450.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 alignment = 1
 
-[node name="GameModeLabel" type="Label" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="GameModeLabel" type="Label" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_right = 450.0
 margin_bottom = 171.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "LOCATION"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 175.0
 margin_right = 450.0
 margin_bottom = 859.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_right = 30.0
 margin_bottom = 684.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScrollContainer" type="ScrollContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 34.0
 margin_right = 416.0
 margin_bottom = 684.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-scroll_horizontal_enabled = true
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
-scroll_deadzone = 0
-_sections_unfolded = [ "Margin", "Scroll", "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer"]
 margin_right = 382.0
 margin_bottom = 684.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="LocationRandomButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="0"]
-
+[node name="LocationRandomButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 382.0
 margin_bottom = 134.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "LOCATION_RANDOM"
 icon = ExtResource( 7 )
 flat = true
-align = 1
 
-[node name="LocationLiteButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LocationLiteButton" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
 margin_right = 382.0
 margin_bottom = 134.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "LOCATION_LITE"
 icon = ExtResource( 8 )
 flat = true
-align = 1
 
-[node name="LocationDunes01Button" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LocationDunes01Button" type="Button" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
 margin_top = 138.0
 margin_right = 382.0
 margin_bottom = 272.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
-group = null
 text = "LOCATION_DUNES_01"
 icon = ExtResource( 9 )
 flat = true
-align = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer2" type="MarginContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 420.0
 margin_right = 450.0
 margin_bottom = 684.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_constants/margin_right = 15
 custom_constants/margin_top = 0
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 margin_top = 863.0
 margin_right = 450.0
 margin_bottom = 1035.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/NewGameMenu/PanelContainer/HBoxContainer"]
 margin_left = 960.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="OptionsMenu" parent="Menu" index="3" instance=ExtResource( 10 )]
-
+[node name="OptionsMenu" parent="Menu" instance=ExtResource( 10 )]
 visible = false
 
-[node name="Top10" type="Control" parent="Menu" index="4"]
-
-editor/display_folded = true
+[node name="Top10" type="Control" parent="Menu"]
 visible = false
-modulate = Color( 1, 1, 1, 5.96046e-008 )
-anchor_left = 0.0
-anchor_top = 0.0
+modulate = Color( 1, 1, 1, 5.96046e-08 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 3 )
 script = ExtResource( 11 )
-_sections_unfolded = [ "Theme", "Visibility" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/Top10" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="Menu/Top10"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 3 )
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/Top10/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/Top10/PanelContainer"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer"]
 margin_right = 637.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer"]
 margin_left = 641.0
 margin_right = 1278.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_right = 637.0
 margin_bottom = 229.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="TitleLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TitleLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 233.0
 margin_right = 637.0
 margin_bottom = 297.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.886719, 0.81904, 0.67543, 1 )
 text = "BUTTON_TOP_TEN"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 301.0
 margin_right = 637.0
 margin_bottom = 346.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer1" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 350.0
 margin_right = 637.0
 margin_bottom = 395.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer1"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer2" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 399.0
 margin_right = 637.0
 margin_bottom = 444.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer3" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 448.0
 margin_right = 637.0
 margin_bottom = 493.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer4" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 497.0
 margin_right = 637.0
 margin_bottom = 542.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer5" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 546.0
 margin_right = 637.0
 margin_bottom = 591.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer6" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 595.0
 margin_right = 637.0
 margin_bottom = 640.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer6"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer7" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 644.0
 margin_right = 637.0
 margin_bottom = 689.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer7"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="10"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer8" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 693.0
 margin_right = 637.0
 margin_bottom = 738.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.480469, 0.426612, 0.315308, 1 )
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer8"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer9" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="11"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer9" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 742.0
 margin_right = 637.0
 margin_bottom = 787.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer9"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="HBoxContainer10" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="12"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer10" type="HBoxContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 791.0
 margin_right = 637.0
 margin_bottom = 836.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10"]
 margin_right = 224.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="NumLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10"]
 margin_left = 224.0
 margin_right = 239.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 text = "1."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10"]
 margin_left = 239.0
 margin_right = 351.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreLabel" type="Label" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10"]
 margin_left = 351.0
 margin_right = 411.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 text = "165156"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer10"]
 margin_left = 411.0
 margin_right = 637.0
 margin_bottom = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer" index="13"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_top = 840.0
 margin_right = 637.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/Top10/PanelContainer/HBoxContainer"]
 margin_left = 1282.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CreditsScreen" type="Control" parent="Menu" index="5"]
-
-modulate = Color( 1, 1, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="CreditsScreen" type="Control" parent="Menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 3 )
 script = ExtResource( 12 )
-_sections_unfolded = [ "Theme", "Visibility" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu/CreditsScreen" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="PanelContainer" type="PanelContainer" parent="Menu/CreditsScreen"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 3 )
-_sections_unfolded = [ "Size Flags", "Visibility", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer"]
 margin_right = 637.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer"]
 margin_left = 641.0
 margin_right = 1278.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_right = 637.0
-margin_bottom = 148.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+margin_bottom = 145.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="TitleLabel" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 152.0
+[node name="TitleLabel" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 149.0
 margin_right = 637.0
-margin_bottom = 216.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+margin_bottom = 213.0
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.886719, 0.81904, 0.67543, 1 )
 text = "BUTTON_CREDITS"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 220.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 217.0
 margin_right = 637.0
-margin_bottom = 319.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+margin_bottom = 313.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="DeveloperVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 323.0
+[node name="DeveloperVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 317.0
 margin_right = 637.0
-margin_bottom = 422.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+margin_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
-alignment = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer"]
 margin_right = 637.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer"]
 margin_left = 213.0
 margin_right = 423.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer"]
 margin_right = 210.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 5 )
@@ -2895,416 +1319,169 @@ custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "DEVELOPER_TITLE"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/CenterContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 210.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer"]
 margin_top = 51.0
 margin_right = 637.0
-margin_bottom = 99.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+margin_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer"]
 margin_left = 163.0
-margin_top = 11.0
+margin_top = 10.0
 margin_right = 348.0
-margin_bottom = 36.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
+margin_bottom = 35.0
 size_flags_horizontal = 5
-size_flags_vertical = 4
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "DEVELOPER_NAME_01"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
-[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/DeveloperVBoxContainer/HBoxContainer"]
 margin_left = 352.0
-margin_top = 14.0
+margin_top = 13.0
 margin_right = 474.0
-margin_bottom = 33.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
+margin_bottom = 32.0
 size_flags_horizontal = 5
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "(vitaly@lifanoff.ru)"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer3" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 426.0
+[node name="CenterContainer3" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 417.0
 margin_right = 637.0
-margin_bottom = 475.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
+margin_bottom = 465.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MusicVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 479.0
+[node name="MusicVBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 469.0
 margin_right = 637.0
-margin_bottom = 578.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+margin_bottom = 591.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
-alignment = 0
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer"]
 margin_right = 637.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer"]
 margin_left = 228.0
 margin_right = 408.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer"]
 margin_right = 180.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "BUTTON_MUSIC"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HSeparator" type="HSeparator" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/CenterContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 180.0
 margin_bottom = 51.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 15
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer"]
 margin_top = 51.0
 margin_right = 637.0
-margin_bottom = 134.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+margin_bottom = 122.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer"]
 margin_right = 637.0
 margin_bottom = 25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "Desert City Kevin MacLeod (incompetech.com)"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
-[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label2" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer"]
 margin_top = 29.0
 margin_right = 637.0
-margin_bottom = 54.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 7 )
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "Licensed under Creative Commons: By Attribution 3.0 License"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="Label3" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 58.0
+[node name="Label3" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/MusicVBoxContainer/VBoxContainer"]
+margin_top = 52.0
 margin_right = 637.0
-margin_bottom = 83.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 8 )
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0.886275, 0.815686, 0.67451, 1 )
 text = "http://creativecommons.org/licenses/by/3.0/"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer4" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 582.0
+[node name="CenterContainer4" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_top = 595.0
 margin_right = 637.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4"]
 margin_left = 263.0
-margin_top = 238.0
+margin_top = 231.0
 margin_right = 374.0
-margin_bottom = 260.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
+margin_bottom = 253.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer/VBoxContainer/CenterContainer4/VBoxContainer"]
 margin_right = 111.0
 margin_bottom = 22.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.886275, 0.811765, 0.67451, 1 )
 text = "MADE_ENGINE"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="Menu/CreditsScreen/PanelContainer/HBoxContainer"]
 margin_left = 1282.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="animation_menu" type="AnimationPlayer" parent="Menu" index="6"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/CreditsScreen_hide = SubResource( 10 )
-anims/CreditsScreen_show = SubResource( 11 )
-anims/NewGameMenu_hide = SubResource( 12 )
-anims/NewGameMenu_show = SubResource( 13 )
-anims/OptionsMenu_hide = SubResource( 14 )
-anims/OptionsMenu_show = SubResource( 15 )
-anims/Top10_hide = SubResource( 16 )
-anims/Top10_show = SubResource( 17 )
-blend_times = [  ]
-
+[node name="animation_menu" type="AnimationPlayer" parent="Menu"]
+anims/CreditsScreen_hide = SubResource( 11 )
+anims/CreditsScreen_show = SubResource( 12 )
+anims/NewGameMenu_hide = SubResource( 13 )
+anims/NewGameMenu_show = SubResource( 14 )
+anims/OptionsMenu_hide = SubResource( 15 )
+anims/OptionsMenu_show = SubResource( 16 )
+anims/Top10_hide = SubResource( 17 )
+anims/Top10_show = SubResource( 18 )
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ContinueButton" to="Menu/GeneralMenu" method="_on_ContinueButton_pressed"]
-
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/NewGameButton" to="Menu/GeneralMenu" method="_on_NewGameButton_pressed"]
-
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/OptionsButton" to="Menu/GeneralMenu" method="_on_OptionsButton_pressed"]
-
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Top10Button" to="Menu/GeneralMenu" method="_on_Top10Button_pressed"]
-
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/CreditsButton" to="Menu/GeneralMenu" method="_on_CreditsButton_pressed"]
-
 [connection signal="pressed" from="Menu/GeneralMenu/HBoxContainer/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="Menu/GeneralMenu" method="_on_ExitButton_pressed"]
-
 [connection signal="pressed" from="Menu/NewGameMenu/PanelContainer/HBoxContainer/InvisibleExitSaveMenuButton" to="Menu/NewGameMenu" method="_on_InvisibleExitSaveMenuButton_pressed"]
-
 [connection signal="pressed" from="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer/LocationRandomButton" to="Menu/NewGameMenu" method="_on_LocationRandomButton_pressed"]
-
 [connection signal="pressed" from="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer/LocationLiteButton" to="Menu/NewGameMenu" method="_on_LocationLiteButton_pressed"]
-
 [connection signal="pressed" from="Menu/NewGameMenu/PanelContainer/HBoxContainer/OptionsMenuPanelContainer/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer/LocationDunes01Button" to="Menu/NewGameMenu" method="_on_LocationDunes01Button_pressed"]
-
-
