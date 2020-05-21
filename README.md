@@ -10,5 +10,5 @@
 
 ----
 
-[Sandy Structure on itch.io](https://bitbucket.org/SymBioTech_/sandystructure/src/master/)
+[Sandy Structure on itch.io](https://insolllent.itch.io/sandy-structure)
 
